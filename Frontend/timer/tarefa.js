@@ -14,7 +14,7 @@ function add() {
     let importante = document.createElement("button")
     importante.className = "importante"
     importante.addEventListener("click", () => {
-        card.setAttribute("style","background-color:#fbb;border: 1px solid #600;");
+        card.setAttribute("style","z-index: 5;background-color:#black ;border: 3px solid rgb(255, 0, 0);");
     });
     let excluir = document.createElement("button")
     excluir.className = "excluir"

@@ -16,9 +16,16 @@ button2:hover {
 }
 
 .ljcd{
-    width: 500px;
+    width: 90%;
     margin-top: 20px;
-    margin-left: 20px
+    margin-left: 20px;
+    cursor: pointer;
+    background-color: #FFCDDD;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 
 

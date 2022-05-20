@@ -24,9 +24,9 @@
 <body>
 	<div class=""></div>
     <div class="main">
-    <input type="checkbox" id="active">
-    <label for="active" class="menu-bnt"><span></span></label>
-    <label for="active" class="clos"></label>
+    <input type="checkbox" id="replace">
+    <label for="replace" class="menu-bnt"><span></span></label>
+    <label for="replace" class="clos"></label>
     <div class="wrappper">
       <ul>
         <h2>Adicionar tarefa</h2>
@@ -36,6 +36,7 @@
           />
           <button type="button" id="add" onclick="add()"></button>
         </div>
+        <h4>Você pode priorizar uma tarefa clicando em !</h4>
         <div class="corpo"></div>
       </ul>
     </div>
@@ -44,11 +45,11 @@
         <label for="active" class="menu-btn"><span></span></label>
         <label for="active" class="close"></label>
         <div class="wrapper">
-          <a href="../Menu/index.html"><img  class="logo" src="../Assets/DomateLogo.png"/></a>
+          <img  class="logo" src="../Assets/DomateLogo.png"/>
           <ul>
-            <li><a href="../Menu/index.html">Home</a></li>
-            <li><a href="../mapa mental/index.html">Mapa mental</a></li>
-            <li><a href="../configuração/index.html">Configurações</a></li>
+            <li class="gu1"><a href="../Menu/index.html">Home</a></li>
+            <li class="gu2"><a href="../mapa mental/index.html">Mapa mental</a></li>
+            <li class="gu3"><a href="../configuração/index.html">Configurações</a></li>
           </ul>
           
           <div class="qua"></div>
@@ -56,14 +57,14 @@
             <source src="../music/lofi.mp3" type="audio/mpeg">
           </audio>
           <div class="ljcd">
-          <button2 class="muc" onclick="cs_change_music('../music/lofi.mp3');">Lofi</button2>
-          <button2 class="muc"onclick="cs_change_music('../music/jazz.mp3');">Jazz</button2>
-          <button2 class="muc" onclick="cs_change_music('../music/classica.mp3');">Clássica</button2>
-          <button2 class="muc" onclick="cs_change_music('../music/Dark Academia Library.mp3');">Dark Academia</button2>
-          <button2 class="muc" onclick="cs_change_music('../music/lofi.mp3');">Lofi 2</button2>
-          <button2 class="muc" onclick="cs_change_music('../music/classica.mp3');">Clássica 2</button2>
-          <button2 class="muc" onclick="cs_change_music('../music/Dark Academia Library.mp3');">Dark Academia 2</button2>
-          <button2 class="muc"onclick="cs_change_music('../music/jazz.mp3');">Jazz 2</button2>
+          <button2 class="muc" onclick="cs_change_music('../../../../music/lofi.mp3');">Lofi</button2>
+          <button2 class="muc"onclick="cs_change_music('../../../../music/jazz.mp3');">Jazz</button2>
+          <button2 class="muc" onclick="cs_change_music('../../../../music/classica.mp3');">Clássica</button2>
+          <button2 class="muc" onclick="cs_change_music('../../../../music/Dark Academia Library.mp3');">Dark Academia</button2>
+          <button2 class="muc" onclick="cs_change_music('../../../../music/vaporwave.mp3');">Vaporwave</button2>
+          <button2 class="muc" onclick="cs_change_music('../../../../music/dark lofi.mp3');">Dark Lofi</button2>
+          <button2 class="muc" onclick="cs_change_music('../../../../music/metal.mp3');">Metal</button2>
+          <button2 class="muc"onclick="cs_change_music('../../../../music/nature.mp3');">Nature</button2>
         </div>
       </div>
         </div>
@@ -85,33 +86,17 @@
               </div>
               <div id="pomodoro-clock-actions">
                 <div class="pomodoro-input">
-                  <label>Pomodoro</label>
+                  <label><div class="fond"><h3>Pomodoro</h3></div></label>
                   <input name="input-work-duration" id="input-work-duration" type="number" />
                 </div>
                 <div class="pomodoro-input">
-                  <label>Descanso</label>
+                  <label><div class="fond"><h3>Descanso</h3></div></label>
                   <input name="input-break-duration" id="input-break-duration" type="number" />
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <!--
-		<div class="timer">
-				<h1 id="timer" id="counter">25:00</h1>
-			</div>-->
-            
-            <!--
-            <button onclick="start();" class="bg-green">Iniciar</button>
-
-            <button onclick="pause();" class="bg-yellow">Pausar</button>
-            <button id="pomodoro-stop" class="hidden" class="bg-yellow">
-                <i class="fas fa-stop"></i>
-              </button>
-
-            <button onclick="stop();" class="bg-red">Resetar</button>
-        </div>
-        -->
 	</div>
     
 </body>
