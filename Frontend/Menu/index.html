@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domate</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="../Assets/DomateTimer.png">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
+<body onload="loadtema()" class="body">
+    <header class="header">
+        
+            <img  class="logo" src="../Assets/DomateLogo.png"/>
+        
+        <div class="icons"> 
+            <img src="../Assets/theme.png" id="cores" onmouseover="themes()"/> <!--https://codepen.io/THEORLAN2/pen/MyzWNw-->
+            <img src="../Assets/menu.png" id="abrir" onclick="showmenu()"/>
+        </div>
+
+    </header>
+
+    <div class="main">
+        <div class="container">
+            <div class="infozao">
+                <img src="../Assets/pomodoro.png">
+                <div>
+                    <p>O que é o método pomodoro?</p>
+    
+                O método Pomodoro se trata de uma metodologia de 
+                gerenciamento do tempo como aliado da produtividade. 
+                A ideia é fazer as tarefas que queremos fazer da maneira 
+                que queremos fazer permitindo a capacitação contínua para a 
+                melhoria dos processos.
+                </div>       
+            </div>
+    
+            <div class="tomate">
+            <p>O que é Domate?</p>
+            O Domate é um site com a finalidade de ajudar as pessoas a se concentrarem no trabalho, 
+            estudos e entre outros. O objetivo é utilizar-se do método pomodoro misturando com um 
+            mapa mental e com o acompanhamento do seu progresso. Onde falamos de métodos 
+            e damos dicas para a melhoria de seu desempenho.
+            </div>
+    
+        </div>
+        
+        <div class="container2">
+            <div class="dicas">
+                <p>Dicas <img src="../Assets/lamp.png"></p>
+                <div>
+                    <ul>
+                        <li>Desligue o celular</li>
+                        <li>Feche o youtube</li>
+                        <li>Esteja em um lugar silencioso</li>
+                        <li>Organize-se</li>
+                        <li>Abra somente o que precisa</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="info1">
+                <div>
+                    <p>Descansos</p>
+                Durante o tempo de descanso, é interessante não
+                fazer nada que requeira muito esforço mental.
+                </div>
+                <img src="../Assets/descanso.jpg">
+            </div>
+    
+           
+    
+            <div class="info2">
+                <img src="../Assets/interrupcao.jpeg">
+                <div>
+                    <p>Interrupções</p>
+                    É recomendado escrever uma apóstrofe toda vez que acontecer uma interrupção.
+    
+                    As interrupções podem ser internas ou externas. As internas são aquelas cometidas por 
+                    você mesmo, como pensar em algo, sentir fome, precisar ir ao banheiro etc. As externas 
+                    são quando outras pessoas ou acontecimentos atrapalham sua atividade, como alguém te chamar, 
+                    um barulho de celular, uma mensagem chegando, entre outras.
+    
+                    Caso siga o conselho de anotar todo tipo de interrupção, você poderá medir quantas e em quais 
+                    situações realmente é necessário parar uma atividade. Você também poderá descobrir o que tira 
+                    sua concentração e foco.
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <div class="menu">
+        <div class="menuheader">
+            <text id="sair">Sair</text>
+            <div>
+                <img src="../Assets/theme.png" id="cores2" onclick="themes()"/> <!--https://codepen.io/THEORLAN2/pen/MyzWNw-->
+                <img class="fechar" src="../Assets/DomateX.png" onclick="hidemenu()"/>
+            </div>
+        </div>
+        
+        <div class="deslogado">  
+            <!--https://codepen.io/stevenkuipers/pen/OrRroX-->
+            
+                <div class="login">
+                    <input id="toggle" type="checkbox" checked/>
+                    <text class="texto">Login</text>
+                    <ul>
+                        <li><input placeholder="Nome de usúario" id="usuario"/></li>
+                        <li><input placeholder="Senha" id="senha"/></li>
+                        <li><button id="entrar" onclick="connection()">Entrar</button></li>
+                    </ul> 
+                </div>
+                
+                <div class="cadastro">
+                    <text>Cadastre-se</text>
+                    <ul>
+                        <li><input id="user" placeholder="Crie um nome de usúario"/></li>
+                        <li><input id="cadsenha" placeholder="Senha"/></li>
+                        <li><input id="cadsenha2" placeholder="Confirme a senha"/></li>
+                        <li><button onclick="cadastrar()">Cadastrar</button></li>
+                    </ul>    
+                </div>
+                
+        </div>
+        
+        <div class="botao">
+            <button><img src="../Assets/settings_FILL0_wght400_GRAD0_opsz48.png"/><a href="../configuração/index.html">Configurações</a></button>
+            <button><img src="../Assets/alarm_FILL0_wght400_GRAD0_opsz48.png"><a href="../timer/index.html">Timer</a></button>
+        </div>
+
+        <div class="logado">
+            <button><img src="../Assets/network_intelligence_FILL0_wght400_GRAD0_opsz48.png"><a href="../mapa mental/index.html">Mapas Mentais</a></button>
+        </div>
+        
+    </div>
+
+    <div class="temas">
+        <ul>
+            <li>
+                <div class="tema1">
+                    <button class="botao1"></button>
+                    <text>Padrão</text>
+                </div>
+            </li>
+            <li>
+                <div class="tema2">
+                    <button class="botao2"></button>
+                    <text>Lilás</text>
+                </div>
+            </li>
+            <li>
+                <div class="tema3">
+                    <button class="botao3"></button>
+                    <text>Inverno</text>
+                </div>
+            </li>
+            <li>
+                <div class="tema4">
+                    <button class="botao4"></button>
+                    <text>Rosa Choque</text>
+                </div>
+            </li>
+            <li>
+                <div class="tema5">
+                    <button class="botao5"></button>
+                    <text>Bege</text>
+                </div>
+            </li>
+            <li>
+                <div class="tema6">
+                    <button class="botao6" ></button>
+                    <text>Tons de Roxo</text>
+                </div>
+            </li>
+            <li>
+                <div class="tema7">
+                    <button class="botao7"></button>
+                    <text>Limonada</text>
+                </div>
+            </li>
+            <li>
+                <div class="tema8">
+                    <button class="botao8"></button>
+                    <text>Ceú Limpo</text>
+                </div>
+            </li>
+        </ul>
+        
+        
+    </div>
+
+    <div class="cover"></div>
+
+    <div class="footer">
+        <text>Copyright © 2022-Todos os direitos reservados. Domate®</text>
+    </div>
+</body>
+<script src="script.js" src="https://kit.fontawesome.com/a076d05399.js"></script>
+</html>

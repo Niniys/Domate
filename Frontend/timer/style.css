@@ -1,0 +1,158 @@
+/* Style the header with a grey background and some padding */
+body{
+    padding: 54.7px;
+    margin: 3.7%;
+    border: 0px;
+    height: 100%;
+    background: linear-gradient(300deg, #FFCDDD, #EA99D5);
+    /*background-image: url("../assets/DomateLogo.png"); */
+    font-family: 'Segoe UI';
+  }
+  .main {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-content: center;
+    padding-top: 0%;
+  }
+  .main2{
+    padding-top: 0%;
+  }
+  .logo{
+    display: flex;
+    margin-top: 0px;
+    margin-left: 0px;
+    flex-direction: row;
+    height: 145px;
+    font-size: 50px;
+  }
+
+button:hover {
+    background-color: #B762C1;
+}
+
+.bg-green {
+    background-color: #8946A6;
+}
+
+.bg-yellow {
+    background-color: #8946A6;
+}
+
+.bg-red {
+    background-color: #8946A6;
+}
+
+.a{
+    margin-top: 102px;
+}
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 150px;
+  color: white;
+  font-size: 120px;
+  color: white; text-shadow: black 0.1em 0.1em 0.2em
+}
+
+.timer p{
+  padding-top: 0%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 120px;
+}
+
+.b{
+    margin-top: 102px;
+}
+
+#pomodoro-page {
+  background-color: red;
+}
+
+#pomodoro-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#pomodoro-clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+#pomodoro-clock-circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  height: 300px;
+  width: 300px;
+  border: 5px solid rgb(255, 4, 4);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+#pomodoro-clock-timer {
+  font-size: 30rem;
+  
+}
+
+#pomodoro-clock-circle * {
+  color: rgb(1, 90, 224);
+}
+
+#pomodoro-clock-task {
+  display: inline-block;
+  margin-top: 10px;
+  width: 200px;
+  padding: 5px 10px;
+  border: 1px solid rgb(255, 134, 134);
+  border-radius: 3px
+}
+
+#pomodoro-clock-title {
+  margin-top: 20px;
+  width: 200px
+}
+
+#pomodoro-clock-actions {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 110px;
+}
+
+#pomodoro-clock-actions button {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.pomodoro-input {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin-right: 10px;
+}
+
+.pomodoro-input input {
+  border: 1px solid rgb(128, 42, 42);
+  border-radius: 3px;
+  padding: 5px;
+}

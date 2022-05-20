@@ -1,0 +1,16 @@
+Timer Com tempo de 25 minutos e quando acabar aparecer 5 minutos e pedir para pessoas clicar novamente
+após acabar o timer e a música parar, fazer o navegador piscar, aparecer aviso na tela do pc e apitar com som calmo
+
+setinha pro lado pra surgir negocio, quando entrar no timer aparecer e depois fechar.
+
+Parte de musica
+
+Notas para adicionar notas
+
+menu
+menuheader
+sair
+fechar
+logado
+
+script:

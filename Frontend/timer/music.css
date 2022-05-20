@@ -1,0 +1,45 @@
+button2:hover {
+    background-color: #FFCDDD;
+}
+
+.muc {
+    background: #B762C1;
+    color: #fff;
+    text-decoration: none;
+    right: 100px;
+    height: 100px;
+    margin-left: 1px;
+}
+
+.my-audio{
+    top: 60%;
+}
+
+.ljcd{
+    width: 500px;
+    margin-top: 20px;
+    margin-left: 20px
+}
+
+
+button2{
+    width: 500px;
+    background: #fff;
+    width: 100px;
+    height: 100px;
+    left: 0;
+    top: 0;
+    border-radius: 7px;
+    transform: scaleY(0);
+    z-index: -1;
+    font-size: 25px;
+    transition: transform 0.5s ease;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+.qua{
+    margin-top: 130%;
+}
