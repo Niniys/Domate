@@ -418,6 +418,15 @@ toggleCeuLimpo.addEventListener("click", function () {
     localStorage.setItem("tema", temas[7]);
 })
 
+function descer() {
+    let cadastro = document.querySelector(".cadastro");
+
+    cadastro.style.marginTop = "400px";
+
+     
+    
+}
+
 function connection() {
     let data = JSON.stringify({
         nome_usuario: nome_usuario.value,
