@@ -420,12 +420,50 @@ toggleCeuLimpo.addEventListener("click", function () {
 
 function descer() {
     let cadastro = document.querySelector(".cadastro");
+    let botao = document.querySelector(".botao");
+    let toggle = document.getElementById("toggle");
+    let toggle2 = document.getElementById("toggle2");
+    let img = document.getElementById("setas");
+    let img2 = document.getElementById("setas2");
 
-    cadastro.style.marginTop = "400px";
-
-     
-    
+    if(toggle.checked != true && toggle2.checked == true) {
+        cadastro.style.marginTop = "400px";
+        botao.style.marginTop = "-170px";
+        img.src = "../assets/arrow-down-sign-to-navigate.png";
+        // setTimeout(() => {
+        //     botao.style.marginTop = "-350px";
+            // cadastro.style.marginTop = "220px";
+        // }, 300);
+    } else if(toggle2.checked != true && toggle.checked == true){
+            // cadastro.style.marginTop = "220px";
+            botao.style.marginTop = "-60px";
+            img2.src = "../assets/arrow-down-sign-to-navigate.png";
+    } else if(toggle.checked != true && toggle2.checked != true) {
+        cadastro.style.marginTop = "400px";
+        botao.style.marginTop = "100px";
+    } else if(toggle.checked == true && toggle2.checked == true){
+        setTimeout(() => {
+            img.src = "../assets/right-arrow.png";
+            img2.src = "../assets/right-arrow.png";
+            botao.style.marginTop = "-350px";
+            cadastro.style.marginTop = "220px";
+        }, 300); 
+        
+    }
 }
+
+// function descer2() {
+//     let botao = document.querySelector(".botao");
+//     let toggle2 = document.getElementById("toggle2");
+
+//     if() {
+//         botao.style.marginTop = "-60px";
+//     } else {
+//         setTimeout(() => {
+//             botao.style.marginTop = "-350px";
+//         }, 300); 
+//     }  
+// }
 
 function connection() {
     let data = JSON.stringify({

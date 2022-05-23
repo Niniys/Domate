@@ -315,20 +315,6 @@ body {
   transition: all .4s;
 }
 
-.texto {
-  position: relative;
-  display: flex;
-  flex: 1;
-  cursor: pointer;
-  border: solid black;
-  background-color: var(--cor1);
-  border-width: 4px;
-  width: 250px;
-  height: 47px;
-  box-shadow: 4px 4px 20px -2px rgba(0,0,0,.35);
-  transition: all .4s;
-}
-
 .deslogado {
   font-size: 35px;
     /* display: flex; */
@@ -339,7 +325,7 @@ body {
     /* justify-content: center; */
 
     margin: auto;
-    margin-top: 40px;
+    margin-top: -30px;
     position: relative;
     /* width: 50vw;
     min-width: 320px;
@@ -360,43 +346,47 @@ body {
 .botao {
   display: flex;
   flex-direction: column;
-  margin-top: 50px;
+  margin-top: -350px;
   align-items: center;
   justify-content: center;
 }
 
 .botao a {
   text-decoration: none;
-    color: black
+  color: black
 }
 
 .botao button {
   display: flex;
-    background-color: var(--cor4);
-    width: 250px;
-    height: 60px;
-    margin: 25px; 
-    border-radius: 40px;
-    border: solid black;
-    border-width: 4px;
-    flex-direction: row;
-    font-size: 20px;
-    align-items: center;
-    justify-content: center;
-   font-size: 25px;
-   cursor: pointer;
+  background-color: var(--cor4);
+  width: 250px;
+  height: 60px;
+  margin: 25px; 
+  border-radius: 40px;
+  border: solid black;
+  border-width: 4px;
+  flex-direction: row;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  cursor: pointer;
 }
 
 .cadastro {
   margin-top: 220px;
-  margin-left: -260px;
+  margin-left: -290px;
 }
+
+/* .cadastro text {
+  margin-left: -260px;
+} */
 
 .login ul {
   padding-left: 0;
   padding-top: 0;
   margin-top: 50px;
-  margin-left: -310px;
+  margin-left: -280px;
   list-style: none;
   overflow: hidden;
   text-align: right;
@@ -411,11 +401,25 @@ body {
     align-items: center; */
 }
 
+.login img {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  margin-left: 125px;
+}
+
+.cadastro img {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  margin-left: 25px;
+}
+
 .cadastro ul {
   padding-left: 0;
   padding-top: 0;
-  margin-top: 50px;
-  margin-left: -200px;
+  margin-top: 10px;
+  margin-left: -20px;
   list-style: none;
   overflow: hidden;
   text-align: right;
@@ -430,7 +434,7 @@ body {
   margin-top: 100px;
   /* align-items: center;
   justify-content: center; */
-  margin-left: 110px;
+  margin-left: 130px;
 }
 
 .login:hover text{
@@ -442,9 +446,18 @@ body {
   box-shadow: 0px -1px 2px 0px rgba(0,0,0,.35);
  }
 
+ .cadastro:hover text{
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 5px -1px rgba(0,0,0,.35);
+ }
+.cadastro:hover:active text{
+  transform: translateY(10px);
+  box-shadow: 0px -1px 2px 0px rgba(0,0,0,.35);
+ }
+
  #toggle {
-  position: fixed;
   margin: 0;
+  position: absolute;
   z-index: 1;
   opacity: 0;
   cursor: pointer;
@@ -455,6 +468,23 @@ body {
 }
 
 #toggle:checked ~ul {
+  height: 0%;
+  margin-bottom: 120px;
+}
+
+#toggle2 {
+  position: absolute;
+  margin: 0;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+  height: 55px;
+  display: flex;
+  flex: 1;
+  width: 258px;
+}
+
+#toggle2:checked ~ul {
   height: 0%;
   margin-bottom: 120px;
 }
