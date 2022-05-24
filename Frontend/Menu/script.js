@@ -424,46 +424,43 @@ function descer() {
     let toggle = document.getElementById("toggle");
     let toggle2 = document.getElementById("toggle2");
     let img = document.getElementById("setas");
-    let img2 = document.getElementById("setas2");
 
-    if(toggle.checked != true && toggle2.checked == true) {
-        cadastro.style.marginTop = "400px";
-        botao.style.marginTop = "-170px";
-        img.src = "../assets/arrow-down-sign-to-navigate.png";
-        // setTimeout(() => {
-        //     botao.style.marginTop = "-350px";
-            // cadastro.style.marginTop = "220px";
-        // }, 300);
-    } else if(toggle2.checked != true && toggle.checked == true){
-            // cadastro.style.marginTop = "220px";
-            botao.style.marginTop = "-60px";
-            img2.src = "../assets/arrow-down-sign-to-navigate.png";
-    } else if(toggle.checked != true && toggle2.checked != true) {
-        cadastro.style.marginTop = "400px";
-        botao.style.marginTop = "100px";
-    } else if(toggle.checked == true && toggle2.checked == true){
+    if(toggle.checked == true) {
+        img.src = "../assets/right-arrow.png";
         setTimeout(() => {
-            img.src = "../assets/right-arrow.png";
-            img2.src = "../assets/right-arrow.png";
             botao.style.marginTop = "-350px";
             cadastro.style.marginTop = "220px";
-        }, 300); 
+
+        }, 300);
         
+    } else if(toggle.checked != true) {
+        img.src = "../assets/arrow-down-sign-to-navigate.png";
+        cadastro.style.marginTop = "400px";
+        botao.style.marginTop = "-170px";
+    } else if(toggle2.checked != true && toggle.checked != true) {
+        botao.style.marginTop = "400px";
     }
+
 }
 
-// function descer2() {
-//     let botao = document.querySelector(".botao");
-//     let toggle2 = document.getElementById("toggle2");
+function descer2() {
+    let botao = document.querySelector(".botao");
+    let toggle = document.getElementById("toggle");
+    let toggle2 = document.getElementById("toggle2");
+    let img2 = document.getElementById("setas2");
 
-//     if() {
-//         botao.style.marginTop = "-60px";
-//     } else {
-//         setTimeout(() => {
-//             botao.style.marginTop = "-350px";
-//         }, 300); 
-//     }  
-// }
+    if(toggle2.checked != true) {
+        img2.src = "../assets/arrow-down-sign-to-navigate.png";
+        botao.style.marginTop = "-60px";
+    } else if(toggle2.checked == true && toggle.checked != true || toggle2.checked == true && toggle.checked == true){
+        img2.src = "../assets/right-arrow.png";
+        setTimeout(() => {
+            botao.style.marginTop = "-350px";
+        }, 300); 
+    } else if(toggle2.checked != true && toggle.checked != true) {
+        botao.style.marginTop = "400px";
+    }
+}
 
 function connection() {
     let data = JSON.stringify({
