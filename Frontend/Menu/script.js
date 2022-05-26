@@ -420,27 +420,40 @@ toggleCeuLimpo.addEventListener("click", function () {
 
 function descer() {
     let cadastro = document.querySelector(".cadastro");
+    let login = document.querySelector(".login");
     let botao = document.querySelector(".botao");
     let toggle = document.getElementById("toggle");
     let toggle2 = document.getElementById("toggle2");
     let img = document.getElementById("setas");
+    let deslogado = document.querySelector(".deslogado");
 
-    if(toggle.checked == true) {
-        img.src = "../assets/right-arrow.png";
-        setTimeout(() => {
-            botao.style.marginTop = "-350px";
-            cadastro.style.marginTop = "220px";
 
-        }, 300);
-        
-    } else if(toggle.checked != true) {
+    if(toggle.checked != true && toggle2.checked == true) {
         img.src = "../assets/arrow-down-sign-to-navigate.png";
+        deslogado.style.height = "600px";
         cadastro.style.marginTop = "400px";
         botao.style.marginTop = "-170px";
+    } else if(toggle.checked == true && toggle2.checked == true) {
+        img.src = "../assets/right-arrow.png";
+        setTimeout(() => {
+            botao.style.marginTop = "20px";
+            cadastro.style.marginTop = "220px";
+        }, 300);
+    } else if (toggle.checked == true && toggle2.checked != true){
+        img.src = "../assets/right-arrow.png";
+        deslogado.style.height = "600px";
+        cadastro.style.height = "55%";
+        setTimeout(() => {
+            botao.style.marginTop = "-60px";
+            cadastro.style.marginTop = "220px";
+        }, 300);
     } else if(toggle2.checked != true && toggle.checked != true) {
-        botao.style.marginTop = "400px";
+        img.src = "../assets/arrow-down-sign-to-navigate.png";
+        deslogado.style.height = "600px";
+        botao.style.marginTop = "180px";
+        cadastro.style.marginTop = "400px";
+        cadastro.style.height = "55%";
     }
-
 }
 
 function descer2() {
@@ -448,17 +461,32 @@ function descer2() {
     let toggle = document.getElementById("toggle");
     let toggle2 = document.getElementById("toggle2");
     let img2 = document.getElementById("setas2");
+    let cadastro = document.querySelector(".cadastro");
+    let deslogado = document.querySelector(".deslogado");
 
-    if(toggle2.checked != true) {
+    if(toggle2.checked != true && toggle.checked == true) {
         img2.src = "../assets/arrow-down-sign-to-navigate.png";
         botao.style.marginTop = "-60px";
-    } else if(toggle2.checked == true && toggle.checked != true || toggle2.checked == true && toggle.checked == true){
+        cadastro.style.height = "55%";
+        deslogado.style.height = "600px";
+    } else if(toggle2.checked == true && toggle.checked == true){
         img2.src = "../assets/right-arrow.png";
+        cadastro.style.height = "55%";
         setTimeout(() => {
-            botao.style.marginTop = "-350px";
+            botao.style.marginTop = "20px";
         }, 300); 
-    } else if(toggle2.checked != true && toggle.checked != true) {
-        botao.style.marginTop = "400px";
+    } else if(toggle2.checked == true && toggle.checked != true) {
+        img2.src = "../assets/right-arrow.png";
+        deslogado.style.height = "600px";
+        setTimeout(() => {
+            botao.style.marginTop = "-170px";
+        }, 300); 
+    } 
+    else if(toggle2.checked != true && toggle.checked != true) {
+        deslogado.style.height = "600px";
+        img2.src = "../assets/arrow-down-sign-to-navigate.png";
+        botao.style.marginTop = "180px";
+        cadastro.style.height = "55%";
     }
 }
 
@@ -488,6 +516,12 @@ function connection() {
         });
     console.log(data);
 }
+
+document.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        entrar.click();
+    }
+})
 
 function validaCadSenha() {
     if (cadsenha.value === cadsenha2.value) {
