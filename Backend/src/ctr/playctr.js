@@ -39,7 +39,7 @@ const remove = async (req, res) => {
     const ret = await Play.destroy({where: {id: id}});
 
     if(ret == 1) {
-        res.json({id: id})
+        res.json({id: "id "+id+" removido com sucesso"})
     }else {
         res.status(400).send();
     }

@@ -5,7 +5,7 @@ class mapa extends Model{
         super.init(
             {
                 nome_mapa: {
-                    type: DataTypes.BLOB(),
+                    type: DataTypes.STRING,
                     allowNull: false
                 }
             },

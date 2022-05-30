@@ -34,6 +34,14 @@ class usuario extends Model{
                         key: 'id',
                     }
                 },
+                id_nota: {
+                    type: DataTypes.INTEGER,
+                    allowNull: true,
+                    references: {
+                        model: 'notas',
+                        key: 'id',
+                    }
+                },
             },
             {
                 sequelize: datacon,
@@ -44,6 +52,7 @@ class usuario extends Model{
     }
 
     static associate(models){
+        usuario.belongsTo(models.nota, {foreignKey: 'id_nota'});
         usuario.belongsTo(models.mapa, {foreignKey: 'id_mapa'});
         usuario.belongsTo(models.play, {foreignKey: 'id_play'});
     }

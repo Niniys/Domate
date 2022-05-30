@@ -5,7 +5,7 @@ const route = express.Router();
 
 const Usuarioctr = require('./src/ctr/usuarioctr');
 const Playctr = require('./src/ctr/playctr');
-// const Rankctr = require('./src/ctr/rankctr');
+const Notactr = require('./src/ctr/notactr');
 const Mapactr = require('./src/ctr/Mapactr');
 
 
@@ -24,11 +24,11 @@ route.get('/play/:id', Playctr.read);
 route.put('/play/:id', Playctr.update);
 route.delete('/play/:id', Playctr.remove);
 
-// route.post('/rank', Rankctr.create);
-// route.get('/rank', Rankctr.read);
-// route.get('/rank/:id', Rankctr.read);
-// route.put('/rank/:id', Rankctr.update);
-// route.delete('/rank/:id', Rankctr.remove);
+route.post('/nota', Notactr.create);
+route.get('/nota', Notactr.read);
+route.get('/nota/:id', Notactr.read);
+route.put('/nota/:id', Notactr.update);
+route.delete('/nota/:id', Notactr.remove);
 
 route.post('/mapa', Mapactr.create);
 route.get('/mapa', Mapactr.read);
