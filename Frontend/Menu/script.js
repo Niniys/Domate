@@ -431,11 +431,14 @@ function descer() {
     if(toggle.checked != true && toggle2.checked == true) {
         img.src = "../assets/arrow-down-sign-to-navigate.png";
         deslogado.style.height = "600px";
-        cadastro.style.marginTop = "400px";
-        botao.style.marginTop = "-170px";
+        login.style.height = "40%";
+        cadastro.style.marginTop = "480px";
+        botao.style.marginTop = "-20px";
+        cadastro.style.height = "15%";
     } else if(toggle.checked == true && toggle2.checked == true) {
         img.src = "../assets/right-arrow.png";
         setTimeout(() => {
+            deslogado.style.height = "300px";
             botao.style.marginTop = "20px";
             cadastro.style.marginTop = "220px";
         }, 300);
@@ -444,14 +447,16 @@ function descer() {
         deslogado.style.height = "600px";
         cadastro.style.height = "55%";
         setTimeout(() => {
-            botao.style.marginTop = "-60px";
+            botao.style.marginTop = "40px";
             cadastro.style.marginTop = "220px";
         }, 300);
-    } else if(toggle2.checked != true && toggle.checked != true) {
+    } 
+    else if(toggle.checked != true && toggle2.checked != true) {
         img.src = "../assets/arrow-down-sign-to-navigate.png";
         deslogado.style.height = "600px";
-        botao.style.marginTop = "180px";
-        cadastro.style.marginTop = "400px";
+        login.style.height = "40%";
+        botao.style.marginTop = "300px";
+        cadastro.style.marginTop = "480px";
         cadastro.style.height = "55%";
     }
 }
@@ -466,27 +471,68 @@ function descer2() {
 
     if(toggle2.checked != true && toggle.checked == true) {
         img2.src = "../assets/arrow-down-sign-to-navigate.png";
-        botao.style.marginTop = "-60px";
+        botao.style.marginTop = "40px";
         cadastro.style.height = "55%";
         deslogado.style.height = "600px";
     } else if(toggle2.checked == true && toggle.checked == true){
         img2.src = "../assets/right-arrow.png";
-        cadastro.style.height = "55%";
+        
         setTimeout(() => {
+            cadastro.style.height = "15%";
+            deslogado.style.height = "300px";
             botao.style.marginTop = "20px";
         }, 300); 
     } else if(toggle2.checked == true && toggle.checked != true) {
         img2.src = "../assets/right-arrow.png";
         deslogado.style.height = "600px";
         setTimeout(() => {
-            botao.style.marginTop = "-170px";
+            botao.style.marginTop = "-50px";
         }, 300); 
     } 
     else if(toggle2.checked != true && toggle.checked != true) {
         deslogado.style.height = "600px";
         img2.src = "../assets/arrow-down-sign-to-navigate.png";
-        botao.style.marginTop = "180px";
+        botao.style.marginTop = "300px";
         cadastro.style.height = "55%";
+    }
+}
+
+function mostrarsenha() {
+    let olho = document.getElementById("aaaa");
+    let cadsenha = document.getElementById("cadsenha");
+
+    if(cadsenha.type == "password") {
+        olho.src = "../assets/eye.png";
+        cadsenha.type = "text";
+    } else {
+        olho.src = "../assets/hidden.png";
+        cadsenha.type = "password";
+    }
+}
+
+function mostrarsenha2() {
+    let zoio = document.getElementById("aaa");
+    let cadsenha2 = document.getElementById("cadsenha2");
+
+    if(cadsenha2.type == "password") {
+        zoio.src = "../assets/eye.png";
+        cadsenha2.type = "text";
+    } else {
+        zoio.src = "../assets/hidden.png";
+        cadsenha2.type = "password";
+    }
+}
+
+function mostrarsenha3() {
+    let oio = document.getElementById("aa");
+    let senha = document.getElementById("senha");
+
+    if(senha.type == "password") {
+        oio.src = "../assets/eye.png";
+        senha.type = "text";
+    } else {
+        oio.src = "../assets/hidden.png";
+        senha.type = "password";
     }
 }
 

@@ -109,7 +109,10 @@
                     <text class="texto">Login<img id="setas" src="../assets/right-arrow.png"/></text>
                     <ul>
                         <li><input placeholder="Nome de usúario" id="usuario"/></li>
-                        <li><input placeholder="Senha" id="senha"/></li>
+                        <li>
+                            <input placeholder="Senha" id="senha" type="password"/>
+                            <img id="aa" src="../assets/hidden.png" onclick="mostrarsenha3()"/>
+                        </li>
                         <li><button id="entrar" onclick="connection()">Entrar</button></li>
                     </ul> 
                 </div>
@@ -119,8 +122,14 @@
                     <text>Cadastre-se<img id="setas2" src="../assets/right-arrow.png"/></text>
                     <ul>
                         <li><input id="user" placeholder="Crie um nome de usúario"/></li>
-                        <li><input id="cadsenha" placeholder="Senha"/></li>
-                        <li><input id="cadsenha2" placeholder="Confirme a senha"/></li>
+                        <li>
+                            <input id="cadsenha" placeholder="Senha" type="password"/>
+                            <img id="aaaa" src="../assets/hidden.png" onclick="mostrarsenha()"/>
+                        </li>
+                        <li>
+                            <input id="cadsenha2" placeholder="Confirme a senha" type="password"/>
+                            <img id="aaa" src="../assets/hidden.png" onclick="mostrarsenha2()"/>
+                        </li>
                         <li><button onclick="cadastrar()">Cadastrar</button></li>
                     </ul>    
                 </div>
