@@ -38,7 +38,7 @@ function Principal({ state, descriptors, navigation }) {
         let arrColor = ["#511845", "#a93190"];
         let icon = (
           <Icon
-            name="open-book"
+            name="stopwatch"
             color={selected == index ? "#000" : "#000"}
             size={35}
           />
@@ -47,7 +47,7 @@ function Principal({ state, descriptors, navigation }) {
           arrColor = ["#a93190", "#511845"];
           icon = (
             <Icon
-              name="stopwatch"
+              name="open-book"
               color={selected == index ? "#000" : "#000"}
               size={35}
             />
@@ -109,9 +109,11 @@ export default function App() {
           headerShown: false,
         }}
       >
-        <Tab.Screen name="Anote" component={Anote} />
 
         <Tab.Screen name="Timer" component={Timer} />
+        <Tab.Screen name="Anote" component={Anote} />
+
+        
       </Tab.Navigator>
     </NavigationContainer>
   );
