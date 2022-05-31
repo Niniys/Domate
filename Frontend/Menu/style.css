@@ -1,8 +1,3 @@
-/* @font-face{
-  font-family:'FontAwesome';
-  src:url('../fonts/fontawesome-webfont.eot?v=4.7.0');
-} */
-
 html,
 body {
     height: 100%;
@@ -146,6 +141,7 @@ body {
   flex-direction: row;
   width: 100%;
   height: 50%;
+  font-family: 'Segoe UI';
 }
 
 .infozao {
@@ -263,6 +259,7 @@ body {
     border-right: solid black;
     border-width: 4px;
     width: 300px;
+    font-family: 'Segoe UI';
 }
 
 }
@@ -277,6 +274,7 @@ body {
     color: white;
     justify-content: center;
     align-items: flex-end;
+    font-family: 'Segoe UI';
 }
 
 .menu {
@@ -290,7 +288,9 @@ body {
     border-left: solid black;
     border-width: 4px;
     transition: all .9s;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: none;
+    font-family: 'Segoe UI';
 }
 
 .menu::-webkit-scrollbar {
@@ -309,7 +309,7 @@ body {
   border: solid black;
   background-color: var(--cor1);
   border-width: 4px;
-  width: 250px;
+  width: 240px;
   height: 47px;
   box-shadow: 4px 4px 20px -2px rgba(0,0,0,.35);
   transition: all .4s;
@@ -322,6 +322,7 @@ body {
     margin: auto;
     margin-top: -30px;
     position: relative;
+    justify-content: center;
 }
 
 .deslogado button {
@@ -339,12 +340,13 @@ body {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
-  margin-left: 110px;
+  align-items: center;
 }
 
 .botao a {
   text-decoration: none;
-  color: black
+  color: black;
+  font-family: 'Segoe UI';
 }
 
 .botao button {
@@ -369,6 +371,11 @@ body {
   margin-top: 220px;
   margin-left: -290px;
   height: 15%;
+  width: 100%;
+}
+
+.texto {
+  width: 250px;
 }
 
 .login ul {
@@ -383,10 +390,12 @@ body {
   text-align: center;
   transition: all .4s ease-out;
   height: 100%;
+  /* width: 280px; */
 }
 
 .login ul li {
   height: 90px;
+  
 }
 
 .login img {
@@ -424,8 +433,10 @@ body {
 .login {
   display: flex;
   margin-top: 100px;
-  margin-left: 130px;
+  align-self: center;
+  /* margin-left: 30px; */
   height: 15%;
+  /* width: 100%; */
 }
 
 .login:hover text{
@@ -519,7 +530,7 @@ body {
 .deslogado input {
     width: 250px;
     height: 30px;
-    margin: 25px;
+    margin-bottom: 25px;
     border: solid black;
     border-width: 4px;
     z-index: 2;
@@ -679,7 +690,7 @@ body::-webkit-scrollbar {
 .fechar {
     display: flex;
     margin-left: auto;
-    margin-right: 50px;
+    margin-right: -70px;
     margin-top: 1px;
     width: 70px;
     height: 70px;
@@ -832,7 +843,7 @@ body::-webkit-scrollbar {
     width: 110px;
     border: solid black;
     border-radius: 30px;
-    background-image: linear-gradient(to right, rgb(121, 1, 140), rgb(76, 0, 112), rgb(22, 0, 64));
+    background-image: linear-gradient(to right, rgb(154, 6, 128), rgb(121, 1, 140), rgb(76, 0, 112), rgb(22, 0, 64)); 
 }
 
 .tema7 button{
@@ -857,14 +868,21 @@ body::-webkit-scrollbar {
   .fechar {
     display: flex;
     margin-left: auto;
-    margin-right: -5px;
+    margin-right: 100px;
     margin-top: 1px;
     width: 70px;
     height: 70px;
     cursor: pointer;
 }
 
-  .menu {
+#cores2 {
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin-top: 5px;
+}
+
+.menu {
     position: fixed;
     top: 0;
     background-image: linear-gradient(to bottom, var(--cor2), var(--cor3));
@@ -874,7 +892,8 @@ body::-webkit-scrollbar {
     border-left: solid black;
     border-width: 4px;
     transition: all .9s;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: none;
 }
 
 .menuheader div{
@@ -887,6 +906,181 @@ body::-webkit-scrollbar {
 .cover {
   position: absolute;
   top: -9999px;
+}
+
+.main {
+  background-image: linear-gradient(to bottom, var(--cor1), var(--cor4));
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  background-image: linear-gradient(to right, var(--cor2), var(--cor3));
+  height: 15%;
+  width: 100%;
+  border-bottom: solid black;
+  border-width: 4px;
+  position: fixed;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-top: 240px;
+  margin-bottom: 500px;
+}
+
+.container2 {
+display: flex;
+flex-direction: column;
+width: 100%;
+height: 50%;
+align-items: center;
+justify-content: center;
+margin-top: 600px;
+font-family: 'Segoe UI';
+}
+
+#cores {
+display: none;
+}
+
+.temas {
+display: none;
+position: absolute;
+top: 130px;
+/* margin-left: 200px; */
+align-self: center;
+border-radius: 40px;
+border: solid black;
+border-width: 4px;
+background-color: var(--cor2);
+width: 267px;
+height: 200px;
+align-items: center;
+overflow: auto;
+z-index: 1;
+}
+
+.infozao {
+  display: flex;
+  height: 400px;
+  width: 255px;
+  background-color: var(--cor4);
+  border: solid black;
+  border-width: 4px;
+  font-size: 13px;
+  margin: 3%;
+  flex-direction: column;
+}
+
+.infozao div {
+  text-align: center;
+  flex-direction: column;
+  border-top: solid black;
+  border-width: 4px;
+  width: 100%;
+}
+
+.infozao img {
+  height: 100%;
+  width: 100%;
+  border-width: 4px;
+}
+
+.tomate {
+display: flex;
+flex-direction: column;
+border: solid black;
+border-width: 4px;
+margin-top: 7%;
+margin: 3%;
+background-color: var(--cor4);
+width: 255px;
+height: 300px;
+font-size: 13px;
+}
+
+.dicas {
+display: flex;
+flex-direction: column;
+margin: 3%;
+background-color: var(--cor4);
+height: 255px;
+width: 255px;
+border: solid black;
+border-width: 4px;
+font-size: 25px;
+}
+
+.dicas div {
+font-size: 17px;
+width: 255px;
+}
+
+.dicas p {
+text-align: center;
+}
+
+.info1 {
+display: flex;
+margin-left: 100px;
+margin-bottom: 800px;
+height: 300px;
+width: 255px;
+margin: 3%;
+background-color: var(--cor4);
+border: solid black;
+border-width: 4px;
+text-align: center;
+font-size: 15px;
+flex-direction: column;
+}
+
+.info1 img {
+height: 120px;
+width: 100%;
+}
+
+.info1 div {
+height: 120px;
+text-align: center;
+flex-direction: column;
+border-bottom: solid black;
+border-width: 4px;
+width: 255px;
+font-family: 'Segoe UI';
+}
+
+.info2 {
+margin: 3%;
+height: 530px;
+width: 255px;
+background-color: var(--cor4);
+border: solid black;
+border-width: 4px;
+text-align: center;
+font-size: 11px;
+}
+
+.info2 div {
+height: 300px;
+
+}
+
+.info2 img {
+height: 250px;
+width: 255px;
+border-bottom: solid black;
+border-width: 4px;
 }
 
 }
@@ -951,10 +1145,11 @@ body::-webkit-scrollbar {
 
   .footer {
     text-align: center;
+    font-family: 'Segoe UI';
   }
 }
 
-@media(max-width: 1680px) {
+@media(min-width: 1401px)and (max-width: 1680px) {
 
   .fechar {
     display: flex;
@@ -978,6 +1173,7 @@ body::-webkit-scrollbar {
   flex-direction: row;
   width: 100%;
   height: 50%;
+  font-family: 'Segoe UI';
 }
 
 .infozao {
@@ -988,7 +1184,7 @@ body::-webkit-scrollbar {
     background-color: var(--cor4);
     border: solid black;
     border-width: 4px;
-    font-size: 20px;
+    font-size: 18px;
     flex-direction: row;
     margin-left: 3%;
 }
@@ -1022,8 +1218,8 @@ body::-webkit-scrollbar {
 }
 
 .dicas div {
-    font-size: 20px;
-    width: 300px;
+    font-size: 18px;
+    width: 250px;
 }
 
 .dicas p {
@@ -1044,10 +1240,10 @@ body::-webkit-scrollbar {
 }
 
 .info2 {
-    margin-left: 5%;
-    margin-bottom: 150px;
-    height: 600px;
-    width: 400px;
+    margin-left: 4%;
+    margin-bottom: 100px;
+    height: 650px;
+    width: 350px;
     background-color: var(--cor4);
     border: solid black;
     border-width: 4px;
@@ -1063,7 +1259,7 @@ body::-webkit-scrollbar {
 
 .info2 img {
     height: 250px;
-    width: 400px;
+    width: 350px;
     border-bottom: solid black;
     border-width: 4px;
 }
@@ -1086,7 +1282,7 @@ body::-webkit-scrollbar {
 
 .info1 img {
     height: 200px;
-    width: 300px;
+    width: 250px;
 }
 
 .info1 div {
@@ -1094,7 +1290,8 @@ body::-webkit-scrollbar {
     flex-direction: column;
     border-right: solid black;
     border-width: 4px;
-    width: 300px;
+    width: 250px;
+    font-family: 'Segoe UI';
 }
 }
 
@@ -1121,6 +1318,7 @@ body::-webkit-scrollbar {
   flex-direction: row;
   width: 100%;
   height: 50%;
+  font-family: 'Segoe UI';
 }
 
 .infozao {
@@ -1241,6 +1439,7 @@ body::-webkit-scrollbar {
     border-width: 4px;
     height: 200px;
     width: 270px;
+    font-family: 'Segoe UI';
 }
 
 }
@@ -1276,6 +1475,7 @@ body::-webkit-scrollbar {
   width: 100%;
   height: 50%;
   margin-top: 280px;
+  font-family: 'Segoe UI';
 }
 
 .infozao {
@@ -1320,7 +1520,7 @@ body::-webkit-scrollbar {
 }
 
 .dicas div {
-    font-size: 20px;
+    font-size: 15px;
     width: 300px;
 }
 
@@ -1338,7 +1538,7 @@ body::-webkit-scrollbar {
     background-color: var(--cor4);
     width: 300px;
     height: 250px;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .info2 {
@@ -1354,7 +1554,7 @@ body::-webkit-scrollbar {
   align-self: flex-end;
   justify-content: center;
   text-align: center;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .info2 div {
@@ -1395,6 +1595,7 @@ body::-webkit-scrollbar {
     border-right: solid black;
     border-width: 4px;
     width: 300px;
+    font-family: 'Segoe UI';
 }
 
 }
@@ -1402,7 +1603,7 @@ body::-webkit-scrollbar {
 /*1300px x 665px casa*/
 /*1930px x 1005px senai*/
 
-@media(max-width: 1024px) {
+@media(min-width: 501px) and (max-width: 1024px) {
   .main {
     background-image: linear-gradient(to bottom, var(--cor1), var(--cor4));
     height: 100%;
@@ -1441,12 +1642,14 @@ body::-webkit-scrollbar {
   align-items: center;
   justify-content: center;
   margin-top: 600px;
+  font-family: 'Segoe UI';
 }
 
 #cores2 {
   display: flex;
   width: 60px;
   height: 60px;
+  margin-left: 85px;
   margin-top: 5px;
 }
 
@@ -1557,6 +1760,7 @@ body::-webkit-scrollbar {
   border-bottom: solid black;
   border-width: 4px;
   width: 255px;
+  font-family: 'Segoe UI';
 }
 
 .info2 {
@@ -1567,7 +1771,7 @@ body::-webkit-scrollbar {
   border: solid black;
   border-width: 4px;
   text-align: center;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 .info2 div {
