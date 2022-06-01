@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -20,85 +20,87 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
     <link rel="stylesheet" href="./tarefa.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  </head>
+</head>
+
 <body>
-	<div class=""></div>
+    <!-- <div class=""></div> -->
     <div class="main">
-    <input type="checkbox" id="replace">
-    <label for="replace" class="menu-bnt"><span></span></label>
-    <label for="replace" class="clos"></label>
-    <div class="wrappper">
-      <ul>
-        <h2>Adicionar tarefa</h2>
-        <div class="novo">
-          <input type="text" id="compromisso" size="42" maxlength="42"
-          placeholder='limite de até 42 caracteres'
-          />
-          <button type="button" id="add" onclick="add()"></button>
+        <input type="checkbox" id="replace">
+        <label for="replace" class="menu-bnt"><span></span></label>
+        <label for="replace" class="clos"></label>
+        <div class="wrappper">
+            <ul>
+                <h2>Adicionar tarefa</h2>
+                <div class="novo">
+                    <input type="text" id="compromisso" size="42" maxlength="42" placeholder='limite de até 42 caracteres' />
+                    <button type="button" id="add" ></button>
+                </div>
+                <h4>Você pode priorizar uma tarefa clicando em !</h4>
+                <div class="corpo"></div>
+            </ul>
         </div>
-        <h4>Você pode priorizar uma tarefa clicando em !</h4>
-        <div class="corpo"></div>
-      </ul>
-    </div>
         <!--<div class="seta"><img src="../assets/expand_more_FILL0_wght400_GRAD0_opsz48 (1).png">-->
-          <input type="checkbox" id="active">
+        <input type="checkbox" id="active">
         <label for="active" class="menu-btn"><span></span></label>
         <label for="active" class="close"></label>
         <div class="wrapper">
-          <img  class="logo" src="../Assets/DomateLogo.png"/>
-          <ul>
-            <li class="gu1"><a href="../Menu/index.html">Home</a></li>
-            <li class="gu2"><a href="../mapa mental/index.html">Mapa mental</a></li>
-            <li class="gu3"><a href="../configuração/index.html">Configurações</a></li>
-          </ul>
-          
-          <div class="qua"></div>
-          <audio id="my-audio" controls>
+            <img class="logo" src="../Assets/DomateLogo.png" />
+            <ul>
+                <li class="gu1"><a href="../Menu/index.html">Home</a></li>
+                <li class="gu2"><a href="../mapa mental/index.html">Mapa mental</a></li>
+                <li class="gu3"><a href="../configuração/index.html">Configurações</a></li>
+            </ul>
+
+            <div class="qua"></div>
+            <audio id="my-audio" controls>
             <source src="../../../../music/lofi.mp3" type="audio/mpeg">
           </audio>
-          <div class="ljcd">
-          <button2 class="muc" onclick="cs_change_music('../../../../music/lofi.mp3');">Lofi</button2>
-          <button2 class="muc"onclick="cs_change_music('../../../../music/jazz.mp3');">Jazz</button2>
-          <button2 class="muc" onclick="cs_change_music('../../../../music/classica.mp3');">Clássica</button2>
-          <button2 class="muc" onclick="cs_change_music('../../../../music/Dark Academia Library.mp3');">Dark Academia</button2>
-          <button2 class="muc" onclick="cs_change_music('../../../../music/vaporwave.mp3');">Vaporwave</button2>
-          <button2 class="muc" onclick="cs_change_music('../../../../music/dark lofi.mp3');">Dark Lofi</button2>
-          <button2 class="muc" onclick="cs_change_music('../../../../music/metal.mp3');">Metal</button2>
-          <button2 class="muc"onclick="cs_change_music('../../../../music/nature.mp3');">Nature</button2>
+            <div class="ljcd">
+                <button2 class="muc" onclick="cs_change_music('../../../../music/lofi.mp3');">Lofi</button2>
+                <button2 class="muc" onclick="cs_change_music('../../../../music/jazz.mp3');">Jazz</button2>
+                <button2 class="muc" onclick="cs_change_music('../../../../music/classica.mp3');">Clássica</button2>
+                <button2 class="muc" onclick="cs_change_music('../../../../music/Dark Academia Library.mp3');">Dark Academia</button2>
+                <button2 class="muc" onclick="cs_change_music('../../../../music/vaporwave.mp3');">Vaporwave</button2>
+                <button2 class="muc" onclick="cs_change_music('../../../../music/dark lofi.mp3');">Dark Lofi</button2>
+                <button2 class="muc" onclick="cs_change_music('../../../../music/metal.mp3');">Metal</button2>
+                <button2 class="muc" onclick="cs_change_music('../../../../music/nature.mp3');">Nature</button2>
+            </div>
         </div>
-      </div>
-        </div>
-      </div>
-        </div>
-        <div class="main2">
+    </div>
+    </div>
+    </div>
+    <div class="main2">
         <div id="pomodoro-container">
             <div id="pomodoro-clock">
-              <h1 class="timer"><div id="pomodoro-timer"></div></h1>
-              
-              <div id="pomodoro-clock-actions">
-                <button id="pomodoro-start">
+                <h1 class="timer">
+                    <div id="pomodoro-timer"></div>
+                </h1>
+
+                <div id="pomodoro-clock-actions">
+                    <button id="pomodoro-start">
                     <i class="fas fa-play" id="play-icon"></i>
                   <i class="fas fa-pause hidden" id="pause-icon"></i>
                 </button>
-                <button id="pomodoro-stop" class="hidden">
+                    <button id="pomodoro-stop" class="hidden">
                   <i class="fas fa-stop"></i>
                 </button>
-              </div>
-              <div id="pomodoro-clock-actions">
-                <div class="pomodoro-input">
-                  <label><div class="fond"><h3>Pomodoro</h3></div></label>
-                  <input name="input-work-duration" id="input-work-duration" type="number" />
                 </div>
-                <div class="pomodoro-input">
-                  <label><div class="fond"><h3>Descanso</h3></div></label>
-                  <input name="input-break-duration" id="input-break-duration" type="number" />
+                <div id="pomodoro-clock-actions">
+                    <div class="pomodoro-input">
+                        <label><div class="fond"><h3>Pomodoro</h3></div></label>
+                        <input name="input-work-duration" id="input-work-duration" type="number" />
+                    </div>
+                    <div class="pomodoro-input">
+                        <label><div class="fond"><h3>Descanso</h3></div></label>
+                        <input name="input-break-duration" id="input-break-duration" type="number" />
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
         </div>
-	</div>
-    
+    </div>
+    </div>
+
 </body>
 <script src="tarefa.js"></script>
+
 </html>
