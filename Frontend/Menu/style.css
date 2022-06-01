@@ -198,14 +198,14 @@ body {
 .tomate {
     display: flex;
     flex-direction: column;
-    border: solid black;
+    border-color: var(--cor2);
     border-width: 4px;
-    margin-top: 12%;
-    margin-left: 10%;
+    margin-top: 14%;
+    margin-left: 13%;
     background-color: var(--cor4);
-    width: 300px;
-    height: 300px;
-    font-size: 17px;
+    width: 75%;
+    height: 250px;
+    font-size: 25px;
 }
 
 .info2 {
