@@ -12,28 +12,37 @@
 <body onload="loadtema()" class="body">
     <header class="header">
         
-            <img  class="logo" src="../Assets/DomateLogo.png"/>
         
         <div class="icons"> 
+            <text>Dicas<img src="../Assets/lamp.png"></text>
             <img src="../Assets/theme.png" id="cores" onmouseover="themes()"/> <!--https://codepen.io/THEORLAN2/pen/MyzWNw-->
-            <img src="../Assets/menu.png" id="abrir" onclick="showmenu()"/>
+            <!-- <img src="../Assets/menu.png" id="abrir" onclick="showmenu()"/> -->
+            <input type="checkbox" id="active">
+                <label for="active" class="menu-btn"><span></span></label>
+                <label for="active" class="close"></label>
         </div>
 
     </header>
 
-    <div class="main">
+    <div class="main1">
+
         <div class="tomate">
-            <p>O que é Domate?</p>
-            O Domate é um site com a finalidade de ajudar as pessoas a se concentrarem no trabalho, 
+            <img src="../Assets/DomateLogo.png">
+            <div>
+                O Domate é um site com a finalidade de ajudar as pessoas a se concentrarem no trabalho, 
             estudos e entre outros. O objetivo é utilizar-se do método pomodoro misturando com um 
             mapa mental e com o acompanhamento do seu progresso. Onde falamos de métodos 
             e damos dicas para a melhoria de seu desempenho.
+            </div>
         </div>
 
+    </div>
+
+    <div class="main2">
+        
+        <img id="tutoriel" src="../Assets/pomodoro.png">
         <div class="infozao">
-                <img src="../Assets/pomodoro.png">
                 <div>
-                    <p>O que é o método pomodoro?</p>
     
                 O método Pomodoro se trata de uma metodologia de 
                 gerenciamento do tempo como aliado da produtividade. 
@@ -43,57 +52,45 @@
                 </div>       
         </div>
 
-        <!-- <div class="container">
+        <div class="info1">
             
-    
+                <p>Descansos</p>
+            Durante o tempo de descanso, é interessante não
+            fazer nada que requeira muito esforço mental.
             
-    
+        </div>
+
+        <div class="info2">
+          
+                <p>Interrupções</p>
+                É recomendado escrever uma apóstrofe toda vez que acontecer uma interrupção.
+                <br />
+                As interrupções podem ser internas ou externas. As internas são aquelas cometidas por 
+                você mesmo, como pensar em algo, sentir fome, precisar ir ao banheiro etc. As externas 
+                são quando outras pessoas ou acontecimentos atrapalham sua atividade, como alguém te chamar, 
+                um barulho de celular, uma mensagem chegando, entre outras.
+
+                Caso siga o conselho de anotar todo tipo de interrupção, você poderá medir quantas e em quais 
+                situações realmente é necessário parar uma atividade. Você também poderá descobrir o que tira 
+                sua concentração e foco.
+            
         </div>
         
-        <div class="container2">
-            <div class="dicas">
-                <p>Dicas <img src="../Assets/lamp.png"></p>
-                <div>
-                    <ul>
-                        <li>Desligue o celular</li>
-                        <li>Feche o youtube</li>
-                        <li>Esteja em um lugar silencioso</li>
-                        <li>Organize-se</li>
-                        <li>Abra somente o que precisa</li>
-                    </ul>
-                </div>
-            </div>
-    
-            <div class="info1">
-                <div>
-                    <p>Descansos</p>
-                Durante o tempo de descanso, é interessante não
-                fazer nada que requeira muito esforço mental.
-                </div>
-                <img src="../Assets/descanso.jpg">
-            </div>
-    
-           
-    
-            <div class="info2">
-                <img src="../Assets/interrupcao.jpeg">
-                <div>
-                    <p>Interrupções</p>
-                    É recomendado escrever uma apóstrofe toda vez que acontecer uma interrupção.
-    
-                    As interrupções podem ser internas ou externas. As internas são aquelas cometidas por 
-                    você mesmo, como pensar em algo, sentir fome, precisar ir ao banheiro etc. As externas 
-                    são quando outras pessoas ou acontecimentos atrapalham sua atividade, como alguém te chamar, 
-                    um barulho de celular, uma mensagem chegando, entre outras.
-    
-                    Caso siga o conselho de anotar todo tipo de interrupção, você poderá medir quantas e em quais 
-                    situações realmente é necessário parar uma atividade. Você também poderá descobrir o que tira 
-                    sua concentração e foco.
-                </div>
-            </div>
+    </div>
 
-        </div> -->
-        
+    <div class="main3">
+        <div class="numeros">
+            <div class="um"><text>Mapa Mental <br />como fazer? </text><img src="../Assets/right-arrow.png"/></div>
+            <div class="dois"><text>Um mapa mental é um diagrama utilizado para organizar informações de maneira visual. 
+            O mapa mental pode ser utilizado para estudos, para organização de tarefas ou estruturação de um planejamento.
+            <br />
+            <br />
+            No centro de um mapa mental coloca-se o objetivo ou a ideia central, de onde partem outras informações a 
+            ela relacionadas. É possível fazer diversas ramificações a partir de cada palavra-chave.</text></div>
+        </div>
+        <div class="mapa">
+            <img src="../Assets/mapa-mental-exemplo (1).png"/>
+        </div>
     </div>
 
     <div class="menu">
@@ -101,7 +98,8 @@
             <text id="sair">Sair</text>
             <div>
                 <img src="../Assets/theme.png" id="cores2" onclick="themes()"/> <!--https://codepen.io/THEORLAN2/pen/MyzWNw-->
-                <img class="fechar" src="../Assets/DomateX.png" onclick="hidemenu()"/>
+                <!-- <img class="fechar" src="../Assets/DomateX.png" onclick="hidemenu()"/> -->
+                
             </div>
         </div>
         
@@ -212,7 +210,8 @@
     <div class="cover"></div>
 
     <div class="footer">
-        <text>Copyright © 2022-Todos os direitos reservados. Domate®</text>
+        <img src="../Assets/Domate.png"/><text>Copyright © 2022 - Domate Timer Online® </text>
+        <text> Terms | Policy</text>
     </div>
 </body>
 <script src="script.js" src="https://kit.fontawesome.com/a076d05399.js"></script>

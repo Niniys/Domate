@@ -1,6 +1,8 @@
 var body = document.querySelector(".body");
 var header = document.querySelector(".header");
-var main = document.querySelector(".main");
+var main1 = document.querySelector(".main1");
+var main2 = document.querySelector(".main2");
+var main3 = document.querySelector(".main3");
 var footer = document.querySelector(".footer");
 var menu = document.querySelector(".menu");
 const logado = document.querySelector(".logado");
@@ -170,7 +172,15 @@ function themes() {
         temas.style.display = "none";
     })
 
-    main.addEventListener("click", () => {
+    main1.addEventListener("click", () => {
+        temas.style.display = "none";
+    })
+
+    main2.addEventListener("click", () => {
+        temas.style.display = "none";
+    })
+
+    main3.addEventListener("click", () => {
         temas.style.display = "none";
     })
 

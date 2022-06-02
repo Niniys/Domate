@@ -106,11 +106,84 @@ body {
     cursor: pointer;
 }
 
-.main {
+.main1 {
+  display: flex;
+  background-color: var(--cor1);
+  height: 60%;
+  width: 100%;
+  overflow: auto;
+  justify-content: center;
+}
+
+.main2 {
     background-image: linear-gradient(to bottom, var(--cor1), var(--cor4));
     height: 100%;
     width: 100%;
     overflow: auto;
+}
+
+.main3 {
+  display: flex;
+  flex-direction: column;
+  border-top: 6px solid black;
+  background-color: var(--cor4);
+  height: 90%;
+  width: 100%;
+  overflow: auto;
+}
+
+.numeros {
+  display: flex;
+  flex-direction: row;
+  height: 400px;
+  width: 100%;
+}
+
+.mapa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.mapa img {
+  width: 60%;
+  height: 450px;
+}
+
+.um{
+  display: flex;
+  margin-left: 300px;
+  margin-top: 130px;
+  background-color: var(--cor3);
+  height: 90px;
+  width: 280px;
+  align-items: center;
+}
+
+.um img {
+  display: flex;
+  margin-left: auto;
+  height: 50px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.um text {
+  display: flex;
+  margin-left: 20px;
+}
+
+.dois {
+  display: flex;
+  margin-left: 400px;
+  margin-top: 50px;
+  background-color: var(--cor3);
+  height: 250px;
+  width: 560px;
+  align-items: center;
+  text-align: left;
+  font-size: 20px;
 }
 
 @media(min-width: 1025px) {
@@ -146,30 +219,31 @@ body {
 }
 
 .infozao {
-    margin-top: 3%;
+    margin-top: -17%;
     display: flex;
-    height: 300px;
-    width: 700px;
+    margin-left: auto;
+    margin-right: 200px;
+    height: 250px;
+    width: 400px;
     background-color: var(--cor4);
-    border: solid black;
-    border-width: 4px;
+    border: 8px solid;
+    border-color:  var(--cor3);
     font-size: 20px;
     flex-direction: row;
-    margin-left: 3%;
+    align-items: center;
 }
 
 .infozao div {
     text-align: center;
     flex-direction: column;
-    border-left: solid black;
-    border-width: 4px;
     width: 100%;
 }
 
-.infozao img {
-    height: 100%;
-    width: 50%;
-    border-width: 4px;
+#tutoriel {
+    
+    height: 45%;
+    width: 40%;
+    margin-left: 150px;
 }
 
 .dicas {
@@ -197,28 +271,42 @@ body {
 
 .tomate {
     display: flex;
-    flex-direction: column;
-    border-color: var(--cor2);
-    border-width: 4px;
-    margin-top: 14%;
-    margin-left: 13%;
+    align-items: center;
+    flex-direction: row;
+    border: 4px solid;
+    border-color:var(--cor3);
+    margin-top: 12%;
     background-color: var(--cor4);
-    width: 75%;
+    width: 70%;
     height: 250px;
     font-size: 25px;
 }
 
+.tomate div {
+  text-align: center;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 40px;
+}
+
+.tomate img {
+  height: 100%;
+  width: 50%;
+}
+
 .info2 {
-    margin-left: 15%;
-    margin-bottom: 150px;
-    height: 600px;
-    width: 400px;
+  margin-top: -10%;
+    margin-left: 55%;
+    height: 300px;
+    width: 550px;
     background-color: var(--cor4);
-    border: solid black;
-    border-width: 4px;
+    border: solid 4px;
+    border-color: var(--cor3);
     align-self: flex-end;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     font-size: 17px;
 }
 
@@ -226,27 +314,21 @@ body {
   height: 300px;
 }
 
-.info2 img {
-    height: 250px;
-    width: 400px;
-    border-bottom: solid black;
-    border-width: 4px;
-}
-
 .info1 {
     display: flex;
-    margin-left: 100px;
-    margin-bottom: 100px;
-    height: 200px;
-    width: 600px;
+    margin-top: 200px;
+    margin-left: 300px;
+    height: 170px;
+    width: 400px;
     background-color: var(--cor4);
-    border: solid black;
-    border-width: 4px;
+    border: solid 4px;
+    border-color: var(--cor3);
     align-self: flex-end;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     font-size: 20px;
-    flex-direction: row;
+    flex-direction: column;
+    font-family: 'Segoe UI';
 }
 
 .info1 img {
@@ -254,19 +336,11 @@ body {
     width: 300px;
 }
 
-.info1 div {
-    text-align: center;
-    flex-direction: column;
-    border-right: solid black;
-    border-width: 4px;
-    width: 300px;
-    font-family: 'Segoe UI';
-}
-
 }
 
 .footer {
     display: flex;
+    flex-direction: row;
     border-top: solid black;
     border-width: 4px;
     background-image: linear-gradient(to right, var(--cor2), var(--cor3));
@@ -276,6 +350,11 @@ body {
     justify-content: center;
     align-items: flex-end;
     font-family: 'Segoe UI';
+}
+
+.footer img {
+  width: 30px;
+  height: 30px;
 }
 
 .menu {
@@ -288,7 +367,11 @@ body {
     z-index: 1;
     border-left: solid black;
     border-width: 4px;
-    transition: all .9s;
+    transition: all .7s;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
     overflow-y: auto;
     overflow-x: none;
     font-family: 'Segoe UI';
@@ -300,6 +383,50 @@ body {
 
 .menu--open {
     right: 0;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 2;
+  right: 1%;
+  /*left: 20px; */
+  top: 25px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(-45deg, #9b2d76 0%, #ff2982 100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn span,
+.menu-btn:before,
+.menu-btn:after{
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 30%;
+    width: 40%;
+    border-bottom: 2px solid #fff;
+    transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.menu-btn:before{
+  transform: translateY(-8px);
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  -o-transform: translateY(-8px);
+}
+.menu-btn:after{
+  transform: translateY(8px);
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  -ms-transform: translateY(8px);
+  -o-transform: translateY(8px);
 }
 
 .deslogado text {
@@ -935,7 +1062,7 @@ body::-webkit-scrollbar {
   top: -9999px;
 }
 
-.main {
+.main2 {
   background-image: linear-gradient(to bottom, var(--cor1), var(--cor4));
   height: 100%;
   width: 100%;
@@ -1481,7 +1608,7 @@ border-width: 4px;
     cursor: pointer;
 }
 
-  .main {
+  .main2 {
     background-image: linear-gradient(to bottom, var(--cor1), var(--cor4));
     height: 100%;
     width: 100%;
@@ -1630,7 +1757,7 @@ border-width: 4px;
 /*1930px x 1005px senai*/
 
 @media(min-width: 501px) and (max-width: 1024px) {
-  .main {
+  .main2 {
     background-image: linear-gradient(to bottom, var(--cor1), var(--cor4));
     height: 100%;
     width: 100%;
