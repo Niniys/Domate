@@ -97,7 +97,7 @@
 }
 .wrapper ul{
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 32%;
   height: 100%;
   transform: translate(-50%, -30%);
@@ -111,6 +111,10 @@
 .wrapper ul li{
   height: 10%;
   margin: 65px 0;
+}
+
+a2{
+  color: #00000000;
 }
 
 .wrapper ul li a{

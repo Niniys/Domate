@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
    const progressBar = new ProgressBar.Circle("#pomodoro-timer", {
      strokeWidth: 2,
      text: {
-       value: "25:00"
+       value: "00:00"
      },
      trailColor: "#f4f4f4",
    });
@@ -206,7 +206,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // calculate the completion rate of this session
       const sessionDuration =
         type === "Work" ? workSessionDuration : breakSessionDuration;
-      return (timeSpentInCurrentSession / sessionDuration) * 10;
+      return (timeSpentInCurrentSession / sessionDuration) * 1;
     };
   
   });

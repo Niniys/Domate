@@ -23,9 +23,7 @@ botao.addEventListener("click", () => {
                 alert("Erro ao adicionar uma anotação")
             } else {
 
-                const host = localStorage.setItem("user", JSON.stringify(data));
-
-
+                let dado = data.id;
                 let corpo = document.querySelector(".corpo")
                 let card = document.createElement("div")
                 let comp = document.getElementById("compromisso")
@@ -43,7 +41,7 @@ botao.addEventListener("click", () => {
                     let data = JSON.stringify({
                         anot: anote.value
                     })
-                    fetch("http://10.87.207.4:3000/nota/" + host.id, {
+                    fetch("http://10.87.207.4:3000/nota/" + dado, {
                             method: "DELETE",
                             headers: {
                                 "Content-Type": "application/json"

@@ -2,9 +2,13 @@ body{
     background-color: #FFCDDD;
     width: 80%;
     height: 0%;
-    padding: 58.7px;
+    padding: 200px;
     margin: 3.7%;
     border: 0px;
+}
+
+h1{
+  color: white;
 }
 
 .cong{
@@ -20,69 +24,57 @@ body{
     font-size: 50px;
   }
 
-  .letr{
-    position: fixed;
-    top: 14%;
-    /*left: -100%;
-    */right: 72%;
-    height: 15%;
-    width: 18%;
-    background: #EA99D5;
-    border: 4.5px solid #8946A6;
-    border-radius: 5%  ;
-    -webkit-border-radius: 5%  ;
-    -moz-border-radius: 5%  ;
-    -ms-border-radius: 5%  ;
-    -o-border-radius: 5%  ;
-}
+  h3a{
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    top: 20%;
+    right: -19.2%;
+  }
 
-button{
-  border: none;
-  background-color: white;
-}
-
-.qua1{
-  top: 16%;
-  right: 87%;
-  position: fixed;
-  border: none;
-    background: none;
-    background-image: url(../assets/zoom_in.png);
-    background-size: cover;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-}
-
-.qua2{
-  top: 20%;
-  right: 73%;
-  position: fixed;
-}
-
-.qua3{
-  top: 23%;
-  right: 87%;
-  position: fixed;
-  border: none;
-    background: none;
-    background-image: url(../assets/zoom_out.png);
-    background-size: cover;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-}
+  h3b{
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    top: 35%;
+    right: -10.1%;
+  }
 
   .conda{
+    font-family: 'Oswald', sans-serif;
     position: fixed;
-    top: 60%;
+    top: 35%;
     /*left: -100%;
-    */right: 60%;
-    height: 20%;
+    */right: 35%;
+    height: 30%;
     width: 30%;
     background: #EA99D5;
     border: 5px solid #8946A6;
     border-radius: 5%  ;
     list-style: none;
     text-decoration: none;
+  }
+
+  .peso{
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    top: 60%;
+    right: -45%;
+  }
+
+  .exclu{
+    position: relative;
+    top: 75%;
+    right: -10px;
+    color: #C70039;
+  }
+
+  .lina{
+    position: relative;
+    border: 0.7px solid #ffffff;
+    top: 55%;
+    right: -25px;
+    width: 90%;
+  }
+
+  a2{
+    color: #00000000;
   }

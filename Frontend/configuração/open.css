@@ -104,7 +104,7 @@
   .wrapper ul{
     position: absolute;
     top: 50%;
-    left: 42%;
+    left: 32%;
     height: 100%;
     transform: translate(-50%, -30%);
     list-style: none;
