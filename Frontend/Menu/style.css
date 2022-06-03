@@ -75,6 +75,7 @@ body {
     background-image: linear-gradient(to right, var(--cor2), var(--cor3));
     height: 15%;
     width: 100%;
+    /* z-index: 1; */
     border-bottom: solid black;
     border-width: 4px;
     position: fixed;
@@ -357,17 +358,17 @@ body {
   height: 30px;
 }
 
-.menu {
+.meni {
     position: fixed;
     top: 0;
-    right: -505px;
+    right: -100%;
     background-image: linear-gradient(to bottom, var(--cor2), var(--cor3));
     height: 100%;
     width: 500px;
-    z-index: 1;
+    /* z-index: 2; */
     border-left: solid black;
     border-width: 4px;
-    transition: all .7s;
+    transition: all .7s ease-in-out;
     -webkit-transition: all 0.7s ease-in-out;
     -moz-transition: all 0.7s ease-in-out;
     -ms-transition: all 0.7s ease-in-out;
@@ -377,16 +378,22 @@ body {
     font-family: 'Segoe UI';
 }
 
-.menu::-webkit-scrollbar {
-  display: none;
-}
+/* #active:checked ~ .meni{ */
+  /*left: 0;*/
+  /* right:0;
+} */
 
-.menu--open {
+/* .menu::-webkit-scrollbar {
+  display: none;
+} */
+
+/* .menu--open {
     right: 0;
-}
+} */
 
 .menu-btn {
   position: absolute;
+  display: block;
   z-index: 2;
   right: 1%;
   /*left: 20px; */
@@ -399,7 +406,7 @@ body {
   font-size: 20px;
   cursor: pointer;
   color: #fff;
-  background: linear-gradient(-45deg, #9b2d76 0%, #ff2982 100%);
+  background: linear-gradient(-45deg, var(--cor1) 0%, var(--cor2) 100%);
   transition: all 0.3s ease-in-out;
 }
 
@@ -427,6 +434,35 @@ body {
   -moz-transform: translateY(8px);
   -ms-transform: translateY(8px);
   -o-transform: translateY(8px);
+}
+
+.close {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: background .6s;
+}
+
+/* closing animation */
+#active:checked + .menu-btn span {
+  transform: scaleX(0);
+}
+#active:checked + .menu-btn:before {
+  transform: rotate(45deg);
+  border-color: #fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+#active:checked + .menu-btn:after {
+  transform: rotate(-45deg);
+  border-color: #fff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
 }
 
 .deslogado text {
@@ -614,7 +650,7 @@ body {
  #toggle {
   margin: 0;
   position: absolute;
-  z-index: 1;
+  /* z-index: 1; */
   opacity: 0;
   cursor: pointer;
   height: 55px;
@@ -631,7 +667,7 @@ body {
 #toggle2 {
   position: absolute;
   margin: 0;
-  z-index: 1;
+  /* z-index: 1; */
   opacity: 0;
   cursor: pointer;
   height: 55px;
@@ -666,7 +702,7 @@ body {
   border: none;
   margin-left: 235px;
   margin-top: -56px;
-  z-index: 3;
+  /* z-index: 3; */
 }
 
 #aa {
@@ -678,7 +714,7 @@ body {
   border: none;
   margin-left: 235px;
   margin-top: -56px;
-  z-index: 3;
+  /* z-index: 3; */
 }
 
 .deslogado input {
@@ -860,7 +896,7 @@ body::-webkit-scrollbar {
 
 .logado {
     display: none;
-    height: 100%;
+    height: 20%;
     margin-top: 10px;
     flex-direction: column;
     align-items: center;
@@ -1042,7 +1078,7 @@ body::-webkit-scrollbar {
     background-image: linear-gradient(to bottom, var(--cor2), var(--cor3));
     height: 100%;
     width: 100%;
-    z-index: 1;
+    /* z-index: 1; */
     border-left: solid black;
     border-width: 4px;
     transition: all .9s;
@@ -1120,7 +1156,7 @@ width: 267px;
 height: 200px;
 align-items: center;
 overflow: auto;
-z-index: 1;
+/* z-index: 1; */
 }
 
 .infozao {
@@ -1823,7 +1859,7 @@ border-width: 4px;
   height: 200px;
   align-items: center;
   overflow: auto;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
   .infozao {

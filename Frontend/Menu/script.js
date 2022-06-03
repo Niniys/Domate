@@ -4,7 +4,7 @@ var main1 = document.querySelector(".main1");
 var main2 = document.querySelector(".main2");
 var main3 = document.querySelector(".main3");
 var footer = document.querySelector(".footer");
-var menu = document.querySelector(".menu");
+var menu = document.querySelector(".meni");
 const logado = document.querySelector(".logado");
 const deslogado = document.querySelector(".deslogado");
 var temas = document.querySelector(".temas");
@@ -640,3 +640,18 @@ $btnDiminuir.on('click', function() {
     $elemento.eq(i).css('font-size', fonts[i]);
   }
 });
+
+function meni() {
+    let checkbox = document.getElementById("active");
+    let botaomenu = document.querySelector(".menu-btn")
+
+    if(checkbox.checked == true) {
+        menu.style.right = "0";
+        // botaomenu.style.zIndex = 3;
+        // menu.syle.zIndex = 2;
+        body.style.overflow = "hidden";
+    } else {
+        menu.style.right = "-100%";
+        body.style.overflow = "auto";
+    }
+}
