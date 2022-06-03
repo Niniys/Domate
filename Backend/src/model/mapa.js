@@ -7,6 +7,10 @@ class mapa extends Model{
                 nome_mapa: {
                     type: DataTypes.STRING,
                     allowNull: false
+                },
+                imagem: {
+                    type: DataTypes.BLOB('medium'),
+                    allowNull: true
                 }
             },
             {
