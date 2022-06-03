@@ -4,21 +4,11 @@ var main1 = document.querySelector(".main1");
 var main2 = document.querySelector(".main2");
 var main3 = document.querySelector(".main3");
 var footer = document.querySelector(".footer");
-var menu = document.querySelector(".meni");
 const logado = document.querySelector(".logado");
 const deslogado = document.querySelector(".deslogado");
 var temas = document.querySelector(".temas");
 var sair = document.getElementById("sair");
 
-//login
-var nome_usuario = document.getElementById("usuario");
-var senha = document.getElementById("senha");
-var entrar = document.getElementById("entrar");
-
-//cadastrar
-var user = document.getElementById("user");
-var cadsenha = document.getElementById("cadsenha");
-var cadsenha2 = document.getElementById("cadsenha2");
 
 var temas = ["Padrao", "Lilas", "Inverno", "RosaChoque", "Bege", "Roxo", "Limonada", "CeuLimpo"];
 var indexTema = -1;
@@ -30,11 +20,11 @@ function loadtema() {
     document.body.classList.add(temas[temaSelecionado]);
     if (userdata != null) {
         deslogado.style.display = "none";
-        logado.style.display = "flex";
+        
         sair.style.display = "flex";
     } else {
         deslogado.style.display = "flex";
-        logado.style.display = "none";
+        
         sair.style.display = "none";
     }
 
@@ -50,118 +40,6 @@ function setTema() {
         indexTema = Integer.parseInt(temaSelecionado);
     }
 }
-
-function showmenu() {
-    let menu = document.querySelector(".menu");
-    let cover = document.querySelector(".cover");
-    let fechar = document.querySelector(".fechar");
-
-
-    body.style.overflow = "hidden";
-
-    // cover.style.display = "block";
-    // body.createElement(cover);
-    menu.classList.toggle("menu--open");
-    // setTimeout(() => {
-    //     cover.style.display = "block";
-    // }, 1000);
-
-
-    // if(cover.classList.toggle("cover--close") == true) {
-    //     setTimeout(() => {
-    //         // cover.style.display = "none";
-    //         // remove("cover--close");
-    //         cover.classList.toggle("cover--close")
-    //         cover.classList.toggle("cover--open");
-    //         cover.style.display = "block";
-    //     }, 500);
-    // } else if(cover.classList.toggle("cover--close") == false) {
-    cover.classList.toggle("cover--open");
-    // setTimeout(() => {
-    // cover.style.display = "none";
-    // remove("cover--close");
-
-    cover.style.display = "block";
-    // }, 500);
-    // }
-
-
-    // if(cover.style.display = "none") {
-    //     cover.classList.toggle("cover--open");
-    //     setTimeout(() => {
-    //         // cover.style.display = "none";
-    //         cover.style.display = "block";
-    //         }, 500);
-
-    // } else {
-    //     cover.classList.toggle("cover--close");
-    //     setTimeout(() => {
-    //     cover.style.display = "none";
-    //     }, 500);
-    // }
-    // fechar.addEventListener("click", () => {
-    //     cover.style.display = "none";
-    // })
-    // cover.classList.toggle("cover--close");
-
-    // setTimeout(() => {
-    //     cover.style.display = "none";
-    // }, 1000);
-
-}
-
-function hidemenu() {
-    let menu = document.querySelector(".menu");
-    const cover = document.querySelector(".cover");
-    let body = document.querySelector(".body")
-
-
-    body.style.overflow = "auto";
-    // cover.classList.toggle("cover--open");
-    // cover.remove();
-    // cover.classList.toggle("cover--none");
-    // body.classList.remove("cover");
-    menu.classList.toggle("menu--open");
-
-    // if(cover.classList.toggle("cover--open") == true) {
-
-    cover.classList.toggle("cover--close");
-
-    setTimeout(function () {
-        cover.remove("cover--open");
-        // cover.classList.toggle("cover--open");
-
-        // cover.style.display = "block";
-        cover.style.display = "none";
-    }, 500);
-    // } else if(cover.classList.toggle("cover--open") == false && cover.style.display == "block") {
-    //     cover.classList.toggle("cover--close");    
-    // setTimeout(() => {
-    //         // remove("cover--open");
-
-    //                 // cover.style.display = "block";
-    //         cover.style.display = "none";
-    //     }, 1000);
-    // }
-
-
-
-    // if(cover.style.display = "block") {
-    //     cover.classList.toggle("cover--close");
-    //     setTimeout(() => {
-    //         // cover.style.display = "block";
-    //         cover.style.display = "none";
-    //     }, 500);
-
-    // } else {
-    //     setTimeout(() => {
-    //     cover.style.display = "block";
-    //     }, 500);
-    // }
-
-
-}
-
 
 function themes() {
     let temas = document.querySelector(".temas");
@@ -188,16 +66,6 @@ function themes() {
         temas.style.display = "none";
     })
 
-    // menu.addEventListener("click", () => {
-    //     temas.style.display = "none";
-    // })
-
-
-
-    // logado.addEventListener("click", () => {
-    //     temas.style.display = "none";
-    // })
-
     deslogado.addEventListener("click", () => {
         temas.style.display = "none";
     })
@@ -211,9 +79,6 @@ function themes() {
 // Tons de Roxo: https://colorhunt.co/palette/9a068079018c4c0070160040
 // Limonada: https://colorhunt.co/palette/ffef82efd345babd4282954b
 // Céu Limpo: https://colorhunt.co/palette/e8f9fd79dae80aa1dd2155cd
-
-
-
 
 const enablePadrao = () => {
     document.body.classList.add("Padrao");
@@ -428,194 +293,6 @@ toggleCeuLimpo.addEventListener("click", function () {
     localStorage.setItem("tema", temas[7]);
 })
 
-function descer() {
-    let cadastro = document.querySelector(".cadastro");
-    let login = document.querySelector(".login");
-    let botao = document.querySelector(".botao");
-    let toggle = document.getElementById("toggle");
-    let toggle2 = document.getElementById("toggle2");
-    let img = document.getElementById("setas");
-    let deslogado = document.querySelector(".deslogado");
-
-
-    if(toggle.checked != true && toggle2.checked == true) {
-        img.src = "../assets/arrow-down-sign-to-navigate.png";
-        deslogado.style.height = "600px";
-        login.style.height = "40%";
-        cadastro.style.marginTop = "480px";
-        botao.style.marginTop = "-20px";
-        cadastro.style.height = "15%";
-    } else if(toggle.checked == true && toggle2.checked == true) {
-        img.src = "../assets/right-arrow.png";
-        setTimeout(() => {
-            deslogado.style.height = "300px";
-            botao.style.marginTop = "20px";
-            cadastro.style.marginTop = "220px";
-        }, 300);
-    } else if (toggle.checked == true && toggle2.checked != true){
-        img.src = "../assets/right-arrow.png";
-        deslogado.style.height = "600px";
-        cadastro.style.height = "55%";
-        setTimeout(() => {
-            botao.style.marginTop = "40px";
-            cadastro.style.marginTop = "220px";
-        }, 300);
-    } 
-    else if(toggle.checked != true && toggle2.checked != true) {
-        img.src = "../assets/arrow-down-sign-to-navigate.png";
-        deslogado.style.height = "600px";
-        login.style.height = "40%";
-        botao.style.marginTop = "300px";
-        cadastro.style.marginTop = "480px";
-        cadastro.style.height = "55%";
-    }
-}
-
-function descer2() {
-    let botao = document.querySelector(".botao");
-    let toggle = document.getElementById("toggle");
-    let toggle2 = document.getElementById("toggle2");
-    let img2 = document.getElementById("setas2");
-    let cadastro = document.querySelector(".cadastro");
-    let deslogado = document.querySelector(".deslogado");
-
-    if(toggle2.checked != true && toggle.checked == true) {
-        img2.src = "../assets/arrow-down-sign-to-navigate.png";
-        botao.style.marginTop = "40px";
-        cadastro.style.height = "55%";
-        deslogado.style.height = "600px";
-    } else if(toggle2.checked == true && toggle.checked == true){
-        img2.src = "../assets/right-arrow.png";
-        
-        setTimeout(() => {
-            cadastro.style.height = "15%";
-            deslogado.style.height = "300px";
-            botao.style.marginTop = "20px";
-        }, 300); 
-    } else if(toggle2.checked == true && toggle.checked != true) {
-        img2.src = "../assets/right-arrow.png";
-        deslogado.style.height = "600px";
-        setTimeout(() => {
-            botao.style.marginTop = "-50px";
-        }, 300); 
-    } 
-    else if(toggle2.checked != true && toggle.checked != true) {
-        deslogado.style.height = "600px";
-        img2.src = "../assets/arrow-down-sign-to-navigate.png";
-        botao.style.marginTop = "300px";
-        cadastro.style.height = "55%";
-    }
-}
-
-function mostrarsenha() {
-    let olho = document.getElementById("aaaa");
-    let cadsenha = document.getElementById("cadsenha");
-
-    if(cadsenha.type == "password") {
-        olho.src = "../assets/eye.png";
-        cadsenha.type = "text";
-    } else {
-        olho.src = "../assets/hidden.png";
-        cadsenha.type = "password";
-    }
-}
-
-function mostrarsenha2() {
-    let zoio = document.getElementById("aaa");
-    let cadsenha2 = document.getElementById("cadsenha2");
-
-    if(cadsenha2.type == "password") {
-        zoio.src = "../assets/eye.png";
-        cadsenha2.type = "text";
-    } else {
-        zoio.src = "../assets/hidden.png";
-        cadsenha2.type = "password";
-    }
-}
-
-function mostrarsenha3() {
-    let oio = document.getElementById("aa");
-    let senha = document.getElementById("senha");
-
-    if(senha.type == "password") {
-        oio.src = "../assets/eye.png";
-        senha.type = "text";
-    } else {
-        oio.src = "../assets/hidden.png";
-        senha.type = "password";
-    }
-}
-
-function connection() {
-    let data = JSON.stringify({
-        nome_usuario: nome_usuario.value,
-        senha: senha.value,
-    });
-
-    var url = "http://10.87.207.4:3000/login";
-
-    fetch(url, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        "body": data
-    })
-        .then(res => { return res.json() })
-        .then(data => {
-            if (data.length > 0) {
-                localStorage.setItem("userdata", JSON.stringify(data));
-                window.location.reload();
-            } else {
-                alert("Usuario ou senha incorretos")
-            }
-        });
-    console.log(data);
-}
-
-document.addEventListener("keypress", function(e) {
-    if (e.key === "Enter") {
-        entrar.click();
-    }
-})
-
-function validaCadSenha() {
-    if (cadsenha.value === cadsenha2.value) {
-        return true;
-    }
-    return false;
-}
-
-function cadastrar() {
-    let data = {
-        nome_usuario: user.value,
-        senha: cadsenha.value,
-        senha: cadsenha2.value
-    };
-
-    var url = "http://10.87.207.4:3000/usuario";
-
-    if (validaCadSenha() && data != null) {
-        fetch(url, {
-            method: "POST",
-            headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(data),
-        })
-            .then(res => res.json()
-                .then(dados => {
-                    console.log(dados)
-                    localStorage.setItem("userdata", JSON.stringify(data));
-                    window.location.reload();
-                }))
-    } else {
-        alert("senhas devem ser iguais")
-    }
-}
-
-
 var $btnAumentar = $("#btnAumentar");
 var $btnDiminuir = $("#btnDiminuir");
 var $elemento = $("body #content").find("*"); //encontra todos os elementos dentro do #content
@@ -640,18 +317,3 @@ $btnDiminuir.on('click', function() {
     $elemento.eq(i).css('font-size', fonts[i]);
   }
 });
-
-function meni() {
-    let checkbox = document.getElementById("active");
-    let botaomenu = document.querySelector(".menu-btn")
-
-    if(checkbox.checked == true) {
-        menu.style.right = "0";
-        // botaomenu.style.zIndex = 3;
-        // menu.syle.zIndex = 2;
-        body.style.overflow = "hidden";
-    } else {
-        menu.style.right = "-100%";
-        body.style.overflow = "auto";
-    }
-}
