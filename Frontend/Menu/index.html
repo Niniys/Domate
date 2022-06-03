@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domate</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="open.css">
+    <link rel="stylesheet" href="map.css">
+    <link rel="stylesheet" href="barra.css">
     <link rel="shortcut icon" href="../Assets/DomateTimer.png">
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
@@ -15,11 +18,65 @@
         
         <div class="icons"> 
             <text>Dicas<img src="../Assets/lamp.png"></text>
-            <img src="../Assets/theme.png" id="cores" onmouseover="themes()"/> <!--https://codepen.io/THEORLAN2/pen/MyzWNw-->
-            <!-- <img src="../Assets/menu.png" id="abrir" onclick="showmenu()"/> -->
+            <img src="../Assets/theme.png" id="cores" onmouseover="themes()"/>
+            <div>
+                <img src="../Assets/theme.png" id="cores2" onclick="themes()"/> <!--https://codepen.io/THEORLAN2/pen/MyzWNw-->
+            </div>
             <input type="checkbox" id="active" onclick="meni()">
             <label for="active" class="menu-btn"><span></span></label>
             <label for="active" class="close"></label>
+            <div class="wrapper">
+                <div class="meni">
+                    <div class="menuheader">
+                        <text id="sair">Sair</text>
+                    </div>
+                
+                    <div class="deslogado">  
+                        <!-- https://codepen.io/stevenkuipers/pen/OrRroX -->
+                        
+                            <div class="login">
+                                <input id="toggle" onchange="descer()" type="checkbox" checked/>
+                                <text class="texto">Login<img id="setas" src="../assets/right-arrow.png"/></text>
+                                <ul>
+                                    <li><input placeholder="Nome de usúario" id="usuario"/></li>
+                                    <li>
+                                        <input placeholder="Senha" id="senha" type="password"/>
+                                        <img id="aa" src="../assets/hidden.png" onclick="mostrarsenha3()"/>
+                                    </li>
+                                    <li><button id="entrar" onclick="connection()">Entrar</button></li>
+                                </ul> 
+                            </div>
+                            
+                            <div class="cadastro">
+                                <input id="toggle2" onchange="descer2()" type="checkbox" checked/>
+                                <text>Cadastre-se<img id="setas2" src="../assets/right-arrow.png"/></text>
+                                <ul>
+                                    <li><input id="user" placeholder="Crie um nome de usúario"/></li>
+                                    <li>
+                                        <input id="cadsenha" placeholder="Senha" type="password"/>
+                                        <img id="aaaa" src="../assets/hidden.png" onclick="mostrarsenha()"/>
+                                    </li>
+                                    <li>
+                                        <input id="cadsenha2" placeholder="Confirme a senha" type="password"/>
+                                        <img id="aaa" src="../assets/hidden.png" onclick="mostrarsenha2()"/>
+                                    </li>
+                                    <li><button onclick="cadastrar()">Cadastrar</button></li>
+                                </ul>    
+                            </div>
+                    </div>
+                    
+                    <div class="botao">
+                        <button><a href="../configuração/index.html">Configurações</a></button>
+                        <button><a href="../timer/index.html">Timer</a></button>
+                        <button><a href="../mapa mental/index.html">Mapas Mentais</a></button>
+                        <div>
+                            <button type="button" id="btnAumentar">Aumentar fonte <img src="../Assets/zoom_in.png"/></button>
+                            <button type="button" id="btnDiminuir">Diminuir fonte <img src="../Assets/zoom_out.png"/></button>
+                        </div>
+                    </div>           
+                </div>
+            </div>
+
         </div>
 
     </header>
@@ -93,65 +150,6 @@
         </div>
     </div>
 
-    <div class="meni">
-        <div class="menuheader">
-            <text id="sair">Sair</text>
-            <div>
-                <img src="../Assets/theme.png" id="cores2" onclick="themes()"/> <!--https://codepen.io/THEORLAN2/pen/MyzWNw-->
-                <!-- <img class="fechar" src="../Assets/DomateX.png" onclick="hidemenu()"/> -->
-                
-            </div>
-        </div>
-        
-        <div class="deslogado">  
-            <!-- https://codepen.io/stevenkuipers/pen/OrRroX -->
-            
-                <div class="login">
-                    <input id="toggle" onchange="descer()" type="checkbox" checked/>
-                    <text class="texto">Login<img id="setas" src="../assets/right-arrow.png"/></text>
-                    <ul>
-                        <li><input placeholder="Nome de usúario" id="usuario"/></li>
-                        <li>
-                            <input placeholder="Senha" id="senha" type="password"/>
-                            <img id="aa" src="../assets/hidden.png" onclick="mostrarsenha3()"/>
-                        </li>
-                        <li><button id="entrar" onclick="connection()">Entrar</button></li>
-                    </ul> 
-                </div>
-                
-                <div class="cadastro">
-                    <input id="toggle2" onchange="descer2()" type="checkbox" checked/>
-                    <text>Cadastre-se<img id="setas2" src="../assets/right-arrow.png"/></text>
-                    <ul>
-                        <li><input id="user" placeholder="Crie um nome de usúario"/></li>
-                        <li>
-                            <input id="cadsenha" placeholder="Senha" type="password"/>
-                            <img id="aaaa" src="../assets/hidden.png" onclick="mostrarsenha()"/>
-                        </li>
-                        <li>
-                            <input id="cadsenha2" placeholder="Confirme a senha" type="password"/>
-                            <img id="aaa" src="../assets/hidden.png" onclick="mostrarsenha2()"/>
-                        </li>
-                        <li><button onclick="cadastrar()">Cadastrar</button></li>
-                    </ul>    
-                </div>
-        </div>
-        
-        <div class="botao">
-            <button><img src="../Assets/settings_FILL0_wght400_GRAD0_opsz48.png"/><a href="../configuração/index.html">Configurações</a></button>
-            <button><img src="../Assets/alarm_FILL0_wght400_GRAD0_opsz48.png"><a href="../timer/index.html">Timer</a></button>
-            <div>
-                <button type="button" id="btnAumentar">Aumentar fonte <img src="../Assets/zoom_in.png"/></button>
-                <button type="button" id="btnDiminuir">Diminuir fonte <img src="../Assets/zoom_out.png"/></button>
-            </div>
-        </div>
-
-        <div class="logado">
-            <button><img src="../Assets/network_intelligence_FILL0_wght400_GRAD0_opsz48.png"><a href="../mapa mental/index.html">Mapas Mentais</a></button>
-        </div>
-        
-    </div>
-
     <div class="temas">
         <ul>
             <li>
@@ -203,11 +201,7 @@
                 </div>
             </li>
         </ul>
-        
-        
     </div>
-
-    <div class="cover"></div>
 
     <div class="footer">
         <img src="../Assets/Domate.png"/><text>Copyright © 2022 - Domate Timer Online® </text>

@@ -1,0 +1,208 @@
+:root {
+    --cor1: rgb(81, 24, 69);
+    --cor2: rgb(144, 12, 63);
+    --cor3: rgb(199, 0, 57);
+    --cor4: rgb(255, 87, 51);
+}
+
+.Padrao {
+    --cor1: rgb(81, 24, 69);
+    --cor2: rgb(144, 12, 63);
+    --cor3: rgb(199, 0, 57);
+    --cor4: rgb(255, 87, 51);
+}
+
+.Roxo {
+    --cor1: rgb(22, 0, 64);
+    --cor2: rgb(76, 0, 112);
+    --cor3: rgb(121, 1, 140);
+    --cor4: rgb(154, 6, 128);
+}
+
+.Lilas {
+    --cor1: rgb(137, 70, 166);
+    --cor2: rgb(183, 98, 193);
+    --cor3: rgb(234, 153, 213);
+    --cor4: rgb(255, 205, 221);
+}
+
+.Inverno {
+    --cor1: rgb(28, 12, 91);
+    --cor2: rgb(61, 44, 141);
+    --cor3: rgb(145, 107, 191);
+    --cor4: rgb(201, 150, 204);
+}
+
+.RosaChoque {
+    --cor1: rgb(66, 5, 22);
+    --cor2: rgb(125, 25, 53);
+    --cor3: rgb(180, 43, 81);
+    --cor4: rgb(230, 62, 109);
+}
+
+.Bege {
+    --cor1: rgb(248, 236, 209);
+    --cor2: rgb(222, 182, 171);
+    --cor3: rgb(172, 125, 136);
+    --cor4: rgb(133, 88, 111);
+}
+
+.Limonada {
+    --cor1: rgb(255, 239, 130);
+    --cor2: rgb(239, 211, 69);
+    --cor3: rgb(186, 189, 66);
+    --cor4: rgb(130, 149, 75);
+}
+
+.CeuLimpo {
+    --cor1: rgb(232, 249, 253);
+    --cor2: rgb(121, 218, 232);
+    --cor3: rgb(10, 161, 221);
+    --cor4: rgb(33, 85, 205);
+}
+
+.header {
+    display: flex;
+    background-image: linear-gradient(to right, var(--cor2), var(--cor3));
+    height: 15%;
+    width: 100%;
+    /* z-index: 1; */
+    border-bottom: solid black;
+    border-width: 4px;
+    position: fixed;
+}
+
+.icons {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin-top: 0.9%;
+    height: 90px;
+    width: 100%;
+}
+
+#cores  {
+    margin-right: 40px;
+    height: 85px;
+    width: 90px;
+}
+
+#cores2 {
+  display: none;
+}
+
+#abrir  {
+    margin-right: 40px;
+    height: 85px;
+    width: 90px;
+    cursor: pointer;
+}
+
+.temas {
+    display: none;
+    position: fixed;
+    top: 130px;
+    right: 20px;
+    border-radius: 40px;
+    border: solid black;
+    border-width: 4px;
+    background-color: var(--cor2);
+    width: 350px;
+    height: 200px;
+    align-items: center;
+    overflow: auto
+}
+
+.temas::-webkit-scrollbar {
+    display: none;
+}
+
+.temas ul {
+    list-style: none;
+    align-self: center;
+}
+
+.tema1, .tema2, .tema3, .tema4, .tema5,.tema6, .tema7, .tema8 {
+    position: relative;
+    margin-top: 15px;
+    font-size: 20px;
+    height: 45px;
+    width: 280px;
+}
+
+.tema1, .tema2, .tema3, .tema4, .tema5,.tema6, .tema7, .tema8 text{
+    position: relative;
+    line-height: 20px;
+}
+
+.tema1 button{
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    border: solid black;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, rgb(81, 24, 69), rgb(144, 12, 63), rgb(199, 0, 57), rgb(255, 87, 51));
+}
+
+.tema2 button{
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    border: solid black;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, rgb(137, 70, 166), rgb(183, 98, 193), rgb(234, 153, 213), rgb(255, 205, 221));
+}
+
+.tema3 button{
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    border: solid black;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, rgb(28, 12, 91), rgb(61, 44, 141), rgb(145, 107, 191), rgb(201, 150, 204));
+}
+
+.tema4 button{
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    border: solid black;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, rgb(66, 5, 22), rgb(125, 25, 53), rgb(180, 43, 81), rgb(230, 62, 109));
+}
+
+.tema5 button{
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    border: solid black;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, rgb(248, 236, 209), rgb(222, 182, 171), rgb(172, 125, 136), rgb(133, 88, 111));
+}
+
+.tema6 button{
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    border: solid black;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, rgb(154, 6, 128), rgb(121, 1, 140), rgb(76, 0, 112), rgb(22, 0, 64)); 
+}
+
+.tema7 button{
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    border: solid black;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, rgb(255, 239, 130), rgb(239, 211, 69), rgb(186, 189, 66), rgb(130, 149, 75));
+}
+
+.tema8 button{
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    border: solid black;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, rgb(232, 249, 253), rgb(121, 218, 232), rgb(10, 161, 221), rgb(33, 85, 205));
+}

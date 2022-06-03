@@ -1,0 +1,354 @@
+.meni {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor3));
+    height: 100%;
+    width: 500px;
+    /* z-index: 2; */
+    border-left: solid black;
+    border-width: 4px;
+    transition: all .7s ease-in-out;
+    -webkit-transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -ms-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
+    overflow-y: auto;
+    overflow-x: none;
+    font-family: 'Segoe UI';
+}
+
+.menu-btn {
+  position: absolute;
+  display: block;
+  z-index: 2;
+  right: 1%;
+  /*left: 20px; */
+  top: 25px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(-45deg, var(--cor1) 0%, var(--cor2) 100%);
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-btn span,
+.menu-btn:before,
+.menu-btn:after{
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    left: 30%;
+    width: 40%;
+    border-bottom: 2px solid #fff;
+    transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.menu-btn:before{
+  transform: translateY(-8px);
+  -webkit-transform: translateY(-8px);
+  -moz-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
+  -o-transform: translateY(-8px);
+}
+.menu-btn:after{
+  transform: translateY(8px);
+  -webkit-transform: translateY(8px);
+  -moz-transform: translateY(8px);
+  -ms-transform: translateY(8px);
+  -o-transform: translateY(8px);
+}
+
+.close {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  transition: background .6s;
+}
+
+/* closing animation */
+#active:checked + .menu-btn span {
+  transform: scaleX(0);
+}
+#active:checked + .menu-btn:before {
+  transform: rotate(45deg);
+  border-color: #fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+#active:checked + .menu-btn:after {
+  transform: rotate(-45deg);
+  border-color: #fff;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
+.deslogado text {
+  position: relative;
+  display: flex;
+  flex: 1;
+  cursor: pointer;
+  border: solid black;
+  background-color: var(--cor1);
+  border-width: 4px;
+  width: 240px;
+  height: 47px;
+  box-shadow: 4px 4px 20px -2px rgba(0,0,0,.35);
+  transition: all .4s;
+}
+
+.deslogado {
+  font-size: 35px;
+    height: 300px;
+    width: 100%;
+    margin: auto;
+    margin-top: -30px;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+}
+
+.deslogado button {
+    width: 180px;
+    height: 50px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    border: solid black;
+    border-width: 4px;
+    background-color: var(--cor4);
+}
+
+.botao {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.botao a {
+  text-decoration: none;
+  color: black;
+  font-family: 'Segoe UI';
+}
+
+.botao button {
+  display: flex;
+  background-color: var(--cor4);
+  width: 258px;
+  height: 60px;
+  margin: 25px; 
+  border-radius: 40px;
+  border: solid black;
+  border-width: 4px;
+  flex-direction: row;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  cursor: pointer;
+  box-shadow: rgba(0,0,0,.35);
+}
+
+.botao div {
+  display: flex;
+  flex-direction: row;
+}
+
+#btnAumentar, #btnDiminuir {
+  display: flex;
+  background-color: var(--cor4);
+  width: 150px;
+  height: 60px;
+  margin: 25px; 
+  border-radius: 40px;
+  border: solid black;
+  border-width: 4px;
+  flex-direction: row;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: rgba(0,0,0,.35);
+}
+
+.cadastro {
+  display: inline-block;
+  margin-top: 220px;
+  position: absolute;
+  height: 15%;
+  justify-content: center;
+}
+
+.texto {
+  width: 250px;
+}
+
+.cadastro text {
+  width: 250px;
+}
+
+.login ul {
+  padding-left: 0;
+  padding-top: 0;
+  margin-top: 80px;
+  margin-left: -255px;
+  list-style: none;
+  overflow: hidden;
+  text-align: right;
+  margin-bottom: 200px;
+  text-align: center;
+  transition: all .4s ease-out;
+  height: 100%;
+}
+
+.login ul li {
+  height: 90px;
+}
+
+.login img {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  margin-left: 120px;
+}
+
+.cadastro img {
+  width: 30px;
+  height: 30px;
+  align-self: center;
+  margin-left: 30px;
+}
+
+.cadastro ul {
+  padding-left: 0;
+  padding-top: 0;
+  margin-top: 10px;
+  margin-left: -5px;
+  list-style: none;
+  overflow: hidden;
+  text-align: right;
+  margin-bottom: 200px;
+  text-align: center;
+  transition: all .4s ease-out;
+  height: 100%;
+}
+
+.cadastro ul li {
+  height: 90px;
+}
+
+.login {
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+  position: absolute;
+  height: 15%;
+}
+
+.login:hover text{
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 5px -1px rgba(0,0,0,.35);
+ }
+.login:hover:active text{
+  transform: translateY(10px);
+  box-shadow: 0px -1px 2px 0px rgba(0,0,0,.35);
+ }
+
+ .cadastro:hover text{
+  transform: translateY(-2px);
+  box-shadow: 2px 2px 5px -1px rgba(0,0,0,.35);
+ }
+.cadastro:hover:active text{
+  transform: translateY(10px);
+  box-shadow: 0px -1px 2px 0px rgba(0,0,0,.35);
+ }
+
+ #toggle {
+  margin: 0;
+  position: absolute;
+  /* z-index: 1; */
+  opacity: 0;
+  cursor: pointer;
+  height: 55px;
+  display: flex;
+  flex: 1;
+  width: 258px;
+}
+
+#toggle:checked ~ul {
+  height: 0%;
+  margin-bottom: 120px;
+}
+
+#toggle2 {
+  position: absolute;
+  margin: 0;
+  /* z-index: 1; */
+  opacity: 0;
+  cursor: pointer;
+  height: 55px;
+  display: flex;
+  flex: 1;
+  width: 258px;
+}
+
+#toggle2:checked ~ul {
+  height: 0%;
+  margin-bottom: 120px;
+}
+
+#aaaa {
+  display: flex;
+  position: relative;
+  height: 20px;
+  cursor: pointer;
+  width: 20px;
+  border: none;
+  margin-left: 235px;
+  margin-top: -56px;
+  z-index: 3;
+}
+
+#aaa {
+  display: flex;
+  position: relative;
+  height: 20px;
+  cursor: pointer;
+  width: 20px;
+  border: none;
+  margin-left: 235px;
+  margin-top: -56px;
+  /* z-index: 3; */
+}
+
+#aa {
+  display: flex;
+  position: relative;
+  height: 20px;
+  cursor: pointer;
+  width: 20px;
+  border: none;
+  margin-left: 235px;
+  margin-top: -56px;
+  /* z-index: 3; */
+}
+
+.deslogado input {
+    width: 250px;
+    height: 30px;
+    margin-bottom: 25px;
+    border: solid black;
+    border-width: 4px;
+    z-index: 2;
+}
