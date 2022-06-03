@@ -1,3 +1,11 @@
+ a{
+  font-size: 17pt;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+
 .menuheader div{
   display: flex;
   flex-direction: row;
