@@ -1,3 +1,67 @@
+
+:root {
+  --cor1: rgb(81, 24, 69);
+  --cor2: rgb(144, 12, 63);
+  --cor3: rgb(199, 0, 57);
+  --cor4: rgb(255, 87, 51);
+}
+
+.Padrao {
+  --cor1: rgb(81, 24, 69);
+  --cor2: rgb(144, 12, 63);
+  --cor3: rgb(199, 0, 57);
+  --cor4: rgb(255, 87, 51);
+}
+
+.Roxo {
+  --cor1: rgb(22, 0, 64);
+  --cor2: rgb(76, 0, 112);
+  --cor3: rgb(121, 1, 140);
+  --cor4: rgb(154, 6, 128);
+}
+
+.Lilas {
+  --cor1: rgb(137, 70, 166);
+  --cor2: rgb(183, 98, 193);
+  --cor3: rgb(234, 153, 213);
+  --cor4: rgb(255, 205, 221);
+}
+
+.Inverno {
+  --cor1: rgb(28, 12, 91);
+  --cor2: rgb(61, 44, 141);
+  --cor3: rgb(145, 107, 191);
+  --cor4: rgb(201, 150, 204);
+}
+
+.RosaChoque {
+  --cor1: rgb(66, 5, 22);
+  --cor2: rgb(125, 25, 53);
+  --cor3: rgb(180, 43, 81);
+  --cor4: rgb(230, 62, 109);
+}
+
+.Bege {
+  --cor1: rgb(248, 236, 209);
+  --cor2: rgb(222, 182, 171);
+  --cor3: rgb(172, 125, 136);
+  --cor4: rgb(133, 88, 111);
+}
+
+.Limonada {
+  --cor1: rgb(255, 239, 130);
+  --cor2: rgb(239, 211, 69);
+  --cor3: rgb(186, 189, 66);
+  --cor4: rgb(130, 149, 75);
+}
+
+.CeuLimpo {
+  --cor1: rgb(232, 249, 253);
+  --cor2: rgb(121, 218, 232);
+  --cor3: rgb(10, 161, 221);
+  --cor4: rgb(33, 85, 205);
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -5,29 +69,6 @@
   font-family: 'Lato', sans-serif;
   font-family: 'Oswald', sans-serif;
 }
-
-.menuheader div{
-  display: flex;
-  flex-direction: row;
-  width: 130px;
-  margin-left: 250px;
-}
-
-.menuheader {
-    display: flex;
-    margin-top: 15px;
-    margin-left: 20px;
-    flex-direction: row;
-    height: 100px;
-    width: 90%;
-    font-size: 50px;
-}
-
-#sair {
-  display: none;
-    cursor: pointer;
-}
-
 .wrapper{
   position: fixed;
   top: 0;
@@ -35,7 +76,7 @@
   */right: -100%;
   height: 100%;
   width: 27%;
-  background: linear-gradient(290deg, #EA99D5, #FFCDDD);
+  background: linear-gradient(290deg, var(--cor3), var(--cor4));
   transition: all 0.7s ease-in-out;
   -webkit-transition: all 0.7s ease-in-out;
   -moz-transition: all 0.7s ease-in-out;
@@ -60,7 +101,7 @@
   font-size: 20px;
   cursor: pointer;
   color: #fff;
-  background: linear-gradient(-45deg, #9b2d76 0%, #ff2982 100%);
+  background: linear-gradient(-45deg, var(--cor3) 0%, var(--cor2) 100%);
   transition: all 0.3s ease-in-out;
 }
 .menu-btn span,

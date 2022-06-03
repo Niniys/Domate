@@ -3,7 +3,7 @@ button2:hover {
 }
 
 .muc {
-    background: #B762C1;
+    background: var(--cor2);
     color: #fff;
     text-decoration: none;
     right: 100px;
@@ -20,7 +20,7 @@ button2:hover {
     margin-top: 20px;
     margin-left: 20px;
     cursor: pointer;
-    background-color: #FFCDDD;
+    background-color: var(--cor4);
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;

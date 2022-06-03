@@ -5,7 +5,7 @@ body{
     border: 0px;
     height: 100%;
     /*background: #FFCDDD;*/
-    background: linear-gradient(-200deg, #FFCDDD, #ebafdb);
+    background: linear-gradient(-200deg, var(--cor3), var(--cor4));
     /*background-image: url("../assets/DomateLogo.png"); */
     font-family: 'Segoe UI';
   }
@@ -29,20 +29,20 @@ body{
   }
 
 button:hover {
-    background-color: #B762C1;
+    background-color: var(--cor2);
     cursor: pointer;
 }
 
 .bg-green {
-    background-color: #8946A6;
+    background-color: var(--cor1);
 }
 
 .bg-yellow {
-    background-color: #8946A6;
+    background-color: var(--cor1);
 }
 
 .bg-red {
-    background-color: #8946A6;
+    background-color: var(--cor1);
 }
 
 .a{
