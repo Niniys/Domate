@@ -14,7 +14,7 @@
     height: 101%;
     width: 27%;
     background: #EA99D5;
-    border: 5px solid #8946A6;
+    border: 1px solid #8946A6;
     transition: all 0.7s ease-in-out;
     -webkit-transition: all 0.7s ease-in-out;
     -moz-transition: all 0.7s ease-in-out;
@@ -103,8 +103,8 @@
   }
   .wrapper ul{
     position: absolute;
-    top: 50%;
-    left: 32%;
+    top: 48%;
+    left: 27%;
     height: 100%;
     transform: translate(-50%, -30%);
     list-style: none;
