@@ -101,7 +101,7 @@
   font-size: 20px;
   cursor: pointer;
   color: #fff;
-  background: linear-gradient(-45deg, var(--cor3) 0%, var(--cor2) 100%);
+  background: linear-gradient(-45deg, var(--cor1) 0%, var(--cor2) 100%);
   transition: all 0.3s ease-in-out;
 }
 .menu-btn span,

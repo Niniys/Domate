@@ -1,5 +1,68 @@
+:root {
+  --cor1: rgb(81, 24, 69);
+  --cor2: rgb(144, 12, 63);
+  --cor3: rgb(199, 0, 57);
+  --cor4: rgb(255, 87, 51);
+}
+
+.Padrao {
+  --cor1: rgb(81, 24, 69);
+  --cor2: rgb(144, 12, 63);
+  --cor3: rgb(199, 0, 57);
+  --cor4: rgb(255, 87, 51);
+}
+
+.Roxo {
+  --cor1: rgb(22, 0, 64);
+  --cor2: rgb(76, 0, 112);
+  --cor3: rgb(121, 1, 140);
+  --cor4: rgb(154, 6, 128);
+}
+
+.Lilas {
+  --cor1: rgb(137, 70, 166);
+  --cor2: rgb(183, 98, 193);
+  --cor3: rgb(234, 153, 213);
+  --cor4: rgb(255, 205, 221);
+}
+
+.Inverno {
+  --cor1: rgb(28, 12, 91);
+  --cor2: rgb(61, 44, 141);
+  --cor3: rgb(145, 107, 191);
+  --cor4: rgb(201, 150, 204);
+}
+
+.RosaChoque {
+  --cor1: rgb(66, 5, 22);
+  --cor2: rgb(125, 25, 53);
+  --cor3: rgb(180, 43, 81);
+  --cor4: rgb(230, 62, 109);
+}
+
+.Bege {
+  --cor1: rgb(248, 236, 209);
+  --cor2: rgb(222, 182, 171);
+  --cor3: rgb(172, 125, 136);
+  --cor4: rgb(133, 88, 111);
+}
+
+.Limonada {
+  --cor1: rgb(255, 239, 130);
+  --cor2: rgb(239, 211, 69);
+  --cor3: rgb(186, 189, 66);
+  --cor4: rgb(130, 149, 75);
+}
+
+.CeuLimpo {
+  --cor1: rgb(232, 249, 253);
+  --cor2: rgb(121, 218, 232);
+  --cor3: rgb(10, 161, 221);
+  --cor4: rgb(33, 85, 205);
+}
+
 body{
-    background-color: #FFCDDD;
+    background-color: var(--cor4);
     width: 80%;
     height: 0%;
     padding: 200px;
@@ -12,7 +75,7 @@ h1{
 }
 
 .cong{
-    background-color: #FFCDDD;
+    background-color: var(--cor4);
 }
 
 .logo{
@@ -46,8 +109,8 @@ h1{
     */right: 35%;
     height: 30%;
     width: 30%;
-    background: #EA99D5;
-    border: 5px solid #8946A6;
+    background: var(--cor3);
+    border: 5px solid var(--cor1);
     border-radius: 5%  ;
     list-style: none;
     text-decoration: none;

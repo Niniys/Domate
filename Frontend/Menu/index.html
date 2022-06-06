@@ -10,21 +10,21 @@
     <link rel="stylesheet" href="map.css">
     <link rel="stylesheet" href="barra.css">
     <link rel="shortcut icon" href="../Assets/DomateTimer.png">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
 <body onload="loadtema()" class="body">
     <header class="header">
         
-        
         <div class="icons"> 
             <text>Dicas<img src="../Assets/lamp.png"></text>
             <img src="../Assets/theme.png" id="cores" onmouseover="themes()"/>
-            <div>
+            
                 <img src="../Assets/theme.png" id="cores2" onclick="themes()"/> <!--https://codepen.io/THEORLAN2/pen/MyzWNw-->
-            </div>
+            
             <input type="checkbox" id="active" onclick="meni()">
             <label for="active" class="menu-btn"><span></span></label>
             <label for="active" class="close"></label>
+        </div>
+        
             <div class="wrapper">
                 <div class="meni">
                     <div class="menuheader">
@@ -33,7 +33,7 @@
                 
                     <div class="deslogado">  
                         <!-- https://codepen.io/stevenkuipers/pen/OrRroX -->
-                        <a>Se cadastre para manter suas anotações e seu mapa mental salvos ;)</a>
+                        <a>Se cadastre para manter suas anotações e seus mapas mentais salvos ;)</a>
                             <div class="login">
                                 <input id="toggle" onchange="descer()" type="checkbox" checked/>
                                 <text class="texto">Login<img id="setas" src="../assets/right-arrow.png"/></text>
@@ -73,14 +73,16 @@
                             <button type="button" id="btnAumentar">Aumentar fonte <img src="../Assets/zoom_in.png"/></button>
                             <button type="button" id="btnDiminuir">Diminuir fonte <img src="../Assets/zoom_out.png"/></button>
                         </div>
-                    </div>           
+                    </div>
+
                 </div>
             </div>
 
-        </div>
+        
 
     </header>
 
+<div class="principal">
     <div class="main1">
 
         <div class="tomate">
@@ -149,6 +151,8 @@
             <img src="../Assets/mapa-mental-exemplo (1).png"/>
         </div>
     </div>
+</div>
+    
 
     <div class="temas">
         <ul>
