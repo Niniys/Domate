@@ -18,7 +18,7 @@ header>div{
     height: 100%;
 }
 
-header>div> img {
+header>div> a> img {
     width: 200px;
 }
 
@@ -31,7 +31,7 @@ header>div> img {
     height: 100px;
 }
 
-#opcao1 {
+#mapa {
     transition: 1s;
     background-color: white;
     width: 150px;
