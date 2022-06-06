@@ -6,13 +6,19 @@
 }
 
 .Padrao {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
     --cor1: rgb(81, 24, 69);
     --cor2: rgb(144, 12, 63);
     --cor3: rgb(199, 0, 57);
     --cor4: rgb(255, 87, 51);
+    --cor5: rgb(134, 41, 114);
+    --cor6: rgb(220, 97, 145);
 }
 
 .Roxo {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
     --cor1: rgb(22, 0, 64);
     --cor2: rgb(76, 0, 112);
     --cor3: rgb(121, 1, 140);
@@ -20,6 +26,8 @@
 }
 
 .Lilas {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
     --cor1: rgb(137, 70, 166);
     --cor2: rgb(183, 98, 193);
     --cor3: rgb(234, 153, 213);
@@ -27,6 +35,8 @@
 }
 
 .Inverno {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
     --cor1: rgb(28, 12, 91);
     --cor2: rgb(61, 44, 141);
     --cor3: rgb(145, 107, 191);
@@ -34,6 +44,8 @@
 }
 
 .RosaChoque {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
     --cor1: rgb(66, 5, 22);
     --cor2: rgb(125, 25, 53);
     --cor3: rgb(180, 43, 81);
@@ -41,6 +53,8 @@
 }
 
 .Bege {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
     --cor1: rgb(248, 236, 209);
     --cor2: rgb(222, 182, 171);
     --cor3: rgb(172, 125, 136);
@@ -48,6 +62,8 @@
 }
 
 .Limonada {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
     --cor1: rgb(255, 239, 130);
     --cor2: rgb(239, 211, 69);
     --cor3: rgb(186, 189, 66);
@@ -55,6 +71,8 @@
 }
 
 .CeuLimpo {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
     --cor1: rgb(232, 249, 253);
     --cor2: rgb(121, 218, 232);
     --cor3: rgb(10, 161, 221);
@@ -63,10 +81,9 @@
 
 .header {
     display: flex;
-    background-image: linear-gradient(to right, var(--cor2), var(--cor3));
+    background-color: var(--cor2);
     height: 15%;
     width: 100%;
-    border-bottom: solid black;
     border-width: 4px;
     position: fixed;
 }

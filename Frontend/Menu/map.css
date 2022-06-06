@@ -1,7 +1,7 @@
 .main3 {
     display: flex;
     flex-direction: column;
-    background-color: var(--cor4);
+    background-color: var(--cor1);
     height: 90%;
     width: 100%;
     overflow: auto;
@@ -22,18 +22,20 @@
   }
   
   .mapa img {
-    width: 60%;
-    height: 450px;
+    display: fixed;
+    width: 75%;
+    height: 730px;
   }
   
   .um{
     display: flex;
     margin-left: 300px;
     margin-top: 130px;
-    background-color: var(--cor3);
-    height: 90px;
+    background-color: var(--cor4);
+    height: 100px;
     width: 280px;
     align-items: center;
+    font-size: 30px;
   }
   
   .um img {
@@ -47,16 +49,24 @@
   .um text {
     display: flex;
     margin-left: 20px;
+    color: var(--cor12);
+  }
+
+  .um br{
+    color: var(--cor12);
   }
   
   .dois {
-    display: flex;
-    margin-left: 400px;
+    margin-left: 300px;
     margin-top: 50px;
-    background-color: var(--cor3);
-    height: 250px;
-    width: 560px;
+    left: 10px;
+    height: 350px;
+    width: 900px;
     align-items: center;
     text-align: left;
-    font-size: 20px;
-  }
+    font-size: 30px;
+}
+
+.dois text {
+  color: var(--cor12);
+}
