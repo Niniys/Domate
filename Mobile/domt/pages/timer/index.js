@@ -7,7 +7,7 @@ export default function App() {
     
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Welcome to Codersera</Text>
+            <Text style={styles.title}>Domate</Text>
 
             <Timer />
 
