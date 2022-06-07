@@ -95,6 +95,7 @@
     width: 100%;
     border-width: 4px;
     position: fixed;
+    z-index: 2;
 }
 
 .icons {

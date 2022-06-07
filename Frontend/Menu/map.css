@@ -4,7 +4,7 @@
     background-color: var(--cor1);
     height: 90%;
     width: 100%;
-    overflow: auto;
+    overflow: hidden;
   }
   
   .numeros {
@@ -24,7 +24,7 @@
   .mapa img {
     display: fixed;
     width: 75%;
-    height: 730px;
+    height: 710px;
   }
   
   .um{
@@ -45,11 +45,14 @@
     width: 50px;
     margin-right: 10px;
     cursor: pointer;
+    z-index: 1;
   }
   
   .um text {
     display: flex;
     margin-left: 20px;
+   
+    white-space: nowrap;
     color: var(--cor12);
   }
 
@@ -59,22 +62,60 @@
   
   .um--abrir {
     display: flex;
-    margin-left: 100px;
-    margin-top: 50px;
-    height: 700px;
-    width: 800px;
+    position: relative;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 350px;
+    width: 98%;
+    z-index: 1;
+    transition: all .9s;
+  }
+
+  .um--abrir text {
+    display: flex;
+    margin-top: -200px;
+    transition: all .9s;
+  }
+
+  .mapa1 {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 350px;
+    font-size: 30px;
+  }
+
+  .mapa1 text {
+    white-space: pre-wrap;
+    text-align: center;
+    height: 100%;
+    margin-top: 0;
+  }
+
+  .mapa1 img {
+    display: flex;
+    transform: none;
+    align-self: flex-end;
+  }
+
+  .um--abrir img {
+    transform: rotate(90deg);
+    margin-top: -230px;
+    margin-left: 20px;
     transition: all .9s;
   }
 
   .dois {
-    margin-left: 300px;
+    display: flex;
+    position: absolute;
+    margin-left: 800px;
     margin-top: 50px;
     left: 10px;
-    height: 350px;
+    height: 340px;
     width: 900px;
     align-items: center;
     text-align: left;
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .dois text {

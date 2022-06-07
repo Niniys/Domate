@@ -51,12 +51,16 @@ section {
 }
 
 #drop::-webkit-scrollbar {
-    width: 5px;
+    width: 0;
 }
+#drop::-webkit-scrollbar:horizontal {
+    height: 5px;
+}
+
 
 #drop::-webkit-scrollbar-thumb {
     background-color: rgba(131, 126, 126, 0.555);
-    border-radius: 10px
+    border-radius: 10px;
 }
 
 #drop{
