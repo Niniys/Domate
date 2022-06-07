@@ -287,20 +287,6 @@ body::-webkit-scrollbar {
   margin-top: 5px;
 }
 
-.menu {
-    position: fixed;
-    top: 0;
-    background-image: linear-gradient(to bottom, var(--cor2), var(--cor3));
-    height: 100%;
-    width: 100%;
-    /* z-index: 1; */
-    border-left: solid black;
-    border-width: 4px;
-    transition: all .9s;
-    overflow-y: auto;
-    overflow-x: none;
-}
-
 .menuheader div{
   display: flex;
   flex-direction: row;
@@ -325,28 +311,6 @@ body::-webkit-scrollbar {
   border-bottom: solid black;
   border-width: 4px;
   position: fixed;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 50%;
-  align-items: center;
-  justify-content: center;
-  margin-top: 240px;
-  margin-bottom: 500px;
-}
-
-.container2 {
-display: flex;
-flex-direction: column;
-width: 100%;
-height: 50%;
-align-items: center;
-justify-content: center;
-margin-top: 600px;
-font-family: 'Segoe UI';
 }
 
 #cores {
@@ -694,8 +658,8 @@ width: 50%;
 }
 
 #tutoriel {
-  height: 45%;
-  width: 40%;
+  height: 50%;
+  width: 45%;
   margin-top: 5%;
   margin-left: 100px;
 }
@@ -732,7 +696,6 @@ width: 50%;
   flex-direction: column;
   margin-left: 590px;
   margin-bottom: 10px;
-  /* margin-top: 200px; */
   height: 300px;
   width: 600px;
   background-color: var(--cor4);
@@ -740,7 +703,7 @@ width: 50%;
   border-color:  var(--cor3);
   justify-content: center;
   text-align: left;
-  font-size: 18px;
+  font-size: 17px;
 }
 
 .info2 div {

@@ -90,3 +90,10 @@ function meni() {
         body.style.overflow = "auto";
     }
 }
+
+function mover() {
+    let um = document.querySelector(".um");
+
+    um.classList.toggle("um--abrir");
+    
+}
