@@ -93,7 +93,9 @@ function meni() {
 
 function mover() {
     let um = document.querySelector(".um");
+    let mapa1 = document.querySelector(".mapa1");
 
     um.classList.toggle("um--abrir");
+    mapa1.style.display = "flex";
     
 }
