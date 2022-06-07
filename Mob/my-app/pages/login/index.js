@@ -18,7 +18,7 @@ export default function Login({ navigation }) {
         }
         
 
-        fetch('http://192.168.0.109:3000/login', {
+        fetch('http://10.87.207.4:3000/login', {
             "method":"POST",
             "headers": {
                 "Content-Type": "application/json"
