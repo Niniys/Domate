@@ -196,9 +196,9 @@ function createMapa() {
   };
   createCard(info20, "myRorange");
 
+  
 
 }
-
 
 function createCard(info, id) {
   let { x, y, width, height, fill } = info;
