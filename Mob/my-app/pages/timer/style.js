@@ -3,7 +3,7 @@ export default StyleSheet.create({
     container: {
         flex: 1,
         display: "flex",
-        backgroundColor: '#DBD053',
+        backgroundColor: '#620e96',
         alignItems: 'center',
         justifyContent: 'flex-start',
         paddingTop: "8%",

@@ -7,10 +7,10 @@ export default StyleSheet.create({
         borderRadius: 80,
         borderColor: "#694966",
         backgroundColor: '#694966',
-        paddingLeft: "8%",
-        paddingRight: "8%",
-        paddingTop: ".5%",
-        paddingBottom: ".5%",
+        // paddingLeft: "8%",
+        // paddingRight: "8%",
+        // paddingTop: "5%",
+        // paddingBottom: "5%",
     },
 
     child: {
@@ -22,20 +22,20 @@ export default StyleSheet.create({
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-around",
-        marginTop: "12%",
+        marginTop: "2%",
     },
 
     button: {
         backgroundColor: "#694966",
         paddingTop: "5%",
-        paddingBottom: "5%",
+        // paddingBottom: "5%",
         paddingLeft: "5%",
         paddingRight: "5%",
         display: "flex",
         borderRadius: 20,
         borderWidth: 1,
         borderColor: "#694966",
-        height: 60,
+        height: 80,
     },
 
     buttonText: {
