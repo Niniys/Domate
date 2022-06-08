@@ -99,3 +99,52 @@ function mover() {
     mapa1.style.display = "flex";
     
 }
+
+var atual = 1;
+
+function proximo() {
+let mapa1 = document.querySelector(".mapa1");
+let mapa2 = document.querySelector(".mapa2");
+let mapa3 = document.querySelector(".mapa3");
+let um = document.querySelector(".um");
+
+    
+    if(atual <= 3) atual ++;
+    mapa1.classList.toggle("mapa1--hide");
+
+    if(atual == 1) {
+        mapa1.style.display = "flex";
+        mapa2.style.display = "none";
+        mapa3.style.display = "none";
+    } else if(atual == 2) {
+        mapa1.style.display = "none";
+        mapa2.style.display = "flex";
+        mapa3.style.display = "none";
+    } else if(atual == 3) {
+        mapa1.style.display = "none";
+        mapa2.style.display = "none";
+        mapa3.style.display = "flex";
+    }
+}
+
+function voltar() {
+    let mapa1 = document.querySelector(".mapa1");
+    let mapa2 = document.querySelector(".mapa2");
+    let mapa3 = document.querySelector(".mapa3");
+
+    if(atual >= 2) atual --;
+
+    if(atual == 1) {
+        mapa1.style.display = "flex";
+        mapa2.style.display = "none";
+        mapa3.style.display = "none";
+    } else if(atual == 2) {
+        mapa1.style.display = "none";
+        mapa2.style.display = "flex";
+        mapa3.style.display = "none";
+    } else if(atual == 3) {
+        mapa1.style.display = "none";
+        mapa2.style.display = "none";
+        mapa3.style.display = "flex";
+    }
+}

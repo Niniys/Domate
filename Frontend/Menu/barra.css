@@ -140,7 +140,8 @@
     width: 350px;
     height: 200px;
     align-items: center;
-    overflow: auto
+    overflow: auto;
+    z-index: 3;
 }
 
 .temas::-webkit-scrollbar {
