@@ -1,17 +1,21 @@
-import Timer from "../contTimer/index.js";
-import styles from './style.js';
+import React from 'react';
+import { ScrollView, StyleSheet } from 'react-native';
+import Header from '../tiimer/head'
+import PomodoroTimer from '../tiimer/timerPomo'
 
-import { Text, View } from 'react-native';
-
-export default function App() {
-    
-    return (
-        <View style={styles.container}>
-            <Text style={styles.title}>Domate</Text>
-
-            <Timer />
-
-        </View>
-    );
+export default class App extends React.Component {
+    render() {
+        return (
+            <ScrollView style={styles.container}>
+                <Header />
+                <PomodoroTimer />
+            </ScrollView>
+        );
+    }
 }
 
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+});

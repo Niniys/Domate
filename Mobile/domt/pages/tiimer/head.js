@@ -5,7 +5,7 @@ class Head extends React.Component {
     render() {
         return (
             <View style={styles.headerContainer}>
-                <Text style={styles.textStyle}> Temporizador </Text>
+                <Text style={styles.textStyle}> Domate </Text>
             </View>
         )
     }
@@ -13,7 +13,7 @@ class Head extends React.Component {
 
 const styles = StyleSheet.create({
     headerContainer: {
-        backgroundColor: "#C2362B",
+        backgroundColor: "#a93190",
         height: 90,
         justifyContent: "center",
         alignItems: "center",
@@ -24,12 +24,12 @@ const styles = StyleSheet.create({
         position: "relative"
     },
     textStyle: {
-        color: "white",
-        fontSize: 20,
-        fontWeight: "600",
+        color: "black",
+        fontSize: 30,
+        fontWeight: "800",
         letterSpacing: 1.5,
         fontFamily: Platform.OS == "android" ? "notoserif" : "system",
-        marginTop: 50
+        marginTop: 0
     }
 })
 
