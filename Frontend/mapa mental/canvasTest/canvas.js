@@ -1,12 +1,12 @@
 var op1 = document.querySelector("#mapa").addEventListener("click", () => {
   createMapa();
 });
-var div = document.querySelector("#drop");
+
 var svgNs = "http://www.w3.org/2000/svg";
 var svg = document.querySelector("#svg");
 
 function createMapa() {
-  let info = {
+  let card = {
     x: "450",
     y: "345",
     width: "250px",
@@ -14,189 +14,190 @@ function createMapa() {
     fill: "#1E90FF",
   };
 
-  createCard(info, "myR");
+  createCard(card, "myR");
 
-  let info1 = {
+  let card1 = {
     x: "50",
     y: "50",
     width: "100px",
     height: "35px",
     fill: "#95c160",
   };
-  createCard(info1, "myRgreen");
+  createCard(card1, "myRgreen");
 
-  let info2 = {
+  let card2 = {
     x: "220",
     y: "90",
     width: "100px",
     height: "35px",
     fill: "#95c160",
   };
-  createCard(info2, "myRgreen");
+  createCard(card2, "myRgreen");
 
-  let info3 = {
+  let card3 = {
     x: "40",
     y: "110",
     width: "100px",
     height: "35px",
     fill: "#95c160",
   };
-  createCard(info3, "myRgreen");
+  createCard(card3, "myRgreen");
 
-  let info4 = {
+  let card4 = {
     x: "50",
     y: "170",
     width: "100px",
     height: "35px",
     fill: "#95c160",
   };
-  createCard(info4, "myRgreen");
+  createCard(card4, "myRgreen");
 
-  let info5 = {
+  let card5 = {
     x: "70",
     y: "220",
     width: "100px",
     height: "35px",
     fill: "#95c160",
   };
-  createCard(info5, "myRgreen");
+  createCard(card5, "myRgreen");
 
-  let info6 = {
+  let card6 = {
     x: "90",
     y: "280",
     width: "100px",
     height: "35px",
     fill: "#20B2AA",
   };
-  createCard(info6, "myRciano");
+  createCard(card6, "myRciano");
 
-  let info7 = {
+  let card7 = {
     x: "70",
     y: "330",
     width: "100px",
     height: "35px",
     fill: "#20B2AA",
   };
-  createCard(info7, "myRciano");
+  createCard(card7, "myRciano");
 
-  let info8 = {
+  let card8 = {
     x: "80",
     y: "375",
     width: "100px",
     height: "35px",
     fill: "#20B2AA",
   };
-  createCard(info8, "myRciano");
+  createCard(card8, "myRciano");
 
-  let info9 = {
+  let card9 = {
     x: "90",
     y: "420",
     width: "100px",
     height: "35px",
     fill: "#20B2AA",
   };
-  createCard(info9, "myRciano");
+  createCard(card9, "myRciano");
 
-  let info10 = {
+  let card10 = {
     x: "100",
     y: "465",
     width: "100px",
     height: "35px",
     fill: "#20B2AA",
   };
-  createCard(info10, "myRciano");
+  createCard(card10, "myRciano");
 
-  let info11 = {
+  let card11 = {
     x: "260",
     y: "350",
     width: "100px",
     height: "35px",
     fill: "#20B2AA",
   };
-  createCard(info11, "myRciano");
+  createCard(card11, "myRciano");
 
-  let info12 = {
+  let card12 = {
     x: "320",
     y: "430",
     width: "100px",
     height: "35px",
     fill: "#FFB6C1",
   };
-  createCard(info12, "myRlightpink");
+  createCard(card12, "myRlightpink");
 
-  let info13 = {
+  let card13 = {
     x: "409",
     y: "480",
     width: "100px",
     height: "35px",
     fill: "#FFB6C1",
   };
-  createCard(info13, "myRlightpink");
+  createCard(card13, "myRlightpink");
 
-  let info14 = {
+  let card14 = {
     x: "350",
     y: "540",
     width: "100px",
     height: "35px",
     fill: "#FFB6C1",
   };
-  createCard(info14, "myRlightpink");
+  createCard(card14, "myRlightpink");
 
-  let info15 = {
+  let card15 = {
     x: "270",
     y: "585",
     width: "100px",
     height: "35px",
     fill: "#FFB6C1",
   };
-  createCard(info15, "myRlightpink");
+  createCard(card15, "myRlightpink");
 
-  let info16 = {
+  let card16 = {
     x: "320",
     y: "200",
     width: "100px",
     height: "35px",
     fill: "#FFA500",
   };
-  createCard(info16, "myRorange");
+  createCard(card16, "myRorange");
 
-  let info17 = {
+  let card17 = {
     x: "400",
     y: "120",
     width: "100px",
     height: "35px",
     fill: "#FFA500",
   };
-  createCard(info17, "myRorange");
+  createCard(card17, "myRorange");
 
-  let info18 = {
+  let card18 = {
     x: "500",
     y: "170",
     width: "100px",
     height: "35px",
     fill: "#FFA500",
   };
-  createCard(info18, "myRorange");
+  createCard(card18, "myRorange");
   
-  let info19 = {
+  let card19 = {
     x: "500",
     y: "170",
     width: "100px",
     height: "35px",
     fill: "#FFA500",
   };
-  createCard(info19, "myRorange");
+  createCard(card19, "myRorange");
 
-  let info20 = {
+  let card20 = {
     x: "500",
     y: "170",
     width: "100px",
     height: "35px",
     fill: "#FFA500",
   };
-  createCard(info20, "myRorange");
+  createCard(card20, "myRorange");
 
-  
+  let linha
+
 
 }
 
@@ -214,4 +215,20 @@ function createCard(info, id) {
   svg.appendChild(card);
 }
 
+function createLinha(info, id) {
+  let {xf, yf, width, stroke}  = info;
+  let point = document.createElementNS(svgNs, "line");
+  point.setAttributeNS(null,"id", id);
+  point.setAttributeNS(null,"x1", xn);
+  point.setAttributeNS(null,"y1", yn);
+  point.setAttributeNS(null,"x2", xf);
+  point.setAttributeNS(null,"y2", yf);
+
+  point.style.width = width;
+  point.style.stroke = stroke;
+
+  svg.appendChild(point);
+}
+
 createMapa();
+
