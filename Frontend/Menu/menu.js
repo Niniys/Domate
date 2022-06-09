@@ -96,7 +96,10 @@ function mover() {
     let mapa1 = document.querySelector(".mapa1");
 
     um.classList.toggle("um--abrir");
-    mapa1.style.display = "flex";
+    setTimeout(() => {
+        mapa1.style.display = "flex";
+    }, 810)
+    
     
 }
 
@@ -106,6 +109,7 @@ function proximo() {
 let mapa1 = document.querySelector(".mapa1");
 let mapa2 = document.querySelector(".mapa2");
 let mapa3 = document.querySelector(".mapa3");
+let mapa = document.querySelector(".mapa");
 let um = document.querySelector(".um");
 
     
@@ -117,6 +121,7 @@ let um = document.querySelector(".um");
         mapa2.style.display = "none";
         mapa3.style.display = "none";
     } else if(atual == 2) {
+        mapa.classList.toggle("mapa--trocar");
         mapa1.style.display = "none";
         mapa2.style.display = "flex";
         mapa3.style.display = "none";

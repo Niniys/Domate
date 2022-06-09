@@ -43,30 +43,31 @@ function setTema() {
 
 function themes() {
     let temas = document.querySelector(".temas");
+    let ideia = document.getElementById("ideia");
 
     temas.style.display = "block";
 
-    header.addEventListener("click", () => {
+    main1.addEventListener("mouseover", () => {
         temas.style.display = "none";
     })
 
-    main1.addEventListener("click", () => {
+    main2.addEventListener("mouseover", () => {
         temas.style.display = "none";
     })
 
-    main2.addEventListener("click", () => {
+    main3.addEventListener("mouseover", () => {
         temas.style.display = "none";
     })
 
-    main3.addEventListener("click", () => {
+    footer.addEventListener("mouseover", () => {
         temas.style.display = "none";
     })
 
-    footer.addEventListener("click", () => {
+    deslogado.addEventListener("mouseover", () => {
         temas.style.display = "none";
     })
 
-    deslogado.addEventListener("click", () => {
+    ideia.addEventListener("mouseover", () => {
         temas.style.display = "none";
     })
 }
@@ -317,3 +318,35 @@ $btnDiminuir.on('click', function() {
     $elemento.eq(i).css('font-size', fonts[i]);
   }
 });
+
+function dicas() {
+    let dicas = document.querySelector(".dicas");
+    let cores1 = document.getElementById("cores") 
+
+
+    dicas.style.display = "block";
+
+    main1.addEventListener("mouseover", () => {
+        dicas.style.display = "none";
+    })
+
+    main2.addEventListener("mouseover", () => {
+        dicas.style.display = "none";
+    })
+
+    main3.addEventListener("mouseover", () => {
+        dicas.style.display = "none";
+    })
+
+    footer.addEventListener("mouseover", () => {
+        dicas.style.display = "none";
+    })
+
+    deslogado.addEventListener("mouseover", () => {
+        dicas.style.display = "none";
+    })
+
+    cores1.addEventListener("mouseover", () => {
+        dicas.style.display = "none";
+    })
+}

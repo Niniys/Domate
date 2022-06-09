@@ -131,7 +131,7 @@
 .temas {
     display: none;
     position: fixed;
-    top: 130px;
+    top: 105px;
     right: 20px;
     border-radius: 40px;
     border: solid black;
@@ -236,4 +236,19 @@
     border: solid black;
     border-radius: 30px;
     background-image: linear-gradient(to right, rgb(232, 249, 253), rgb(121, 218, 232), rgb(10, 161, 221), rgb(33, 85, 205));
+}
+
+.dicas {
+    display: none;
+    position: fixed;
+    top: 105px;
+    margin-left: 580px;
+    margin-right: 20px;
+    border-radius: 40px;
+    background-color: var(--cor12);
+    width: 570px;
+    height: 260px;
+    align-items: center;
+    overflow: auto;
+    z-index: 3;
 }

@@ -26,6 +26,13 @@
     width: 75%;
     height: 710px;
   }
+
+  .mapa--trocar img {
+    display: fixed;
+    width: 1px;
+    height: 710px;
+    transition: all .9s;
+  }
   
   .um{
     display: flex;
