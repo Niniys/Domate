@@ -240,7 +240,7 @@
             f.prototype = new d, f.prototype.constructor = f, f.prototype._pathString = function(a) {
                 var b = a.strokeWidth;
                 a.trailWidth && a.trailWidth > a.strokeWidth && (b = a.trailWidth);
-                var c = 50 - b / 2;
+                var c = 30 - b / 2;
                 return e.render(this._pathTemplate, { radius: c, "2radius": 2 * c })
             }, f.prototype._trailString = function(a) { return this._pathString(a) }, b.exports = f
         }, { "./shape": 7, "./utils": 9 }],
