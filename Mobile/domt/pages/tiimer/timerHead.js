@@ -27,7 +27,9 @@ class timerHead extends React.Component {
 
         let texto = this.handleDisplay()
         return (
-            <Text style={styles.textStyle}>{texto}</Text>
+            <View>
+                <Text style={styles.textStyle}>{texto}</Text>
+            </View>
         )
     }
 }

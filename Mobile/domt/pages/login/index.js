@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { ImageBackground, View, Text, TextInput, ToastAndroid, TouchableOpacity, Image } from 'react-native';
+import { View, Text, TextInput, ToastAndroid, TouchableOpacity} from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import style from './style.js';
 
-// const image = {uri: ""}
 
 export default function Login({ navigation }) {
     const [nome_usuario, setNome_usuario] = useState("");
@@ -28,7 +27,7 @@ export default function Login({ navigation }) {
         .then(resp => { return resp.json()})
         .then( async data => {
             // console.log(data)
-            if(data != undefined){
+            if(data.length > 0){
                 await AsyncStorage.setItem('userdata', JSON.stringify(data[0]));
                 navigation.navigate("Main");
             }else{
@@ -39,6 +38,10 @@ export default function Login({ navigation }) {
 
     const habilitarCadastro = () => {
         setCadastro(true);
+    }
+
+    const desabilitar = () => {
+        setCadastro(false);
     }
 
     const cadastrar = () => {
@@ -58,22 +61,21 @@ export default function Login({ navigation }) {
             if(!(resp.status == 404)){
                 return resp.json();
             }})
-        .then( data => {
-            if(data == undefined) {
+        .then(async data => {
+            if(data.length > 0) {
+                await AsyncStorage.setItem('userdata', JSON.stringify(data));
+                navigation.navigate("main");
+
+            } else {
                 ToastAndroid.show("Falha ao cadastrar", ToastAndroid.SHORT);
                 setCadastro(false);
-            } else {
-                AsyncStorage.setItem('userdata', JSON.stringify(data));
-                navigation.navigate("main");
             }
         });
     }
 
     return(
         <View style={style.container}>
-            {/* <ImageBackground source={image} resizeMode="cover" style={style.image} imageStyle={{opacity: 0.3}}> */}
-                <View>
-                {/* <Image style={style.logo} source={require('../../assets/app/logo.png')} /> */}
+            <View>
                 <TextInput 
                     value={nome_usuario} 
                     onChangeText={setNome_usuario} 
@@ -107,20 +109,25 @@ export default function Login({ navigation }) {
                                 placeholder={"Senha"} 
                                 style={style.textInput} 
                             />
-                            <TouchableOpacity onPress={() => cadastrar() } style={[style.button, style.boxWithShadow]}>
+                            <TouchableOpacity onPress={() => cadastrar() } style={[style.button]}>
                                 <Text style={style.buttontext}>Cadastrar</Text>
+                            </TouchableOpacity>
+
+                            <Text style={style.text}>Já tem uma conta?</Text>
+                            <TouchableOpacity onPress={() => desabilitar() } style={[style.button]}>
+                                <Text style={style.buttontext}>Login</Text>
                             </TouchableOpacity>
                         </View>
                     :
                         <View style={style.view}>
-                            <TouchableOpacity onPress={() => autenticar() } style={[style.button, style.boxWithShadow]}>
+                            <TouchableOpacity onPress={() => autenticar() } style={[style.button]}>
                                 <Text style={style.buttontext}>Entrar</Text>
                             </TouchableOpacity>
 
                             <View style={style.alignmargin}>
                                     <Text style={style.text}>Não tem uma conta?</Text>
                                 <TouchableOpacity onPress={() => { habilitarCadastro() }}>
-                                    <Text style={style.text2}>CADASTRE-SE</Text>
+                                    <Text style={style.text2}>Cadastre-se</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>

@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Platform, StyleSheet, Text, View, TextInput } from 'react-native';
+import { View} from 'react-native';
 import TimerHeader from './timerHead'
 import TimerDisplay from './timerDis'
 import TimerButtons from './timerBut'
