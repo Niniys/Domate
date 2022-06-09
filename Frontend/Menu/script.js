@@ -43,7 +43,7 @@ function setTema() {
 
 function themes() {
     let temas = document.querySelector(".temas");
-    let ideia = document.getElementById("ideia");
+    let ideia = document.getElementById("idea");
 
     temas.style.display = "block";
 

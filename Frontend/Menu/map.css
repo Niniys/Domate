@@ -58,7 +58,6 @@
   .um text {
     display: flex;
     margin-left: 20px;
-   
     white-space: nowrap;
     color: var(--cor12);
   }
@@ -84,7 +83,7 @@
     transition: all .9s;
   }
 
-  .mapa1 {
+  .mapa1, .mapa2, .mapa3 {
     display: none;
     align-items: center;
     justify-content: center;
@@ -127,6 +126,36 @@
 
 .dois text {
   color: var(--cor12);
+}
+
+.mapa2 text {
+  display: flex;
+  white-space: normal;
+  text-align: center;
+  height: 100%;
+  margin-top: 200px;
+}
+
+.mapa3 text {
+  display: flex;
+  white-space: normal;
+  text-align: center;
+  height: 100%;
+  margin-top: 100px;
+}
+
+#direita {
+  display: flex;
+  transform: rotate(180deg);
+  align-self: flex-end;
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+
+#esquerda {
+  display: flex;
+  transform: rotate(360deg);
+  margin-left: 20px;
 }
 
 @media(min-width: 1300px) and (max-width: 1400px) {

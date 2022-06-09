@@ -7,11 +7,13 @@ let dicasObject = [
     // }
 ]
 
+let mainDica = 0
+
 function loadDica() {
-    let texto = document.createElement("textarea");
+    let texto = document.createElement("div");
     let dica = document.querySelector(".dicas");
 
     texto.setAttribute("class","texto");
-    texto.innerHTML = dicasObject[0]
+    texto.innerHTML = dicasObject[mainDica].dica
     dica.appendChild(texto)
 }
