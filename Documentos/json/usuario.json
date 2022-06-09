@@ -1,0 +1,9 @@
+{
+    "id" : 1,
+	"nome_usuario": "hertz",
+	"senha":"1111",
+	"id_mapa": 1,
+	"id_play": 1,
+	"id_nota": 1
+	
+}
