@@ -1,0 +1,50 @@
+var retanguloBorder = document
+  .querySelector(".retanguloBorder")
+  .addEventListener("click", () => {
+    criarRetanguloBorder();
+  });
+var retangulo = document
+  .querySelector(".retangulo")
+  .addEventListener("click", () => {
+    criarRetangulo();
+  });
+var circulo = document
+  .querySelector(".circulo")
+  .addEventListener("click", () => {
+    criarCirculo();
+  });
+var dropzones = document.querySelector(".drop");
+
+function criarCirculo() {
+  circle = document.createElement("div");
+  circle.id = "circle"
+
+  dropzones.appendChild(circle);
+}
+
+function criarRetangulo() {
+  rectangle = document.createElement("div");
+  rectangle.id = "rectangle"
+
+  dropzones.appendChild(rectangle);
+}
+
+function criarRetanguloBorder() {
+  rBorder = document.createElement("div");
+  rBorder.id = "rBorder"
+
+  dropzones.appendChild(rBorder);
+}
+
+/*---------------------------------------------------------------- */
+
+<input type="checkbox" id="active">
+        <label for="active" class="menu-btn"><span></span></label>
+        <label for="active" class="close"></label>
+        <div class="wrapper">
+            <img class="logo" src="../Assets/DomateLogo.png" />
+            <ul>
+                <li class="gu1"><a href="../Menu/index.html">Home</a></li>
+                <li class="gu2"><a href="../mapa mental/canvasTest/canvas.html">Mapa<a2>_</a2>mental</a></li>
+                <li class="gu3"><a href="../configuração/index.html">Configurações</a></li>
+            </ul>

@@ -1,0 +1,33 @@
+#menu{
+    margin: 10px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-image:linear-gradient(-45deg, var(--cor1) 0%, var(--cor2) 100%);
+}
+
+#lebel, #lebel1, #lebel2{
+    width: 50%;
+    position: relative;
+    height: 3%;
+    border-radius: 50px;
+    background:var(--cor12);
+}
+
+#lebel{
+    top: 10px;
+    animation: 1s
+}
+#lebel2{
+    bottom: 10px;
+}
+
+/*-----------------------------animation------------------------------*/
+
+@keyframe down {
+
+}

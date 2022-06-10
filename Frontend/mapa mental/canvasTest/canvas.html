@@ -6,19 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../../assets/DomateTimer.png" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./nav.css" />
     <link rel="stylesheet" href="./color.css" />
     <title>Mapa mental</title>
   </head>
-  <body>
-    <header>
+  <body onload="loadtema()">
+    <header id="top">
         <a href=""><img src="../../assets/DomateLogo.png" /></a>
       <div class="options">
         <div id="mapa"><img src="../../assets/mapamental-removebg-preview.png"></div>
-      </div>
-      <div id="menu">
-        <div id="lebel1"></div>
-        <div id="lebel"></div>
-        <div id="lebel2"></div>
       </div>
     </header>
     <section>
@@ -34,4 +30,5 @@
     </section>
   </body>
   <script src="./canvas.js"></script>
+  <script src="./nav.js"></script>
 </html>
