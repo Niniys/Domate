@@ -10,13 +10,13 @@ let dicasObject = [
     },
     {
         dica: "Arrume a bagunça à sua volta antes de começar a estudar para valer." + "<br />" + 
-        "E a verdade é que ninguém consegue focar em mais de uma tarefa ao mesmo tempo."
+        "A verdade é que ninguém consegue focar em mais de uma tarefa ao mesmo tempo."
     },
     {
         dica: "O acúmulo de informações recebidas todos os dias a todo momento impacta a forma como o corpo humano lida com o foco e a concentração. Apenas o ato de olhar o celular pode desencadear toda uma cadeia de distrações que tiram o foco da tarefa principal."
     },
     {
-        dica: "A hora do estudo deve ser sagrada, por isso, afaste tudo que possa lhe chamar a atenção e desviar o foco. Se poss´vel, desligue o ou mantenha no silencioso aparelhos telefônicos, feche páginas da internet alheias ao conteúdo de estudo, desligue a televisão."
+        dica: "A hora do estudo deve ser sagrada, por isso, afaste tudo que possa lhe chamar a atenção e desviar o foco. Se possível, desligue ou mantenha no silencioso aparelhos telefônicos, feche páginas da internet alheias ao conteúdo de estudo, desligue a televisão."
     }
 ]
 
