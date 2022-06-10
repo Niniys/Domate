@@ -10,8 +10,6 @@ import Anote from "../anot";
 import Timer from "../timer";
 
 function Principal({ state, descriptors, navigation }) {
-  
-  
   let selected = state.index;
   return (
     <View style={{ flexDirection: "row" }}>

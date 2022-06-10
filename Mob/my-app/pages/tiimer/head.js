@@ -1,20 +1,12 @@
 import React from 'react';
-import { Platform, StyleSheet, Text, View, TouchableOpacity} from 'react-native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 
 class Head extends React.Component {
     render() {
         return (
             <View style={styles.headerContainer}>
                 <Text style={styles.textStyle}> Domate </Text>
-                <TouchableOpacity onPress={async () => { await AsyncStorage.removeItem('userdata'); navigation.navigate('login')}}>
-                    <Text>SAIR</Text>
-                </TouchableOpacity>
             </View>
-
-            
-
-
         )
     }
 }

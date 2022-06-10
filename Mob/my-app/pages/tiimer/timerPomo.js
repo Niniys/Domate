@@ -38,7 +38,7 @@ class timerPomo extends React.Component {
 			})
 		}
 		else{
-			alert("Tempo inválido")
+			alert("Time invalid. Setting value to default. Please enter valid time")
 			this.setState({
 				workTime: 25
 			})
