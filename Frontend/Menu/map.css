@@ -27,13 +27,35 @@
     height: 710px;
   }
 
-  .mapa--trocar img {
+  .mapa--trocar2 img {
     display: fixed;
     width: 1px;
     height: 710px;
-    transition: all .9s;
+    transition: all .5s;
+  }
+
+  .mapa--voltar img {
+    transition: all .5s;
+    width: 75%;
+    height: 710px;
+  }
+
+  .mapa--voltar2 img {
+    transition: all .5s;
+    width: 75%;
+    height: 710px;
   }
   
+  .mapa1--hide {
+    display: none;
+    transition: all .5s;
+  }
+
+  /* .mapa1--hide {
+    display: none;
+    transition: all .5s;
+  } */
+
   .um{
     display: flex;
     margin-left: 300px;
@@ -55,7 +77,7 @@
     z-index: 1;
   }
   
-  .um text {
+  #a {
     display: flex;
     margin-left: 20px;
     white-space: nowrap;
@@ -79,7 +101,21 @@
 
   .um--abrir text {
     display: flex;
+    margin-left: 0px;
     margin-top: -200px;
+    transition: all .9s;
+  }
+
+  .um--fechar {
+    display: flex;
+    position: relative;
+    margin-left: 300px;
+    margin-top: 130px;
+    background-color: var(--cor4);
+    height: 100px;
+    width: 280px;
+    align-items: center;
+    font-size: 30px;
     transition: all .9s;
   }
 
@@ -98,10 +134,55 @@
     margin-top: 0;
   }
 
-  .mapa1 img {
+  #img {
     display: flex;
     transform: none;
     align-self: flex-end;
+  }
+
+  #img2,  #img3, #img4, #img5, #img6{
+    display: none;
+    transform: none;
+    align-self: flex-end;
+  }
+
+  .img4--voltar {
+    transition: all .5s;
+    width: 75%;
+    height: 710px;
+  }
+
+  .img--trocar {
+    display: fixed;
+    width: 1px;
+    height: 710px;
+    transition: all .5s;
+  }
+
+  .img2--voltar {
+    transition: all .5s;
+    width: 75%;
+    height: 710px;
+  }
+
+  .img2--trocar {
+    display: fixed;
+    width: 1px;
+    height: 710px;
+    transition: all .5s;
+  }
+
+  .img2--troc {
+    display: fixed;
+    width: 1px;
+    height: 710px;
+    transition: all .5s;
+  }
+
+  .img3--voltar {
+    transition: all .5s;
+    width: 75%;
+    height: 710px;
   }
 
   .um--abrir img {
@@ -250,9 +331,6 @@
   margin-left: 20px;
 }
 
-.mapa1--hide {
-  display: none;
-  transition: all .9s;
-}
+
 
 }

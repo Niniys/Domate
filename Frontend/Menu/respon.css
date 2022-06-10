@@ -6,7 +6,35 @@
       height: 60px;
       margin-top: 5px;
     }
+
+    #idea2 {
+      display: flex;
+      width: 60px;
+      height: 60px;
+      margin-top: 5px;
+      margin-left: 90px;
+    }
     
+    .meni {
+      position: fixed;
+      top: 0;
+      right: -200%;
+      background-image: linear-gradient(to bottom, var(--cor2), var(--cor3));
+      height: 100%;
+      width: 100%;
+      /* z-index: 2; */
+      border-left: solid black;
+      border-width: 4px;
+      transition: all .7s ease-in-out;
+      -webkit-transition: all 0.7s ease-in-out;
+      -moz-transition: all 0.7s ease-in-out;
+      -ms-transition: all 0.7s ease-in-out;
+      -o-transition: all 0.7s ease-in-out;
+      overflow-y: auto;
+      overflow-x: none;
+      font-family: 'Segoe UI';
+  }
+
     .menuheader div{
       display: flex;
       flex-direction: row;
@@ -36,11 +64,16 @@
     #cores {
     display: none;
     }
+
+    #idea {
+      display: none;
+    }
     
     .temas {
     display: none;
     position: absolute;
     top: 130px;
+    left: 3px;
     align-self: center;
     border-radius: 40px;
     border: solid black;

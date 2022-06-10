@@ -86,7 +86,7 @@ function meni() {
         menu.style.right = "0";
         body.style.overflow = "hidden";
     } else {
-        menu.style.right = "-100%";
+        menu.style.right = "-200%";
         body.style.overflow = "auto";
     }
 }
@@ -94,13 +94,17 @@ function meni() {
 function mover() {
     let um = document.querySelector(".um");
     let mapa1 = document.querySelector(".mapa1");
+    let a = document.getElementById("a");
 
-    um.classList.toggle("um--abrir");
+    if(mapa1.style.display = "none") {
+        um.classList.toggle("um--abrir");
     setTimeout(() => {
         mapa1.style.display = "flex";
     }, 810)
-    
-    
+    } else if(mapa1.style.display = "flex"){
+        um.classList.toggle("um--fechar");
+        // mapa1.style.display = "none";
+    } 
 }
 
 var atual = 1;
@@ -110,6 +114,9 @@ let mapa1 = document.querySelector(".mapa1");
 let mapa2 = document.querySelector(".mapa2");
 let mapa3 = document.querySelector(".mapa3");
 let mapa = document.querySelector(".mapa");
+let img = document.getElementById("img");
+let img2 = document.getElementById("img2");
+let img3 = document.getElementById("img3");
 let um = document.querySelector(".um");
 
     
@@ -121,11 +128,22 @@ let um = document.querySelector(".um");
         mapa2.style.display = "none";
         mapa3.style.display = "none";
     } else if(atual == 2) {
-        mapa.classList.toggle("mapa--trocar");
+        mapa.classList.toggle("img--trocar");
+        setTimeout(() => {
+            img.style.display = "none";
+            mapa.classList.toggle("img2--voltar");
+            img2.style.display = "flex";
+        },500)
         mapa1.style.display = "none";
         mapa2.style.display = "flex";
         mapa3.style.display = "none";
     } else if(atual == 3) {
+        mapa.classList.toggle("img2--trocar");
+        setTimeout(() => {
+            img2.style.display = "none";
+            mapa.classList.toggle("img3--voltar");
+            img3.style.display = "flex";
+        },500)
         mapa1.style.display = "none";
         mapa2.style.display = "none";
         mapa3.style.display = "flex";
@@ -136,14 +154,26 @@ function voltar() {
     let mapa1 = document.querySelector(".mapa1");
     let mapa2 = document.querySelector(".mapa2");
     let mapa3 = document.querySelector(".mapa3");
+    let mapa = document.querySelector(".mapa");
+    let img2 = document.getElementById("img2");
+    let img4 = document.getElementById("img4");
+    let img5 = document.getElementById("img5");
+    let img6 = document.getElementById("img6");
 
     if(atual >= 2) atual --;
 
     if(atual == 1) {
+        mapa.classList.toggle("img2--troc");
+        setTimeout(() => {
+            img2.style.display = "none";
+            mapa.classList.toggle("img4--voltar");
+            img4.style.display = "flex";
+        },500)
         mapa1.style.display = "flex";
         mapa2.style.display = "none";
         mapa3.style.display = "none";
     } else if(atual == 2) {
+        
         mapa1.style.display = "none";
         mapa2.style.display = "flex";
         mapa3.style.display = "none";
