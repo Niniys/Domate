@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, Keyboard, TextInput, ToastAndroid, StyleSheet, TouchableOpacity, KeyboardAvoidingView, Image, Animated } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { func } from "prop-types";
+//import { func } from "prop-types";
 
 
 
@@ -17,56 +17,56 @@ export default function Login({ navigation }) {
 
 
     useEffect(() => {
-        show = Keyboard.addListener('keyboardDidShow', keyboardDidShow)
-        hide = Keyboard.addListener('keyboardDidHide', keyboardDidHide)
+        // show = Keyboard.addListener('keyboardDidShow', keyboardDidShow)
+        // hide = Keyboard.addListener('keyboardDidHide', keyboardDidHide)
 
         Animated.parallel([
             Animated.spring(animando.y, {
                 toValue: 0,
                 speed: 4,
                 bounciness: 15, 
-                useNativeDriver: true
+                useNativeDriver: false
             }),
             Animated.timing(transparencia, {
                 toValue: 1,
                 duration: 500,
-                useNativeDriver: true
+                useNativeDriver: false
             }),
 
         ]).start();
     }, [])
 
-    function keyboardDidShow(){
-        Animated.parallel([
+    // function keyboardDidShow(){
+    //     Animated.parallel([
             
-            Animated.spring(logo.x,{
-                toValue: 180,
-                duration: 110,
-                // useNativeDriver: true
-            }),
+    //         Animated.event(hert.x,{
+    //             toValue: 180,
+    //             duration: 110,
+    //             useNativeDriver: true
+    //         }),
             
-            Animated.spring(logo.y,{
-                toValue: 100,
-                duration: 100,
-                // useNativeDriver: true
-            })
-        ]).start();
-    }
+    //         Animated.event(logo.y,{
+    //             toValue: 100,
+    //             duration: 100,
+    //             useNativeDriver: true
+    //         })
+    //     ]).start();
+    // }
 
-    function keyboardDidHide(){
-        Animated.parallel([
-            Animated.spring(logo.x,{
-                toValue: 300,
-                duration: 100,
-                // useNativeDriver: true
-            }),
-            Animated.spring(logo.y,{
-                toValue: 160,
-                duration: 100,
-                // useNativeDriver: true
-            })
-        ]).start();
-    }
+    // function keyboardDidHide(){
+    //     Animated.parallel([
+    //         Animated.spring(logo.x,{
+    //             toValue: 300,
+    //             duration: 100,
+    //             // useNativeDriver: true
+    //         }),
+    //         Animated.spring(logo.y,{
+    //             toValue: 160,
+    //             duration: 100,
+    //             // useNativeDriver: true
+    //         })
+    //     ]).start();
+    // }
 
     const autenticar = () => {
         let user = {
@@ -108,7 +108,7 @@ export default function Login({ navigation }) {
             senha: senha,
         }
 
-        fetch("http://localhost:3000/usuario", {
+        fetch("http://192.168.0.109:3000/usuario", {
             "method": "POST",
             "headers": {
                 "Content-Type": "application/json"
@@ -223,12 +223,16 @@ const styles = StyleSheet.create({
     },
     logo: {
         flex: 1,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        width: '70%',
+        height: '10%',
+        
     },
     textInput: {
         backgroundColor: '#fff',
         width: '90%',
-        marginBottom: 15,
+        marginBottom: 18,
+        marginTop: -7,
         color: '#222',
         fontSize: 17,
         borderRadius: 7,

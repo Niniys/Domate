@@ -38,7 +38,7 @@ export default function Anotacao() {
     }
 
     const listar = () => {
-        fetch('http://10.87.207.4:3000/nota', {
+        fetch('http://192.168.0.109:3000/nota', {
             method: 'GET'
         })
         .then(res => { return res.json(); })
@@ -73,9 +73,7 @@ export default function Anotacao() {
                             return(
 
                                 <View key={index}>
-                                    <ScrollView style={styles.Scrow}>
-                                        <Text style={styles.text}>{item.anot}</Text>
-                                    </ScrollView>
+                                    <Text style={styles.text}>{item.anot}</Text>
                                 </View>
                             )
                         })
@@ -86,6 +84,8 @@ export default function Anotacao() {
         </View>
     )
 }
+
+
 
 const styles = StyleSheet.create({
     container: {

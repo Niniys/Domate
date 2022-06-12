@@ -1,13 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { View, TextInput, Text, ToastAndroid, TouchableOpacity } from 'react-native';
+import { View, TextInput, Text, ToastAndroid, TouchableOpacity, StyleSheet, FlatList, ScrollView } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import styles from './style'
+
 
 
 
 export default function Anotacao() {
 
     const [anotacao, setAnot] = useState("")
+    const [lista, setLista] = useState([])
+
+    useEffect(() => {
+        listar();
+    }, [])
 
     const anotar = () => {
         let dados = {
@@ -36,9 +41,9 @@ export default function Anotacao() {
         fetch('http://192.168.0.109:3000/nota', {
             method: 'GET'
         })
-        .then((res) => res.json())
-        .then((data) => {
-            console.log(data);
+        .then(res => { return res.json(); })
+        .then(data => {
+            setLista(data);
 
         })
         .catch((error) => {
@@ -50,11 +55,11 @@ export default function Anotacao() {
 
 
     return (
-        <View>
-            <Text>Anotações</Text>
+        <View style={styles.container}>
+            <Text style={styles.textStyle}>Anotações</Text>
             <View>
                 <TextInput
-                    style={styles.anotacao}
+                    style={styles.textInput}
                     value={anotacao}
                     onChangeText={setAnot}
                     placeholder={"Escreva suas anotações"}
@@ -62,13 +67,59 @@ export default function Anotacao() {
                 <TouchableOpacity onPress={() => anotar()} style={[styles.button]}>
                     <Text style={styles.buttontext}>Adicionar anotação</Text>
                 </TouchableOpacity>
+                <View>
+                    {
+                        lista.map((item, index) => {
+                            return(
 
-                <Text onLoad={() => listar()} style={[styles.nn]}/>
+                                <View key={index}>
+                                    <Text style={styles.text}>{item.anot}</Text>
+                                </View>
+                            )
+                        })
+                    }
+                </View>
             </View>
 
         </View>
     )
 }
+
+
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: '#191919',
+        
+    },
+    textStyle: {
+        color: '#FFFFFF',
+        marginBottom: 25,
+        fontSize: 30
+    },
+    text: {
+        color: '#FFFFFF',
+        marginBottom: 25,
+    },
+
+    textInput: {
+        backgroundColor: '#fff',
+        width: 250,
+        marginBottom: 18,
+        color: '#222',
+        fontSize: 15,
+        borderRadius: 7,
+        padding: 10
+    },
+
+    Scrow: {
+        height: '100px',
+        width: '200px'
+    }
+})
 
 // class Anot extends Component {
 //     state = {
