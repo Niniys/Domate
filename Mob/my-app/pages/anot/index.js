@@ -19,7 +19,7 @@ export default function Anotacao() {
             anot: anotacao
         }
 
-        fetch('http://192.168.0.109:3000/nota', {
+        fetch('http://10.87.207.4:3000/nota', {
             "method": "POST",
             "headers": {
                 "Content-Type": "application/json"
@@ -38,7 +38,7 @@ export default function Anotacao() {
     }
 
     const listar = () => {
-        fetch('http://192.168.0.109:3000/nota', {
+        fetch('http://10.87.207.4:3000/nota', {
             method: 'GET'
         })
         .then(res => { return res.json(); })
@@ -120,41 +120,3 @@ const styles = StyleSheet.create({
         width: '200px'
     }
 })
-
-// class Anot extends Component {
-//     state = {
-//         data: ''
-//     }
-//     listar = () => {
-//         fetch('http://192.168.0.109:3000/nota', {
-//             method: 'GET'
-//         })
-//         .then((response) => response.json())
-//         .then((responseJson) => {
-//             console.log(responseJson);
-//             this.setState({
-//                 data: responseJson
-//             })
-            
-//         })
-//         .catch((error) => {
-//             console.error(error);
-//         });
-//         Anotacao();
-//     }
-//     render() {
-//         return (
-//             <View>
-//                 <Text>
-//                     {this.state.data.Object}
-//                 </Text>
-//             </View>
-//         )
-//     }
-// }
-// const App = () => {
-//     return (
-//         <Anot />
-//     )
-// }
-// export default App
