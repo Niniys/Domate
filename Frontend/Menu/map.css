@@ -45,13 +45,8 @@
     width: 75%;
     height: 710px;
   }
-  
+/*   
   .mapa1--hide {
-    display: none;
-    transition: all .5s;
-  }
-
-  /* .mapa1--hide {
     display: none;
     transition: all .5s;
   } */
@@ -87,23 +82,89 @@
   .um br{
     color: var(--cor12);
   }
-  
-  .um--abrir {
-    display: flex;
-    position: relative;
-    margin-left: 20px;
-    margin-top: 20px;
-    height: 350px;
-    width: 98%;
-    z-index: 1;
-    transition: all .9s;
+
+  @keyframes abrir {
+    from {
+      height: 100px;
+      width: 280px;
+      margin-left: 200px;
+      margin-top: 130px;
+    }
+
+    to {
+      height: 350px;
+      width: 98%;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
   }
 
-  .um--abrir text {
-    display: flex;
-    margin-left: 0px;
-    margin-top: -200px;
-    transition: all .9s;
+  @keyframes fechar {
+    from {
+      height: 350px;
+      width: 98%;
+      margin-left: 20px;
+      margin-top: 20px;
+    }
+
+    to {
+      height: 100px;
+      width: 280px;
+      margin-left: 200px;
+      margin-top: 130px;
+    }
+  }
+
+  @keyframes texto{
+    from {
+      margin-top: 0px;
+    }
+
+    to {
+      margin-top: -250px;
+    }
+  }
+
+  @keyframes texto2 {
+    from {
+      margin-top: -250px;
+    }
+
+    to {
+      margin-top: 0px;
+    }
+  }
+
+  @keyframes setar {
+    from {
+      margin-left: auto;
+      margin-top: 0;
+      margin-right: 10px;
+      transform: rotate(0deg);
+    }
+
+    to {
+      margin-left: auto;
+      margin-top: -240px;
+      margin-right: 1070px;
+      transform: rotate(90deg);
+    }
+  }
+
+  @keyframes desetar {
+    from {
+      margin-left: auto;
+      margin-top: -240px;
+      margin-right: 1070px;
+      transform: rotate(90deg);
+    }
+
+    to {
+      margin-left: auto;
+      margin-top: 0;
+      margin-right: 10px;
+      transform: rotate(0deg);
+    }
   }
 
   .um--fechar {
@@ -288,6 +349,7 @@
 
 .mapa1, .mapa2, .mapa3 {
   display: none;
+  position: absolute;
   align-items: center;
   justify-content: center;
   height: 350px;
@@ -297,8 +359,9 @@
 .mapa1 text {
   white-space: normal;
   text-align: center;
-  height: 100%;
-  margin-top: 200px;
+  height: 50%;
+  margin-top: 100px;
+  margin-left: 100px;
 }
 
 .mapa2 text {

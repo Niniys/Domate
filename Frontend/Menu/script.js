@@ -10,7 +10,7 @@ var temas = document.querySelector(".temas");
 var sair = document.getElementById("sair");
 
 
-var temas = ["Padrao", "Lilas", "Inverno", "RosaChoque", "Bege", "Roxo", "Limonada", "CeuLimpo"];
+var temas = ["Padrao", "Lilas", "Inverno", "RosaChoque", "Bege", "TempodeChuva", "Limonada", "CeuLimpo", "Frutose", "Roxo"];
 var indexTema = -1;
 
 function loadtema() {
@@ -44,6 +44,8 @@ function setTema() {
 function themes() {
     let temas = document.querySelector(".temas");
     let ideia = document.getElementById("idea");
+    let btn = document.querySelector(".menu-btn");
+    let botao = document.querySelector(".botao");
 
     temas.style.display = "block";
 
@@ -68,6 +70,18 @@ function themes() {
     })
 
     ideia.addEventListener("mouseover", () => {
+        temas.style.display = "none";
+    })
+
+    deslogado.addEventListener("click", () => {
+        temas.style.display = "none";
+    })
+
+    botao.addEventListener("click", () => {
+        temas.style.display = "none";
+    })
+
+    btn.addEventListener("click", () => {
         temas.style.display = "none";
     })
 }
@@ -136,15 +150,15 @@ const disableBege = () => {
 }
 
 
-const enableRoxo = () => {
-    document.body.classList.add("Roxo");
-    localStorage.setItem("Roxo", "enabled");
+const enableTempodeChuva = () => {
+    document.body.classList.add("TempodeChuva");
+    localStorage.setItem("TempodeChuva", "enabled");
 };
 
 
-const disableRoxo = () => {
-    document.body.classList.remove("Roxo");
-    localStorage.setItem("Roxo", null);
+const disableTempodeChuva = () => {
+    document.body.classList.remove("TempodeChuva");
+    localStorage.setItem("TempodeChuva", null);
 };
 
 
@@ -170,18 +184,42 @@ const disableCeuLimpo = () => {
 }
 
 
+const enableFrutose = () => {
+    document.body.classList.add("Frutose");
+    localStorage.setItem("Frutose", "enabled");
+}
+
+const disableFrutose = () => {
+    document.body.classList.remove("Frutose");
+    localStorage.setItem("Frutose", null);
+}
+
+
+const enableRoxo = () => {
+    document.body.classList.add("Roxo");
+    localStorage.setItem("Roxo", "enabled");
+}
+
+const disableRoxo = () => {
+    document.body.classList.remove("Roxo");
+    localStorage.setItem("Roxo", null);
+}
+
+
 var togglePadrao = document.querySelector(".botao1");
 
 togglePadrao.addEventListener("click", function () {
 
     localStorage.setItem("temaselecionado", 0);
+    disableRoxo();
+    disableFrutose();
     disableCeuLimpo();
     disableLimonada();
+    disableTempodeChuva();
     disableBege();
     disableRosaChoque();
     disableInverno();
     disableLilas();
-    disableRoxo();
     enablePadrao();
     console.log(temas[0]);
     console.log(0);
@@ -194,8 +232,11 @@ var toggleLilas = document.querySelector(".botao2");
 toggleLilas.addEventListener("click", function () {
 
     localStorage.setItem("temaselecionado", 1);
+    disableRoxo();
+    disableFrutose();
     disableCeuLimpo();
     disableLimonada();
+    disableTempodeChuva();
     disableBege();
     disableRosaChoque();
     disableInverno();
@@ -210,9 +251,12 @@ var toggleInverno = document.querySelector(".botao3");
 
 toggleInverno.addEventListener("click", function () {
 
-    localStorage.setItem("temaselecionado", 2);
+    localStorage.setItem("temaselecionado", 2); 
+    disableRoxo();
+    disableFrutose();
     disableCeuLimpo();
     disableLimonada();
+    disableTempodeChuva();
     disableBege();
     disableRosaChoque();
     enableInverno();
@@ -226,9 +270,12 @@ var toggleRosaChoque = document.querySelector(".botao4");
 
 toggleRosaChoque.addEventListener("click", function () {
 
-    localStorage.setItem("temaselecionado", 3);
+    localStorage.setItem("temaselecionado", 3);  
+    disableRoxo();
+    disableFrutose();
     disableCeuLimpo();
     disableLimonada();
+    disableTempodeChuva();
     disableBege();
     enableRosaChoque();
     console.log(temas[3]);
@@ -241,9 +288,12 @@ var toggleBege = document.querySelector(".botao5");
 
 toggleBege.addEventListener("click", function () {
 
-    localStorage.setItem("temaselecionado", 4);
+    localStorage.setItem("temaselecionado", 4);   
+    disableRoxo();
+    disableFrutose();
     disableCeuLimpo();
     disableLimonada();
+    disableTempodeChuva();
     enableBege();
     console.log(temas[4]);
     console.log(4);
@@ -251,18 +301,16 @@ toggleBege.addEventListener("click", function () {
     localStorage.setItem("tema", temas[4]);
 })
 
-var toggleRoxo = document.querySelector(".botao6");
+var toggleTempodeChuva = document.querySelector(".botao6");
 
-toggleRoxo.addEventListener("click", function () {
+toggleTempodeChuva.addEventListener("click", function () {
 
-    localStorage.setItem("temaselecionado", 5);
+    localStorage.setItem("temaselecionado", 5); 
+    disableRoxo();
+    disableFrutose();
     disableCeuLimpo();
     disableLimonada();
-    disableBege();
-    disableRosaChoque();
-    disableInverno();
-    disableLilas();
-    enableRoxo();
+    enableTempodeChuva();
     console.log(temas[5]);
     console.log(5);
 
@@ -274,6 +322,8 @@ var toggleLimonada = document.querySelector(".botao7");
 toggleLimonada.addEventListener("click", function () {
 
     localStorage.setItem("temaselecionado", 6);
+    disableRoxo();
+    disableFrutose();
     disableCeuLimpo();
     enableLimonada();
     console.log(temas[6]);
@@ -286,12 +336,37 @@ var toggleCeuLimpo = document.querySelector(".botao8");
 
 toggleCeuLimpo.addEventListener("click", function () {
 
-    localStorage.setItem("temaselecionado", 7);
+    localStorage.setItem("temaselecionado", 7); 
+    disableRoxo();
+    disableFrutose();
     enableCeuLimpo();
     console.log(temas[7]);
     console.log(7);
 
     localStorage.setItem("tema", temas[7]);
+})
+
+var toggleFrutose = document.querySelector(".botao9");
+
+toggleFrutose.addEventListener("click", () => {
+    localStorage.setItem("temaselecionado", 8);
+    disableRoxo();
+    enableFrutose();
+    console.log(temas[8]);
+    console.log(8);
+
+    localStorage.setItem("tema", temas[8]);
+})
+
+var toggleRoxo = document.querySelector(".botao10");
+
+toggleRoxo.addEventListener("click", () => {
+    localStorage.setItem("temaselecionado", 9);
+    enableRoxo();
+    console.log(temas[9]);
+    console.log(9);
+
+    localStorage.setItem("tema", temas[9]);
 })
 
 var $btnAumentar = $("#btnAumentar");
@@ -322,7 +397,8 @@ $btnDiminuir.on('click', function() {
 function dicas() {
     let dicas = document.querySelector(".dicas");
     let cores1 = document.getElementById("cores") 
-
+    let btn = document.querySelector(".menu-btn");
+    let botao = document.querySelector(".botao");
 
     dicas.style.display = "block";
 
@@ -346,7 +422,19 @@ function dicas() {
         dicas.style.display = "none";
     })
 
+    deslogado.addEventListener("click", () => {
+        dicas.style.display = "none";
+    })
+
+    botao.addEventListener("click", () => {
+        dicas.style.display = "none";
+    })
+
     cores1.addEventListener("mouseover", () => {
+        dicas.style.display = "none";
+    })
+
+    btn.addEventListener("click", () => {
         dicas.style.display = "none";
     })
 }

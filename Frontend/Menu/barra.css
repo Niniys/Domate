@@ -58,7 +58,7 @@
     --cor5: rgb(252, 223, 148);
 }
 
-.Roxo {
+.TempodeChuva {
     --cor13: rgb(0, 0, 0);
     --cor12: rgb(255, 255, 255);
     --cor1: rgb(233, 213, 218);
@@ -91,11 +91,21 @@
 .Frutose {
     --cor13: rgb(0, 0, 0);
     --cor12: rgb(255, 255, 255);
-    --cor1: rgb(192, 237, 166,);
+    --cor1: rgb(192, 237, 166);
     --cor2: rgb(255, 247, 188);
     --cor3: rgb(253, 93, 93);
     --cor4: rgb(255, 128, 128);
     --cor5: rgb(166, 237, 211);
+}
+
+.Roxo {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
+    --cor1: rgb(224, 55, 193);
+    --cor2: rgb(154, 6, 128);
+    --cor3: rgb(22, 0, 64);
+    --cor4: rgb(76, 0, 112);
+    --cor5: rgb(121, 1, 140);
 }
 
 .header {
@@ -163,7 +173,7 @@
     align-self: center;
 }
 
-.tema1, .tema2, .tema3, .tema4, .tema5,.tema6, .tema7, .tema8 {
+.tema1, .tema2, .tema3, .tema4, .tema5,.tema6, .tema7, .tema8, .tema9, .tema10 {
     position: relative;
     margin-top: 15px;
     font-size: 20px;
@@ -171,7 +181,7 @@
     width: 280px;
 }
 
-.tema1, .tema2, .tema3, .tema4, .tema5,.tema6, .tema7, .tema8 text{
+.tema1, .tema2, .tema3, .tema4, .tema5,.tema6, .tema7, .tema8, .tema9, .tema10 text{
     position: relative;
     line-height: 20px;
 }
@@ -218,7 +228,7 @@
     width: 110px;
     border: solid black;
     border-radius: 30px;
-    background-image: linear-gradient(to right, rgb(248, 236, 209), rgb(222, 182, 171), rgb(172, 125, 136), rgb(133, 88, 111));
+    background-image: linear-gradient(to right, rgb(248, 236, 209), rgb(222, 182, 171), rgb(133, 88, 111), rgb(172, 125, 136), rgb(252, 223, 148));
 }
 
 .tema6 button{
@@ -227,7 +237,7 @@
     width: 110px;
     border: solid black;
     border-radius: 30px;
-    background-image: linear-gradient(to right, rgb(154, 6, 128), rgb(121, 1, 140), rgb(76, 0, 112), rgb(22, 0, 64)); 
+    background-image: linear-gradient(to right, rgb(233, 213, 218), rgb(130, 115, 151), rgb(54, 48, 98), rgb(77, 76, 125), rgb(89, 87, 167)); 
 }
 
 .tema7 button{
@@ -236,7 +246,7 @@
     width: 110px;
     border: solid black;
     border-radius: 30px;
-    background-image: linear-gradient(to right, rgb(255, 239, 130), rgb(239, 211, 69), rgb(186, 189, 66), rgb(130, 149, 75));
+    background-image: linear-gradient(to right, rgb(255, 239, 130), rgb(239, 211, 69), rgb(130, 149, 75), rgb(186, 189, 66), rgb(221, 225, 38));
 }
 
 .tema8 button{
@@ -245,7 +255,25 @@
     width: 110px;
     border: solid black;
     border-radius: 30px;
-    background-image: linear-gradient(to right, rgb(232, 249, 253), rgb(121, 218, 232), rgb(10, 161, 221), rgb(33, 85, 205));
+    background-image: linear-gradient(to right, rgb(232, 249, 253), rgb(121, 218, 232), rgb(33, 85, 205), rgb(10, 161, 221), rgb(72, 188, 205));
+}
+
+.tema9 button {
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    border: solid black;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, rgb(192, 237, 166), rgb(255, 247, 188), rgb(253, 93, 93), rgb(255, 128, 128), rgb(166, 237, 211));
+}
+
+.tema10 button {
+    cursor: pointer;
+    height: 40px;
+    width: 110px;
+    border: solid black;
+    border-radius: 30px;
+    background-image: linear-gradient(to right, rgb(224, 55, 193), rgb(154, 6, 128), rgb(22, 0, 64), rgb(76, 0, 112), rgb(121, 1, 140));
 }
 
 .dicas {
@@ -266,8 +294,8 @@
 
 .texto {
     display: flex;
-    width: 95%;
-    height: 90%;
+    width: auto;
+    height: auto;
     margin-top: 10px;
     margin-left: 15px;
     background-color: var(--cor12);

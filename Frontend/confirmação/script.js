@@ -15,7 +15,7 @@ exxx.addEventListener("click", () => {
         })
 })
 
-var temas = ["Padrao", "Lilas", "Inverno", "RosaChoque", "Bege", "Roxo", "Limonada", "CeuLimpo"];
+var temas = ["Padrao", "Lilas", "Inverno", "RosaChoque", "Bege", "TempodeChuva", "Limonada", "CeuLimpo", "Frutose", "Roxo"];
 var indexTema = -1;
 
 function loadtema() {
