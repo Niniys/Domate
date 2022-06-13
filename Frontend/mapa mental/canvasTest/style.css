@@ -4,7 +4,7 @@ body, head{
 }
 
 header {
-    background: linear-gradient(to top, var(--cor5), var(--cor1));
+    background: var(--cor1);
     border-bottom: 4px  solid var(--cor13);
     display:flex;
     justify-content: space-between;
