@@ -143,9 +143,9 @@ h1{
 
   h3b{
     font-family: 'Oswald', sans-serif;
-    position: relative;
-    top: 35%;
-    right: -10.1%;
+    position: fixed;
+    top: 47%;
+    right: 53.5%;
   }
 
   .conda{

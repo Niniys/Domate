@@ -5,6 +5,45 @@
     font-family: 'Lato', sans-serif;
     font-family: 'Oswald', sans-serif;
   }
+
+  .botao {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+  }
+  
+  .botao a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Segoe UI';
+  }
+  
+  .botao button {
+    position:relative;
+    display: flex;
+    background-color: var(--cor4);
+    left: 10px;
+    width: 258px;
+    height: 60px;
+    margin: 55px;
+    border-radius: 40px;
+    border: solid black;
+    border-width: 4px;
+    flex-direction: row;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    cursor: pointer;
+    box-shadow: rgba(0,0,0,.35);
+  }
+  
+  .botao div {
+    display: flex;
+    flex-direction: row;
+  }
+
   .wrapper{
     position: fixed;
     top: -5PX;
