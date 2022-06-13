@@ -91,13 +91,15 @@ function meni() {
     }
 }
 
+var animate = 1;
+
 function mover() {
     let um = document.querySelector(".um");
     let mapa1 = document.querySelector(".mapa1");
     let seta = document.getElementById("seta");
     let a = document.getElementById("a");
 
-    if(um.style.height = "100px") {
+    if(animate == 1) {
         um.style.animation = "abrir 3s";
         a.style.animation = "texto 3s";
         seta.style.animation = "setar 3s";
@@ -114,38 +116,31 @@ function mover() {
         seta.style.transform = "rotate(90deg)";
 
         mapa1.style.display = "flex";
-    }
 
-    seta.addEventListener("click", () => {
+        setTimeout(() => {  
+            animate ++;
+        }, 3000)
+    } else {
         um.style.animation = "fechar 3s";
         a.style.animation = "texto2 3s";
         seta.style.animation = "desetar 3s";
-        
+                
         um.style.height = "100px";
         um.style.width = "280px";
         um.style.marginTop = "130px";
-        um.style.marginLeft = "200px";
-
-        a.style.marginTop = "0px";
+        um.style.marginLeft = "300px";
         
+        a.style.marginTop = "0px";
+                
         seta.style.marginTop = "0px";
         seta.style.marginRight = "10px";
         seta.style.transform = "rotate(0deg)";
-
-        mapa1.style.display = "none";
-    })
-
-    
-
-    // if(mapa1.style.display = "none") {
         
-    // setTimeout(() => {
-    //     mapa1.style.display = "flex";
-    // }, 810)
-    // } else if(mapa1.style.display = "flex"){
-    //     um.classList.toggle("um--fechar");
-        // mapa1.style.display = "none";
-    // } 
+        mapa1.style.display = "none";
+        setTimeout(() => {
+            animate --;
+        }, 3000)
+    }
 }
 
 var atual = 1;

@@ -285,7 +285,7 @@
     border-radius: 40px;
     background-color: var(--cor12);
     width: 570px;
-    height: 260px;
+    /* height: 260px; */
     align-items: center;
     justify-content: center;
     overflow: auto;

@@ -14,17 +14,19 @@ var temas = ["Padrao", "Lilas", "Inverno", "RosaChoque", "Bege", "TempodeChuva",
 var indexTema = -1;
 
 function loadtema() {
+    let config = document.getElementById("config");
+
     var temaSelecionado = parseInt(localStorage.getItem("temaselecionado"));
     var userdata = JSON.parse(localStorage.getItem("userdata"));
     localStorage.setItem(temas[temaSelecionado], "enabled");
     document.body.classList.add(temas[temaSelecionado]);
     if (userdata != null) {
         deslogado.style.display = "none";
-        
+        config.style.display = "flex";
         sair.style.display = "flex";
     } else {
         deslogado.style.display = "flex";
-        
+        config.style.display = "none";
         sair.style.display = "none";
     }
 
