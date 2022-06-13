@@ -1,10 +1,11 @@
 
 import React from 'react';
-import { View} from 'react-native';
+import { View, StyleSheet} from 'react-native';
 import TimerHeader from './timerHead'
 import TimerDisplay from './timerDis'
 import TimerButtons from './timerBut'
-import { Vibration } from 'react-native'
+import {Vibration} from 'react-native'
+
 
 class Timer extends React.Component {
 
@@ -25,7 +26,7 @@ class Timer extends React.Component {
 
     render() {
         return (
-            <View>
+            <View style={styles.container}>
                 <TimerHeader
                     running={this.state.running}
                     intervalType={this.props.intervalType}
@@ -84,5 +85,12 @@ class Timer extends React.Component {
         })
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: "#FBCEB5"
+    }
+})
+
 
 export default Timer;

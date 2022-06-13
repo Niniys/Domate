@@ -1,19 +1,40 @@
 import React from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Platform, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
-class Head extends React.Component {
-    render() {
-        return (
-            <View style={styles.headerContainer}>
-                <Text style={styles.textStyle}> Domate </Text>
-            </View>
-        )
+import Login from '../login/index';
+
+// class Head extends React.Component {
+//     render() {
+//         return (
+//             <View style={styles.headerContainer}>
+//                 <Text style={styles.textStyle}> Domate </Text>
+//             </View>
+//         )
+//     }
+// }
+
+export default function Head({navigation}){
+    const sair = () => {
+        AsyncStorage.clear("userdata")
+        AsyncStorage.getItem('userdata')
+        console.log(AsyncStorage.getItem('userdata'))
+
     }
+
+    return (
+        <View style={styles.headerContainer}>
+            <Text style={styles.textStyle}> Domate </Text>
+            <TouchableOpacity onPress={() => {navigation.goBack()} }>
+                <Text>Sair</Text>
+            </TouchableOpacity>
+        </View>
+    )
 }
 
 const styles = StyleSheet.create({
     headerContainer: {
-        backgroundColor: "#a93190",
+        backgroundColor: "#FF5D6C",
         height: 90,
         justifyContent: "center",
         alignItems: "center",
@@ -21,7 +42,9 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 1,
         elevation: 5,
-        position: "relative"
+        position: "relative",
+        borderColor: "#000",
+        borderWidth: 1,
     },
     textStyle: {
         color: "black",
@@ -33,4 +56,4 @@ const styles = StyleSheet.create({
     }
 })
 
-export default Head;
+// export default Head;

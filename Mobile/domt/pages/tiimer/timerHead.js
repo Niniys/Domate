@@ -27,7 +27,7 @@ class timerHead extends React.Component {
 
         let texto = this.handleDisplay()
         return (
-            <View>
+            <View style={styles.container}>
                 <Text style={styles.textStyle}>{texto}</Text>
             </View>
         )
@@ -35,13 +35,21 @@ class timerHead extends React.Component {
 }
 
 const styles = StyleSheet.create({
+    container: {
+        backgroundColor: "#FBCEB5"
+    },
     textStyle: {
+        flex: 1,
+        alignItems: "center",
+        alignSelf: "center",
         fontSize: 25,
         fontWeight: "500",
         letterSpacing: 1.5,
         fontFamily: Platform.OS == "android" ? "notoserif" : "system",
-        marginTop: 40,
-        padding: 20
+        marginTop: 30,
+        marginBottom: 30,
+        borderBottomWidth: 2,
+        padding: 0
     }
 });
 

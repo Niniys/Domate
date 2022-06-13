@@ -38,7 +38,7 @@ class timerPomo extends React.Component {
 			})
 		}
 		else{
-			alert("Time invalid. Setting value to default. Please enter valid time")
+			alert("Valor inválido, insira corretamente")
 			this.setState({
 				workTime: 25
 			})
@@ -77,23 +77,23 @@ class timerPomo extends React.Component {
 	render() {
 		let time= this.handleTime()
 		return (
-			<View>
-				<View style={styles.row}>
-					<View style={styles.inputWrap}>
-						<Text style={styles.textStyle}>Trabalhar</Text>
-						<TextInput  style={styles.textStyle}  keyboardType={"numeric"} defaultValue={''+this.state.workTime} placeholder = "workTime in mins" onChangeText={this.handleWorkTime} />
+				<View style={styles.container}>
+					<View style={styles.row}>
+						<View style={styles.inputWrap}>
+							<Text style={styles.textStyle}>Trabalhar</Text>
+							<TextInput  style={styles.textStyle}  keyboardType={"numeric"} defaultValue={''+this.state.workTime} placeholder = "Horário de trabalho" onChangeText={this.handleWorkTime} />
+						</View>
+						<View style={styles.inputWrap}>
+							<Text style={styles.textStyle}>Descansar</Text>
+							<TextInput  style={styles.textStyle}  keyboardType={"numeric"} defaultValue={''+this.state.breakTime} placeholder = "Horário da pausa" onChangeText={this.handleBreakTime} />
+						</View>
 					</View>
-					<View style={styles.inputWrap}>
-						<Text style={styles.textStyle}>Descansar</Text>
-						<TextInput  style={styles.textStyle}  keyboardType={"numeric"} defaultValue={''+this.state.breakTime} placeholder = "breakTime in mins" onChangeText={this.handleBreakTime} />
-					</View>
+					<Timer
+						intervalType={this.state.intervalType}
+						Oncomplete={this.handleTimerCompleted}
+						period={time}
+					/>
 				</View>
-				<Timer
-					intervalType={this.state.intervalType}
-					Oncomplete={this.handleTimerCompleted}
-					period={time}
-				/>
-			</View>
 			)
 	}
 }
@@ -104,16 +104,22 @@ class timerPomo extends React.Component {
 export default timerPomo;
 
 const styles = StyleSheet.create({
+	container: {
+        backgroundColor: "#FBCEB5"
+    },
     row: {
         flex: 1,
         flexDirection: "row",
+		color: "#000000"
     },
     inputWrap: {
         flex: 1,
-        borderColor: "#cccccc",
-        borderBottomWidth: 1,
+        borderColor: "#000000",
+        borderBottomWidth: 2,
+        // borderLeftWidth: 2,
         marginBottom: 10
     },
+
     textStyle: {
         fontSize: 25,
         fontWeight: "500",

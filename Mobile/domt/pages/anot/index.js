@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { View, TextInput, Text, ToastAndroid, TouchableOpacity, StyleSheet, FlatList, ScrollView } from 'react-native';
+import React, { useState, useEffect, Image } from 'react';
+import { View, TextInput, Text, ToastAndroid, TouchableOpacity, StyleSheet, FlatList, ScrollView, Button } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Icon from "react-native-vector-icons/Entypo";
 
 
 
 
-export default function Anotacao() {
+export default function Anotacao({ navigation }) {
 
     const [anotacao, setAnot] = useState("")
     const [lista, setLista] = useState([])
@@ -14,12 +15,25 @@ export default function Anotacao() {
         listar();
     }, [])
 
+    // const deletar = () => {
+    //     const host = AsyncStorage.getItem("usernota");
+    //     console.log(host)
+    //     fetch('http://192.168.1.164:3000/nota/' + host.id, {
+    //         "method": "DELETE"
+    //     })
+    //     .then(resp => { return resp.json() })
+    //     .then(data => {
+    //         alert(data)
+
+    //     })
+    // }
+
     const anotar = () => {
         let dados = {
             anot: anotacao
         }
 
-        fetch('http://192.168.0.109:3000/nota', {
+        fetch('http://192.168.1.164:3000/nota', {
             "method": "POST",
             "headers": {
                 "Content-Type": "application/json"
@@ -27,7 +41,7 @@ export default function Anotacao() {
             "body": JSON.stringify(dados),
         })
             .then(resp => { return resp.json() })
-            .then(async data => {
+            .then(data => {
                 // console.log(data)
                 if (data != null || data != undefined) {
                     ToastAndroid.show('Anotação adicionada com sucesso', ToastAndroid.SHORT);
@@ -38,24 +52,49 @@ export default function Anotacao() {
     }
 
     const listar = () => {
-        fetch('http://192.168.0.109:3000/nota', {
+        fetch('http://192.168.1.164:3000/nota', {
             method: 'GET'
         })
-        .then(res => { return res.json(); })
-        .then(data => {
-            setLista(data);
+            .then(res => { return res.json(); })
+            .then(data => {
+                setLista(data);
+                AsyncStorage.setItem("usernota", JSON.stringify(data))
+                console.log(data.id)
+                if (data.length > 0) {
+                    fetch('http://192.168.1.164:3000/nota/' + data.id, {
+                        "method": "DELETE"
+                    })
+                    .then(resp => { return resp.json() })
+                    .then(data => {
+                        alert("Anotação concluida")
+                        return data
 
-        })
-        .catch((error) => {
-            console.error(error);
-        });
+                    })
+                        
+                }
+                    
+
+
+            })
+            .catch((error) => {
+                console.error(error);
+            });
 
     }
 
+    // let icon = (
+    //     <Icon
+    //         name="open-book"
+    //         color={selected == index ? "#000" : "#000"}
+    //         size={35}
+    //     />
+    // );
 
 
+    // let selected = state.index;
     return (
-        <View style={styles.container}>
+        // key={index}
+        <View style={styles.container} >
             <Text style={styles.textStyle}>Anotações</Text>
             <View>
                 <TextInput
@@ -65,24 +104,34 @@ export default function Anotacao() {
                     placeholder={"Escreva suas anotações"}
                 />
                 <TouchableOpacity onPress={() => anotar()} style={[styles.button]}>
-                    <Text style={styles.buttontext}>Adicionar anotação</Text>
+                    <Text style={styles.submit}>Adicionar anotação</Text>
                 </TouchableOpacity>
-                <View>
+                <ScrollView style={styles.scroll}>
                     {
                         lista.map((item, index) => {
-                            return(
+                            return (
 
                                 <View key={index}>
-                                    <Text style={styles.text}>{item.anot}</Text>
+                                    <Text style={styles.text}>{item.anot}
+                                        {/* <Button>A</Button> */}
+                                        <TouchableOpacity style={styles.botoes}>
+                                            <Text onPress={() => delet()}>Concluir</Text>
+                                        </TouchableOpacity>
+                                        <TouchableOpacity>
+                                            <Text>!!!</Text>
+                                        </TouchableOpacity>
+                                    </Text>
+                                    {/* {icon} */}
                                 </View>
                             )
                         })
                     }
-                </View>
+                </ScrollView>
             </View>
 
         </View>
     )
+    //{state.routes.map((route, index) => {})}
 }
 
 
@@ -93,16 +142,25 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#191919',
-        
+
     },
     textStyle: {
         color: '#FFFFFF',
-        marginBottom: 25,
+        fontWeight: 'bold',
+        marginTop: 70,
+        marginBottom: 15,
         fontSize: 30
     },
     text: {
         color: '#FFFFFF',
-        marginBottom: 25,
+        backgroundColor: '#511845',
+        marginTop: 11,
+        padding: 5,
+        fontSize: 24,
+        alignItems: 'center',
+        alignContent: 'center',
+        justifyContent: 'center',
+        textAlign: 'center',
     },
 
     textInput: {
@@ -115,46 +173,27 @@ const styles = StyleSheet.create({
         padding: 10
     },
 
-    Scrow: {
-        height: '100px',
-        width: '200px'
-    }
-})
+    scroll: {
+        flex: 1,
+        marginTop: 30
+    },
 
-// class Anot extends Component {
-//     state = {
-//         data: ''
-//     }
-//     listar = () => {
-//         fetch('http://192.168.0.109:3000/nota', {
-//             method: 'GET'
-//         })
-//         .then((response) => response.json())
-//         .then((responseJson) => {
-//             console.log(responseJson);
-//             this.setState({
-//                 data: responseJson
-//             })
-            
-//         })
-//         .catch((error) => {
-//             console.error(error);
-//         });
-//         Anotacao();
-//     }
-//     render() {
-//         return (
-//             <View>
-//                 <Text>
-//                     {this.state.data.Object}
-//                 </Text>
-//             </View>
-//         )
-//     }
-// }
-// const App = () => {
-//     return (
-//         <Anot />
-//     )
-// }
-// export default App
+
+
+    submit: {
+        color: '#FFFFFF',
+        fontSize: 18,
+        padding: 5,
+        alignSelf: 'center',
+
+    },
+
+    button: {
+        backgroundColor: '#956897',
+        borderColor: '#956897',
+        borderRadius: 10,
+        borderWidth: 1,
+    }
+
+
+})

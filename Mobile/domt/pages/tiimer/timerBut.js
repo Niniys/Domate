@@ -33,22 +33,27 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         flexDirection: "row",
-        marginLeft: 20,
         justifyContent: 'space-evenly',
-        marginBottom: 20
+        backgroundColor: "FF5D6C",
+        marginTop: 50,
+        marginBottom: 25
     },
     buttonStyle: {
         alignItems: "center",
-        backgroundColor: "#a93190",
+        alignSelf: "center",
+        justifyContent: "center",
+        backgroundColor: "#C0EDA6",
         borderColor: "#000",
-        padding: 30,
+        borderWidth: 5,
+        padding: 13,
         flexDirection: "row",
         borderRadius: 25,
     },
     buttonText: {
         color: "black",
+        borderColor: "#000",
         fontSize: 25,
-        fontWeight: "300",
+        fontWeight: "400",
     }
 })
 
