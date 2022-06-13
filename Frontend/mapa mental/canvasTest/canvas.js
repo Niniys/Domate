@@ -237,8 +237,6 @@ function createMapa() {
 
   createLinha(linha20, "lorange20");
 
-
-
   /*------------------------------------------------------------------------------------------------------------------------------------*/
 
   let card = {
@@ -479,6 +477,8 @@ function createLinha(info, id) {
 
   svg.appendChild(point);
 }
+
+ /*------------------------------------------------------------------------------------------------------------------------------------*/
 
 var temas = ["Padrao", "Lilas", "Inverno", "RosaChoque", "Bege", "Roxo", "Limonada", "CeuLimpo"];
 var indexTema = -1;
