@@ -1,3 +1,9 @@
+@media(min-width: 601px) {
+    svg {
+    width: 600px;
+    }
+}
+
 @media(max-width: 600px) {
     html,
     body{
@@ -229,6 +235,10 @@
 
     .progressbar-text {
         font-size: 80px;
+    }
+
+    svg {
+        width: 400px;
     }
 
     .card{
