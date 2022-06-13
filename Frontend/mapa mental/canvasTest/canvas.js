@@ -496,4 +496,4 @@ function setTema() {
   }
 }
 
-createMapa()
+// createMapa()
