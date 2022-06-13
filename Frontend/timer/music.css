@@ -6,9 +6,10 @@ button2:hover {
     background: var(--cor2);
     color: #fff;
     text-decoration: none;
-    right: 100px;
+    z-index: 2;
+    right: 200px;
     height: 100px;
-    margin-left: 1px;
+    margin-left: 10px;
 }
 
 .my-audio{
