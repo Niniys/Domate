@@ -1,190 +1,190 @@
 :root {
-  --cor13: rgb(0, 0, 0);
-  --cor12: rgb(255, 255, 255);
-  --cor1: rgb(255, 93, 108);
-  --cor2: rgb(251, 206, 181);
-  --cor3: rgb(192, 237, 166);
-  --cor4: rgb(222, 255, 139);
-  --cor5: rgb(155, 255, 93);
-}
-
-.Padrao {
-  --cor13: rgb(0, 0, 0);
-  --cor12: rgb(255, 255, 255);
-  --cor1: rgb(255, 93, 108);
-  --cor2: rgb(251, 206, 181);
-  --cor3: rgb(192, 237, 166);
-  --cor4: rgb(222, 255, 139);
-  --cor5: rgb(155, 255, 93);
-}
-
-.Lilas {
-  --cor13: rgb(0, 0, 0);
-  --cor12: rgb(255, 255, 255);
-  --cor1: rgb(255, 205, 221);
-  --cor2: rgb(234, 153, 213);
-  --cor3: rgb(137, 70, 166);
-  --cor4: rgb(183, 98, 193);
-  --cor5: rgb(205, 43, 170);
-}
-
-.Inverno {
-  --cor13: rgb(0, 0, 0);
-  --cor12: rgb(255, 255, 255);
-  --cor1: rgb(201, 150, 204);
-  --cor2: rgb(61, 44, 141);
-  --cor3: rgb(28, 12, 91);
-  --cor4: rgb(145, 107, 191);
-  --cor5: rgb(109, 90, 195);
-}
-
-.RosaChoque {
-  --cor13: rgb(0, 0, 0);
-  --cor12: rgb(255, 255, 255);
-  --cor1: rgb(230, 62, 109);
-  --cor2: rgb(180, 43, 81);
-  --cor3: rgb(66, 5, 22);
-  --cor4: rgb(125, 25, 53);
-  --cor5: rgb(247, 102, 142);
-}
-
-.Bege {
-  --cor13: rgb(0, 0, 0);
-  --cor12: rgb(255, 255, 255);
-  --cor1: rgb(248, 236, 209);
-  --cor2: rgb(222, 182, 171);
-  --cor3: rgb(133, 88, 111);
-  --cor4: rgb(172, 125, 136);
-  --cor5: rgb(252, 223, 148);
-}
-
-.TempodeChuva {
-  --cor13: rgb(0, 0, 0);
-  --cor12: rgb(255, 255, 255);
-  --cor1: rgb(233, 213, 218);
-  --cor2: rgb(130, 115, 151);
-  --cor3: rgb(54, 48, 98);
-  --cor4: rgb(77, 76, 125);
-  --cor5: rgb(89, 87, 167);
-}
-
-.Limonada {
-  --cor13: rgb(0, 0, 0);
-  --cor12: rgb(255, 255, 255);
-  --cor1: rgb(255, 239, 130);
-  --cor2: rgb(239, 211, 69);
-  --cor3: rgb(130, 149, 75);
-  --cor4: rgb(186, 189, 66);
-  --cor5: rgb(221, 225, 38);
-}
-
-.CeuLimpo {
-  --cor13: rgb(0, 0, 0);
-  --cor12: rgb(255, 255, 255);
-  --cor1: rgb(232, 249, 253);
-  --cor2: rgb(121, 218, 232);
-  --cor3: rgb(33, 85, 205);
-  --cor4: rgb(10, 161, 221);
-  --cor5: rgb(72, 188, 205);
-}
-
-.Frutose {
-  --cor13: rgb(0, 0, 0);
-  --cor12: rgb(255, 255, 255);
-  --cor1: rgb(192, 237, 166);
-  --cor2: rgb(255, 247, 188);
-  --cor3: rgb(253, 93, 93);
-  --cor4: rgb(255, 128, 128);
-  --cor5: rgb(166, 237, 211);
-}
-
-.Roxo {
-  --cor13: rgb(0, 0, 0);
-  --cor12: rgb(255, 255, 255);
-  --cor1: rgb(224, 55, 193);
-  --cor2: rgb(154, 6, 128);
-  --cor3: rgb(22, 0, 64);
-  --cor4: rgb(76, 0, 112);
-  --cor5: rgb(121, 1, 140);
-}
-
-body{
-    background-color: var(--cor4);
-    width: 80%;
-    height: 0%;
-    padding: 200px;
-    margin: 3.7%;
-    border: 0px;
-}
-
-h1{
-  color: white;
-}
-
-.cong{
-    background-color: var(--cor4);
-}
-
-.logo{
-    display: flex;
-    margin-top: 0px;
-    margin-left: 0px;
-    flex-direction: row;
-    height: 145px;
-    font-size: 50px;
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
+    --cor1: rgb(255, 93, 108);
+    --cor2: rgb(251, 206, 181);
+    --cor3: rgb(192, 237, 166);
+    --cor4: rgb(222, 255, 139);
+    --cor5: rgb(155, 255, 93);
   }
-
-  h3a{
-    font-family: 'Oswald', sans-serif;
-    position: relative;
-    top: 20%;
-    right: -19.2%;
+  
+  .Padrao {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
+    --cor1: rgb(255, 93, 108);
+    --cor2: rgb(251, 206, 181);
+    --cor3: rgb(192, 237, 166);
+    --cor4: rgb(222, 255, 139);
+    --cor5: rgb(155, 255, 93);
   }
-
-  h3b{
-    font-family: 'Oswald', sans-serif;
-    position: fixed;
-    top: 47%;
-    right: 53.5%;
+  
+  .Lilas {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
+    --cor1: rgb(255, 205, 221);
+    --cor2: rgb(234, 153, 213);
+    --cor3: rgb(137, 70, 166);
+    --cor4: rgb(183, 98, 193);
+    --cor5: rgb(205, 43, 170);
   }
-
-  .conda{
-    font-family: 'Oswald', sans-serif;
-    position: fixed;
-    top: 35%;
-    /*left: -100%;
-    */right: 35%;
-    height: 30%;
-    width: 30%;
-    background: var(--cor3);
-    border: 5px solid var(--cor1);
-    border-radius: 5%  ;
-    list-style: none;
-    text-decoration: none;
+  
+  .Inverno {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
+    --cor1: rgb(201, 150, 204);
+    --cor2: rgb(61, 44, 141);
+    --cor3: rgb(28, 12, 91);
+    --cor4: rgb(145, 107, 191);
+    --cor5: rgb(109, 90, 195);
   }
-
-  .peso{
-    font-family: 'Oswald', sans-serif;
-    position: relative;
-    top: 60%;
-    right: -45%;
+  
+  .RosaChoque {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
+    --cor1: rgb(230, 62, 109);
+    --cor2: rgb(180, 43, 81);
+    --cor3: rgb(66, 5, 22);
+    --cor4: rgb(125, 25, 53);
+    --cor5: rgb(247, 102, 142);
   }
-
-  .exclu{
-    position: relative;
-    top: 75%;
-    right: -10px;
-    color: #C70039;
+  
+  .Bege {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
+    --cor1: rgb(248, 236, 209);
+    --cor2: rgb(222, 182, 171);
+    --cor3: rgb(133, 88, 111);
+    --cor4: rgb(172, 125, 136);
+    --cor5: rgb(252, 223, 148);
   }
-
-  .lina{
-    position: relative;
-    border: 0.7px solid #ffffff;
-    top: 55%;
-    right: -25px;
-    width: 90%;
+  
+  .TempodeChuva {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
+    --cor1: rgb(233, 213, 218);
+    --cor2: rgb(130, 115, 151);
+    --cor3: rgb(54, 48, 98);
+    --cor4: rgb(77, 76, 125);
+    --cor5: rgb(89, 87, 167);
   }
-
-  a2{
-    color: #00000000;
+  
+  .Limonada {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
+    --cor1: rgb(255, 239, 130);
+    --cor2: rgb(239, 211, 69);
+    --cor3: rgb(130, 149, 75);
+    --cor4: rgb(186, 189, 66);
+    --cor5: rgb(221, 225, 38);
   }
+  
+  .CeuLimpo {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
+    --cor1: rgb(232, 249, 253);
+    --cor2: rgb(121, 218, 232);
+    --cor3: rgb(33, 85, 205);
+    --cor4: rgb(10, 161, 221);
+    --cor5: rgb(72, 188, 205);
+  }
+  
+  .Frutose {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
+    --cor1: rgb(192, 237, 166);
+    --cor2: rgb(255, 247, 188);
+    --cor3: rgb(253, 93, 93);
+    --cor4: rgb(255, 128, 128);
+    --cor5: rgb(166, 237, 211);
+  }
+  
+  .Roxo {
+    --cor13: rgb(0, 0, 0);
+    --cor12: rgb(255, 255, 255);
+    --cor1: rgb(224, 55, 193);
+    --cor2: rgb(154, 6, 128);
+    --cor3: rgb(22, 0, 64);
+    --cor4: rgb(76, 0, 112);
+    --cor5: rgb(121, 1, 140);
+  }
+  
+  body{
+      background-color: var(--cor4);
+      width: 80%;
+      height: 0%;
+      padding: 200px;
+      margin: 3.7%;
+      border: 0px;
+  }
+  
+  h1{
+    color: white;
+  }
+  
+  .cong{
+      background-color: var(--cor4);
+  }
+  
+  .logo{
+      display: flex;
+      margin-top: 0px;
+      margin-left: 0px;
+      flex-direction: row;
+      height: 145px;
+      font-size: 50px;
+    }
+  
+    h3a{
+      font-family: 'Oswald', sans-serif;
+      position: relative;
+      top: 20%;
+      right: -19.2%;
+    }
+  
+    h3b{
+      font-family: 'Oswald', sans-serif;
+      position: fixed;
+      top: 47%;
+      right: 53.5%;
+    }
+  
+    .conda{
+      font-family: 'Oswald', sans-serif;
+      position: fixed;
+      top: 35%;
+      /*left: -100%;
+      */right: 35%;
+      height: 30%;
+      width: 30%;
+      background: var(--cor3);
+      border: 5px solid var(--cor1);
+      border-radius: 5%  ;
+      list-style: none;
+      text-decoration: none;
+    }
+  
+    .peso{
+      font-family: 'Oswald', sans-serif;
+      position: relative;
+      top: 60%;
+      right: -45%;
+    }
+  
+    .exclu{
+      position: relative;
+      top: 75%;
+      right: -10px;
+      color: #C70039;
+    }
+  
+    .lina{
+      position: relative;
+      border: 0.7px solid #ffffff;
+      top: 55%;
+      right: -25px;
+      width: 90%;
+    }
+  
+    a2{
+      color: #00000000;
+    }
