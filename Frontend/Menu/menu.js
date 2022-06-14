@@ -97,6 +97,8 @@ function mover() {
     let um = document.querySelector(".um");
     let dois = document.querySelector(".dois");
     let mapa1 = document.querySelector(".mapa1");
+    let mapa2 = document.querySelector(".mapa2");
+    let mapa3 = document.querySelector(".mapa3");
     let seta = document.getElementById("seta");
     let a = document.getElementById("a");
 
@@ -112,8 +114,9 @@ function mover() {
 
         a.style.marginTop = "-250px";
 
+        seta.style.marginLeft = "20px"
         seta.style.marginTop = "-240px";
-        seta.style.marginRight = "1070px";
+        seta.style.marginRight = "200%";
         seta.style.transform = "rotate(90deg)";
 
         
@@ -135,14 +138,19 @@ function mover() {
         
         a.style.marginTop = "0px";
                 
+        seta.style.marginLeft = "20px";
         seta.style.marginTop = "0px";
         seta.style.marginRight = "10px";
         seta.style.transform = "rotate(0deg)";
         
         mapa1.style.display = "none";
+        mapa2.style.display = "none";
+        mapa3.style.display = "none";
         dois.style.display = "flex";
         setTimeout(() => {
-            
+            img.style.display = "flex";
+            img2.style.display = "none";
+             img3.style.display = "none";
             animate --;
         }, 3000)
     }
@@ -154,11 +162,9 @@ function proximo() {
 let mapa1 = document.querySelector(".mapa1");
 let mapa2 = document.querySelector(".mapa2");
 let mapa3 = document.querySelector(".mapa3");
-let mapa = document.querySelector(".mapa");
 let img = document.getElementById("img");
 let img2 = document.getElementById("img2");
 let img3 = document.getElementById("img3");
-let um = document.querySelector(".um");
 
     
     if(atual <= 3) atual ++;
@@ -169,29 +175,17 @@ let um = document.querySelector(".um");
         mapa2.style.display = "none";
         mapa3.style.display = "none";
     } else if(atual == 2) {
-        // mapa.classList.toggle("img--trocar");
-        // setTimeout(() => {
-        //     img.style.display = "none";
-        //     mapa.classList.toggle("img2--voltar");
-        //     img2.style.display = "flex";
-        // },500)
-        img.style.animation = "imagem1 3s";
-
-        setTimeout(() => {
-            img.style.display = "none";
-            img2.style.animation = "imagem2 3s"
-        }, 3000)
+        img.style.display = "none";
+        img2.style.display = "flex";
 
         mapa1.style.display = "none";
         mapa2.style.display = "flex";
         mapa3.style.display = "none";
     } else if(atual == 3) {
-        // mapa.classList.toggle("img2--trocar");
-        // setTimeout(() => {
-        //     img2.style.display = "none";
-        //     mapa.classList.toggle("img3--voltar");
-        //     img3.style.display = "flex";
-        // },500)
+        img.style.display = "none";
+        img2.style.display = "none";
+        img3.style.display = "flex";
+
         mapa1.style.display = "none";
         mapa2.style.display = "none";
         mapa3.style.display = "flex";
@@ -202,30 +196,33 @@ function voltar() {
     let mapa1 = document.querySelector(".mapa1");
     let mapa2 = document.querySelector(".mapa2");
     let mapa3 = document.querySelector(".mapa3");
-    let mapa = document.querySelector(".mapa");
+    let img = document.getElementById("img");
     let img2 = document.getElementById("img2");
-    let img4 = document.getElementById("img4");
-    let img5 = document.getElementById("img5");
-    let img6 = document.getElementById("img6");
+    let img3 = document.getElementById("img3");
 
     if(atual >= 2) atual --;
 
     if(atual == 1) {
-        // mapa.classList.toggle("img2--troc");
-        // setTimeout(() => {
-        //     img2.style.display = "none";
-        //     mapa.classList.toggle("img4--voltar");
-        //     img4.style.display = "flex";
-        // },500)
+        img.style.display = "flex";
+        img2.style.display = "none";
+        img3.style.display = "none";
+
         mapa1.style.display = "flex";
         mapa2.style.display = "none";
         mapa3.style.display = "none";
     } else if(atual == 2) {
+        img.style.display = "none";
+        img2.style.display = "flex";
+        img3.style.display = "none";
         
         mapa1.style.display = "none";
         mapa2.style.display = "flex";
         mapa3.style.display = "none";
     } else if(atual == 3) {
+        img.style.display = "none";
+        img2.style.display = "none";
+        img3.style.display = "flex";
+
         mapa1.style.display = "none";
         mapa2.style.display = "none";
         mapa3.style.display = "flex";

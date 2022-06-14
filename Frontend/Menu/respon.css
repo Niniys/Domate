@@ -384,7 +384,7 @@
   display: none;
   position: fixed;
   top: 105px;
-  margin-left: 580px;
+  margin-left: 50%;
   margin-right: 20px;
   border-radius: 40px;
   background-color: var(--cor12);
@@ -914,4 +914,122 @@
     flex-direction: column;
     width: 100%;
   }
+}
+
+@media(min-width: 1710px) {
+  .dois {
+    display: flex;
+    position: absolute;
+    margin-left: 800px;
+    margin-top: 50px;
+    left: 10px;
+    height: 340px;
+    width: 900px;
+    align-items: center;
+    text-align: left;
+    font-size: 28px;
+}
+}
+
+@media(min-width: 1610px) and (max-width: 1709px) {
+  .dois {
+    display: flex;
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 50px;
+    left: 10px;
+    height: 340px;
+    width: 900px;
+    align-items: center;
+    text-align: left;
+    font-size: 28px;
+}
+}
+
+@media(min-width: 1510px) and (max-width: 1609px) {
+  .dois {
+    display: flex;
+    position: absolute;
+    margin-left: 600px;
+    margin-top: 50px;
+    left: 10px;
+    height: 340px;
+    width: 900px;
+    align-items: center;
+    text-align: left;
+    font-size: 28px;
+}
+}
+
+@media(min-width: 1410px) and (max-width: 1509px) {
+  .dois {
+    display: flex;
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 50px;
+    left: 10px;
+    height: 340px;
+    width: 900px;
+    align-items: center;
+    text-align: left;
+    font-size: 20px;
+}
+}
+
+@media(min-width: 1215px) and (max-width: 1409px) {
+  .dois {
+    display: flex;
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 50px;
+    left: 10px;
+    height: 340px;
+    width: 500px;
+    align-items: center;
+    text-align: left;
+    font-size: 20px;
+}
+}
+
+@media(min-width: 1065px) and (max-width: 1214px) {
+  .dois {
+    display: flex;
+    position: absolute;
+    margin-left: 550px;
+    margin-top: 50px;
+    left: 10px;
+    height: 340px;
+    width: 500px;
+    align-items: center;
+    text-align: left;
+    font-size: 20px;
+}
+}
+
+@media(min-width: 810px) and (max-width: 1064px) {
+  .dois {
+    display: flex;
+    position: absolute;
+    margin-left: 400px;
+    margin-top: 50px;
+    left: 10px;
+    height: 340px;
+    width: 400px;
+    align-items: center;
+    text-align: left;
+    font-size: 20px;
+}
+}
+
+@media(max-width: 809px) {
+  .dois {
+    display: flex;
+    margin-bottom: 50px;
+    left: 10px;
+    height: 340px;
+    width: 100%;
+    align-items: center;
+    text-align: left;
+    font-size: 20px;
+}
 }
