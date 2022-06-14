@@ -35,7 +35,7 @@
   
   .um img {
     display: flex;
-    margin-left: auto;
+    margin-left: 20px;
     height: 50px;
     width: 50px;
     margin-right: 10px;
@@ -108,30 +108,30 @@
 
   @keyframes setar {
     from {
-      margin-left: auto;
+      margin-left: 20px;
       margin-top: 0;
       margin-right: 10px;
       transform: rotate(0deg);
     }
 
     to {
-      margin-left: auto;
+      margin-left: 20px;
       margin-top: -240px;
-      margin-right: 1070px;
+      margin-right: 200%;
       transform: rotate(90deg);
     }
   }
 
   @keyframes desetar {
     from {
-      margin-left: auto;
+      margin-left: 20px;
       margin-top: -240px;
-      margin-right: 1070px;
+      margin-right: 200%;
       transform: rotate(90deg);
     }
 
     to {
-      margin-left: auto;
+      margin-left: 20px;
       margin-top: 0;
       margin-right: 10px;
       transform: rotate(0deg);
@@ -140,17 +140,19 @@
 
   .mapa1, .mapa2, .mapa3 {
     display: none;
+    position: absolute;
     align-items: center;
     justify-content: center;
     height: 350px;
-    font-size: 30px;
+    font-size: 20px;
   }
 
   .mapa1 text {
-    white-space: pre-wrap;
-    text-align: center;
-    height: 100%;
-    margin-top: 0;
+  white-space: normal;
+  text-align: center;
+  height: 50%;
+  margin-top: 100px;
+  margin-left: 100px;
   }
 
   #img {
@@ -161,11 +163,11 @@
   }
 
   #img2,  #img3{
-    display: flex;
+    display: none;
     top: 0;
     align-self: flex-end;
-    width: 10%;
-    height: 100px;
+    width: 75%;
+    height: 710px;
   }
 
   @keyframes imagem1{
@@ -190,19 +192,6 @@
     }
   }
 
-  .dois {
-    display: flex;
-    position: absolute;
-    margin-left: 800px;
-    margin-top: 50px;
-    left: 10px;
-    height: 340px;
-    width: 900px;
-    align-items: center;
-    text-align: left;
-    font-size: 28px;
-}
-
 .dois text {
   color: var(--cor12);
 }
@@ -211,16 +200,17 @@
   display: flex;
   white-space: normal;
   text-align: center;
-  height: 100%;
-  margin-top: 200px;
+  height: 50%;
+  margin-top: 100px;
 }
 
 .mapa3 text {
   display: flex;
   white-space: normal;
   text-align: center;
-  height: 100%;
-  margin-top: 100px;
+  height: 50%;
+  width: 90%;
+  margin-top: 50px;
 }
 
 #direita {

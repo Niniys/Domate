@@ -107,24 +107,24 @@
   --cor4: rgb(76, 0, 112);
   --cor5: rgb(121, 1, 140);
 }
-
-body{
-    background-color: var(--cor4);
-    width: 60%;
-    height: 0%;
-    padding: 58.7px;
-    margin: 3.7%;
-    border: 0px;
-}
-
-a1{
-    font-family: 'Oswald', sans-serif;
-    color: red;
-    cursor: pointer;
-}
-
-.del{
-    font-family: 'Oswald', sans-serif;
-    position: relative;
-  right: -35%;
-}
+  
+  body{
+      background-color: var(--cor4);
+      width: 60%;
+      height: 0%;
+      padding: 58.7px;
+      margin: 3.7%;
+      border: 0px;
+  }
+  
+  a1{
+      font-family: 'Oswald', sans-serif;
+      color: red;
+      cursor: pointer;
+  }
+  
+  .del{
+      font-family: 'Oswald', sans-serif;
+      position: relative;
+    right: -35%;
+  }
