@@ -19,19 +19,18 @@ export default timerDis;
 
 const styles = StyleSheet.create({
     container: {
-        marginTop: "7%",
-        marginBottom: "10%",
-        marginLeft: "7%",
-        marginRight: "7%",
-        padding: "20%",
+        margin: 10,
+        marginBottom: 50,
+        width: 390,
+        padding: "15%",
         borderColor: "black",
         borderRadius: 80,
-        borderWidth: 5,
+        borderWidth: 7,
         alignItems: 'center',
-        backgroundColor: "#a93190",
+        backgroundColor: "#800000",
     },
     textStyle: {
-        color: "black",
+        color: "white",
         fontSize: 50,
         fontWeight: "400",
     }

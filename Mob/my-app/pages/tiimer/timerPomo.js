@@ -77,7 +77,7 @@ class timerPomo extends React.Component {
 	render() {
 		let time= this.handleTime()
 		return (
-			<View>
+			<View style={{backgroundColor: '#191919'}}>
 				<View style={styles.row}>
 					<View style={styles.inputWrap}>
 						<Text style={styles.textStyle}>Trabalhar</Text>
@@ -110,8 +110,8 @@ const styles = StyleSheet.create({
     },
     inputWrap: {
         flex: 1,
-        borderColor: "#cccccc",
-        borderBottomWidth: 1,
+        borderColor: "#FFFFFF",
+        borderBottomWidth: 3,
         marginBottom: 10
     },
     textStyle: {
@@ -120,6 +120,7 @@ const styles = StyleSheet.create({
         letterSpacing: 1.5,
         fontFamily: Platform.OS == "android" ? "notoserif" : "system",
         marginTop: 40,
-        padding: 20
+        padding: 20,
+		color: "white",
     }
 });

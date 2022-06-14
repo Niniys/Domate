@@ -35,7 +35,7 @@ function Principal({ state, descriptors, navigation }) {
           }
         };
 
-        let arrColor = ["#511845", "#a93190"];
+        let arrColor = ["#E10015", "#FF5D6C"];
         let icon = (
           <Icon
             name="stopwatch"
@@ -44,7 +44,7 @@ function Principal({ state, descriptors, navigation }) {
           />
         );
         if (index == 1) {
-          arrColor = ["#a93190", "#511845"];
+          arrColor = ["#FF5D6C", "#E10015"];
           icon = (
             <Icon
               name="open-book"

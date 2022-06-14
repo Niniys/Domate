@@ -13,7 +13,9 @@ class Head extends React.Component {
 
 const styles = StyleSheet.create({
     headerContainer: {
-        backgroundColor: "#a93190",
+        backgroundColor: "#800000",
+        borderColor: "#000000",
+        borderWidth: 1,
         height: 90,
         justifyContent: "center",
         alignItems: "center",

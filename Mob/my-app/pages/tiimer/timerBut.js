@@ -39,16 +39,17 @@ const styles = StyleSheet.create({
     },
     buttonStyle: {
         alignItems: "center",
-        backgroundColor: "#a93190",
+        backgroundColor: "#800000",
         borderColor: "#000",
-        padding: 30,
+        borderWidth: 5,
+        padding: 20,
         flexDirection: "row",
-        borderRadius: 25,
+        borderRadius: 30,
     },
     buttonText: {
-        color: "black",
+        color: "white",
         fontSize: 25,
-        fontWeight: "300",
+        fontWeight: "bold",
     }
 })
 

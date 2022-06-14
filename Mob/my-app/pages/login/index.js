@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { View, Text, Keyboard, TextInput, ToastAndroid, StyleSheet, TouchableOpacity, KeyboardAvoidingView, Image, Animated } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+// import AsyncStorage from '@react-native-community/async-storage';
 //import { func } from "prop-types";
 
 
@@ -14,6 +15,10 @@ export default function Login({ navigation }) {
     const [animando] = useState(new Animated.ValueXY({ x: 0, y: 95 }));
     const [logo] = useState(new Animated.ValueXY({ x: 300, y: 160 }));
     const [transparencia] = useState(new Animated.Value(0));
+
+    const [valor, setValor] = useState('');
+
+
 
 
     useEffect(() => {
@@ -34,6 +39,7 @@ export default function Login({ navigation }) {
             }),
 
         ]).start();
+
     }, [])
 
     // function keyboardDidShow(){
@@ -68,7 +74,7 @@ export default function Login({ navigation }) {
     //     ]).start();
     // }
 
-    const autenticar = () => {
+    async function autenticar(){
         let user = {
             nome_usuario: nome_usuario,
             senha: senha
@@ -83,14 +89,15 @@ export default function Login({ navigation }) {
             "body": JSON.stringify(user),
         })
             .then(resp => { return resp.json() })
-            .then(async data => {
-                // console.log(data)
-                if (data.length > 0) {
-                    await AsyncStorage.setItem('userdata', JSON.stringify(data[0]));
+            .then( data => {
+
+                data.forEach((element) => {
+                    console.log(element)
+                    AsyncStorage.setItem('userdata', JSON.stringify(element))
+                    console.log( AsyncStorage.setItem('userdata', JSON.stringify(data)));
                     navigation.navigate("Main");
-                } else {
-                    ToastAndroid.show('Email ou Senha Inválidos', ToastAndroid.SHORT);
-                }
+
+                })
             })
     }
 
@@ -123,7 +130,7 @@ export default function Login({ navigation }) {
             .then(async data => {
                 if (data.length > 0) {
                     await AsyncStorage.setItem('userdata', JSON.stringify(data));
-                    navigation.navigate("main");
+                    navigation.navigate("Main");
 
                 } else {
                     ToastAndroid.show("Falha ao cadastrar", ToastAndroid.SHORT);
