@@ -20,46 +20,17 @@
     justify-content: center;
     width: 100%;
   }
-  
-  .mapa img {
-    display: fixed;
-    width: 75%;
-    height: 710px;
-  }
-
-  .mapa--trocar2 img {
-    display: fixed;
-    width: 1px;
-    height: 710px;
-    transition: all .5s;
-  }
-
-  .mapa--voltar img {
-    transition: all .5s;
-    width: 75%;
-    height: 710px;
-  }
-
-  .mapa--voltar2 img {
-    transition: all .5s;
-    width: 75%;
-    height: 710px;
-  }
-/*   
-  .mapa1--hide {
-    display: none;
-    transition: all .5s;
-  } */
 
   .um{
     display: flex;
-    margin-left: 300px;
+    margin-left: 15%;
     margin-top: 130px;
     background-color: var(--cor4);
     height: 100px;
     width: 280px;
     align-items: center;
     font-size: 30px;
+    z-index: 1;
   }
   
   .um img {
@@ -87,7 +58,7 @@
     from {
       height: 100px;
       width: 280px;
-      margin-left: 300px;
+      margin-left: 15%;
       margin-top: 130px;
     }
 
@@ -110,7 +81,7 @@
     to {
       height: 100px;
       width: 280px;
-      margin-left: 300px;
+      margin-left: 15%;
       margin-top: 130px;
     }
   }
@@ -167,19 +138,6 @@
     }
   }
 
-  .um--fechar {
-    display: flex;
-    position: relative;
-    margin-left: 300px;
-    margin-top: 130px;
-    background-color: var(--cor4);
-    height: 100px;
-    width: 280px;
-    align-items: center;
-    font-size: 30px;
-    transition: all .9s;
-  }
-
   .mapa1, .mapa2, .mapa3 {
     display: none;
     align-items: center;
@@ -197,60 +155,39 @@
 
   #img {
     display: flex;
-    transform: none;
     align-self: flex-end;
+    width: 75%;
+    height: 710px;
   }
 
-  #img2,  #img3, #img4, #img5, #img6{
-    display: none;
-    transform: none;
+  #img2,  #img3{
+    display: flex;
+    top: 0;
     align-self: flex-end;
+    width: 10%;
+    height: 100px;
   }
 
-  .img4--voltar {
-    transition: all .5s;
-    width: 75%;
-    height: 710px;
+  @keyframes imagem1{
+    from {
+      
+    }
+
+    to {
+      width: 0%;
+    }
   }
 
-  .img--trocar {
-    display: fixed;
-    width: 1px;
-    height: 710px;
-    transition: all .5s;
-  }
+  @keyframes imagem2 {
+    from {
+      display: none;
+      width: 0;
+    }
 
-  .img2--voltar {
-    transition: all .5s;
-    width: 75%;
-    height: 710px;
-  }
-
-  .img2--trocar {
-    display: fixed;
-    width: 1px;
-    height: 710px;
-    transition: all .5s;
-  }
-
-  .img2--troc {
-    display: fixed;
-    width: 1px;
-    height: 710px;
-    transition: all .5s;
-  }
-
-  .img3--voltar {
-    transition: all .5s;
-    width: 75%;
-    height: 710px;
-  }
-
-  .um--abrir img {
-    transform: rotate(90deg);
-    margin-top: -230px;
-    margin-left: 20px;
-    transition: all .9s;
+    to {
+      display: flex;
+      width: 75%;
+    }
   }
 
   .dois {
@@ -303,29 +240,13 @@
 @media(min-width: 1300px) and (max-width: 1400px) {
   .um{
     display: flex;
-    margin-left: 200px;
+    margin-left: 15%;
     margin-top: 130px;
     background-color: var(--cor4);
     height: 100px;
     width: 280px;
     align-items: center;
     font-size: 19px;
-  }
-
-  .um--abrir {
-    display: flex;
-    position: relative;
-    margin-left: 20px;
-    margin-top: 20px;
-    height: 330px;
-    width: 98%;
-    transition: all .9s;
-  }
-
-  .um--abrir text {
-    display: flex;
-    margin-top: -200px;
-    transition: all .9s;
   }
 
   .dois {
@@ -341,8 +262,9 @@
     font-size: 19px;
 }
 
-.mapa img {
-  display: fixed;
+#img {
+  display: flex;
+  align-self: flex-end;
   width: 65%;
   height: 530px;
 }
@@ -368,16 +290,16 @@
   display: flex;
   white-space: normal;
   text-align: center;
-  height: 100%;
-  margin-top: 200px;
+  height: 50%;
+  margin-top: 100px;
 }
 
 .mapa3 text {
   display: flex;
   white-space: normal;
   text-align: center;
-  height: 100%;
-  margin-top: 100px;
+  height: 50%;
+  margin-top: 50px;
 }
 
 #direita {

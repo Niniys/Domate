@@ -95,6 +95,7 @@ var animate = 1;
 
 function mover() {
     let um = document.querySelector(".um");
+    let dois = document.querySelector(".dois");
     let mapa1 = document.querySelector(".mapa1");
     let seta = document.getElementById("seta");
     let a = document.getElementById("a");
@@ -115,9 +116,11 @@ function mover() {
         seta.style.marginRight = "1070px";
         seta.style.transform = "rotate(90deg)";
 
-        mapa1.style.display = "flex";
+        
 
-        setTimeout(() => {  
+        setTimeout(() => {
+            mapa1.style.display = "flex";
+            dois.style.display = "none";
             animate ++;
         }, 3000)
     } else {
@@ -128,7 +131,7 @@ function mover() {
         um.style.height = "100px";
         um.style.width = "280px";
         um.style.marginTop = "130px";
-        um.style.marginLeft = "300px";
+        um.style.marginLeft = "15%";
         
         a.style.marginTop = "0px";
                 
@@ -137,7 +140,9 @@ function mover() {
         seta.style.transform = "rotate(0deg)";
         
         mapa1.style.display = "none";
+        dois.style.display = "flex";
         setTimeout(() => {
+            
             animate --;
         }, 3000)
     }
@@ -164,22 +169,29 @@ let um = document.querySelector(".um");
         mapa2.style.display = "none";
         mapa3.style.display = "none";
     } else if(atual == 2) {
-        mapa.classList.toggle("img--trocar");
+        // mapa.classList.toggle("img--trocar");
+        // setTimeout(() => {
+        //     img.style.display = "none";
+        //     mapa.classList.toggle("img2--voltar");
+        //     img2.style.display = "flex";
+        // },500)
+        img.style.animation = "imagem1 3s";
+
         setTimeout(() => {
             img.style.display = "none";
-            mapa.classList.toggle("img2--voltar");
-            img2.style.display = "flex";
-        },500)
+            img2.style.animation = "imagem2 3s"
+        }, 3000)
+
         mapa1.style.display = "none";
         mapa2.style.display = "flex";
         mapa3.style.display = "none";
     } else if(atual == 3) {
-        mapa.classList.toggle("img2--trocar");
-        setTimeout(() => {
-            img2.style.display = "none";
-            mapa.classList.toggle("img3--voltar");
-            img3.style.display = "flex";
-        },500)
+        // mapa.classList.toggle("img2--trocar");
+        // setTimeout(() => {
+        //     img2.style.display = "none";
+        //     mapa.classList.toggle("img3--voltar");
+        //     img3.style.display = "flex";
+        // },500)
         mapa1.style.display = "none";
         mapa2.style.display = "none";
         mapa3.style.display = "flex";
@@ -199,12 +211,12 @@ function voltar() {
     if(atual >= 2) atual --;
 
     if(atual == 1) {
-        mapa.classList.toggle("img2--troc");
-        setTimeout(() => {
-            img2.style.display = "none";
-            mapa.classList.toggle("img4--voltar");
-            img4.style.display = "flex";
-        },500)
+        // mapa.classList.toggle("img2--troc");
+        // setTimeout(() => {
+        //     img2.style.display = "none";
+        //     mapa.classList.toggle("img4--voltar");
+        //     img4.style.display = "flex";
+        // },500)
         mapa1.style.display = "flex";
         mapa2.style.display = "none";
         mapa3.style.display = "none";
