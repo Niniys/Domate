@@ -188,3 +188,8 @@
     a2{
       color: #00000000;
     }
+
+    #user {
+      height: 10px;
+      width: 30px;
+    }

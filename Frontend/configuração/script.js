@@ -13,3 +13,12 @@ function setTema() {
       indexTema = Integer.parseInt(temaSelecionado);
   }
 }
+
+function get() {
+  let user = document.getElementById("user");
+  let username = JSON.parse(localStorage.getItem("userdata"));
+
+  if(username.nome_usuario != null) {
+    user.innerHTML = username.nome_usuario;
+  }
+}
